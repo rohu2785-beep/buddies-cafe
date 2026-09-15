@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html class="dark" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Buddies Cafe - Pizza Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#33281f",
+                      "secondary": "#c6c6c6",
+                      "outline-variant": "#564334",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "inverse-surface": "#f3dfd1",
+                      "on-error": "#690005",
+                      "on-primary-fixed": "#2f1500",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "surface-variant": "#3f3229",
+                      "on-primary-fixed-variant": "#6e3900",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-secondary": "#303030",
+                      "inverse-on-surface": "#3a2e25",
+                      "surface": "#1b110a",
+                      "surface-container-low": "#241912",
+                      "primary-fixed-dim": "#ffb77d",
+                      "error-container": "#93000a",
+                      "on-tertiary-container": "#3d3f3f",
+                      "on-secondary-fixed": "#1b1b1b",
+                      "on-surface": "#f3dfd1",
+                      "outline": "#a48c7a",
+                      "background": "#1b110a",
+                      "on-primary": "#4d2600",
+                      "tertiary": "#c6c6c7",
+                      "on-tertiary": "#2f3131",
+                      "on-secondary-container": "#b5b5b5",
+                      "secondary-fixed-dim": "#c6c6c6",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-secondary-fixed-variant": "#474747",
+                      "surface-dim": "#1b110a",
+                      "surface-container-highest": "#3f3229",
+                      "on-primary-container": "#623200",
+                      "surface-tint": "#ffb77d",
+                      "primary": "#ffb77d",
+                      "inverse-primary": "#904d00",
+                      "primary-container": "#ff8c00",
+                      "tertiary-container": "#a9aaaa",
+                      "primary-fixed": "#ffdcc3",
+                      "surface-container-lowest": "#150c06",
+                      "error": "#ffb4ab",
+                      "on-error-container": "#ffdad6",
+                      "secondary-container": "#474747",
+                      "surface-container": "#281d15",
+                      "on-background": "#f3dfd1",
+                      "surface-bright": "#43372e",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-surface-variant": "#ddc1ae"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "4px",
+                      "margin-desktop": "64px",
+                      "gutter": "20px",
+                      "lg": "24px",
+                      "margin-mobile": "16px",
+                      "unit": "4px",
+                      "xl": "40px",
+                      "md": "16px",
+                      "sm": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-mono": [
+                              "JetBrains Mono"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-hero": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-mono": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-hero": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .glow-effect {
+            box-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface sticky top-0 w-full z-50 bg-surface-container dark:bg-surface-container shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-desktop py-md max-w-[1280px] mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary"><a class="inline-flex items-center gap-2" href="#"><img alt="Buddies Cafe" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/><span class="sr-only">Buddies Cafe</span></a></div>
+<div class="hidden md:flex items-center gap-lg font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="home page.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="about page.html">About</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="menu page.html">Menu</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="combos page.html">Combos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="reviews page.html">Reviews</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="contact us.html">Contact</a>
+</div>
+<a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors inline-block text-center" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank">Order Now</a>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<!-- Hero Section -->
+<div class="mb-xl">
+<div class="relative rounded-xl overflow-hidden min-h-[300px] flex items-center justify-center py-xl px-4">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full opacity-60" data-alt="A high-quality, appetizing photograph of a freshly baked pizza with vibrant toppings, captured in a dark, moody gaming cafe setting with neon orange lighting accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJrEcdI53yM4LDKb2KieMEQmjdCfOmNuBh2u9tlyrFT3BENRd_MwrSlqoTc4g5myoYkulB9ORjm0HirRflOTFv1A9juTvXjfsjVVz96gl0q6-oF6nITBP_7XA8ZymrpVS4gWk4C3u83ZKhYYAPdSfb3fOqzQItpd8DAO_wJtuUBULrk3y3NqIAP9pygnMIsKbKU9qLmEuBcEbtPgwaM3IW7-ziqmKBzuXdJCZAn2elJX-FgH_ZY_I')"></div><div class="relative z-10 text-center max-w-[800px] mx-auto"><div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary-container/20 border border-primary-container text-primary-container text-xs font-label-mono mb-sm"><span class="material-symbols-outlined text-[16px]">local_pizza</span> Stone-Fired Artisan</div><h1 class="font-display-hero text-display-hero text-primary font-bold">Pizza</h1><p class="font-body-lg text-body-lg text-inverse-surface mt-sm">Eat – Play – Repeat • Fresh Dough, Hand-Stretched &amp; Baked to Crusty Perfection</p><div class="flex flex-wrap justify-center gap-2 mt-md"><span class="px-3 py-1 bg-surface-container/80 border border-outline-variant rounded-full text-xs font-label-mono text-on-surface-variant">Hand-Tossed Base</span><span class="px-3 py-1 bg-surface-container/80 border border-outline-variant rounded-full text-xs font-label-mono text-primary">Stone Oven Baked</span><span class="px-3 py-1 bg-surface-container/80 border border-outline-variant rounded-full text-xs font-label-mono text-on-surface-variant">Fresh Mozzarella</span><span class="px-3 py-1 bg-surface-container/80 border border-outline-variant rounded-full text-xs font-label-mono text-primary">100% Signature Sauce</span></div></div></div><div class="mt-md p-md bg-surface-container rounded-xl border border-primary-container/40 flex flex-col md:flex-row items-center justify-between gap-md"><div class="flex items-center gap-md"><span class="material-symbols-outlined text-primary-container text-3xl">sports_esports</span><div><h4 class="font-headline-md text-base font-bold text-primary">Challenge Your Friends While You Wait!</h4><p class="text-body-md text-sm text-on-surface-variant">Enjoy our cafe board games — Catan, Uno, Chess &amp; Jenga — while your artisan pizza bakes!</p></div></div><span class="font-label-mono text-xs text-primary-container border border-primary-container/50 px-3 py-1 rounded-full">Board Games Free for Diners</span></div></div>
+<!-- Veg Section -->
+<section class="mb-xl">
+<div class="flex items-center justify-between mb-lg">
+<h2 class="font-headline-lg text-headline-lg md:font-headline-lg-mobile md:text-headline-lg-mobile text-on-background flex items-center gap-sm">
+<span class="inline-block w-4 h-4 border-2 border-green-500 rounded-sm flex items-center justify-center">
+<span class="inline-block w-2 h-2 bg-green-500 rounded-full"></span></span> Veg</h2>
+<span class="font-label-mono text-xs text-on-surface-variant">3 Handcrafted Varieties</span></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all">
+<div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> ~15-20 mins</div>
+<div class="relative overflow-hidden h-48">
+<img alt="Margherita" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl28xnDFFt3SqxxSytiiKJyJi_SlJOH-YggNQZzs-8taN6RlqptLcQylXB7M5PlUVh_i098hS1pTWUsTX43pmFyEsQL0FPmUhtvKxLVjwLz-wBn01h0yoyUnaCdY9qGAsnKcGIuET2qhiQUKpdSOJSVf7FtZXqkm-tecNs1KxaUKOCGYNT033ajd3utoS2HR1wRgPCMRSc0mkMIt8-u7YW_97yrcXBWar7_Wt_wAcYV2AGr05SXjU"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-green-500 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> 100% Pure Veg</span></div>
+<div class="p-md flex-grow flex flex-col justify-between">
+<div class="mb-md">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Margherita</h3>
+<span class="font-label-mono text-primary-container text-lg font-bold">₹99</span></div>
+<p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Classic stone-baked pizza layered with rich San Marzano herb tomato sauce, fresh creamy mozzarella, aromatic basil, and olive oil drizzle.</p>
+<div class="flex flex-wrap gap-1 mt-sm">
+<span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Fresh Mozzarella</span>
+<span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Basil Leaves</span></div></div>
+<div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center">
+<span class="text-xs text-on-surface-variant font-label-mono">Personal 8-inch</span>
+<a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</a></div></div></div>
+<div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all">
+<div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> ~15-20 mins</div>
+<div class="relative overflow-hidden h-48">
+<img alt="Cheese and Corn" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu_D2rT5J3v4BUch4FtdP0gbg4H--OWW7qwZZGshLqoxUPziDfmvuh13bek_grZgtPBkPSyRIBJR6Wg2bke0OuwqW_vR0we7j52dg4AilZXj9H9AG4AN55jZI3GJe3CwdPwq8uClyGB2Jk8vZgX1kkLjKrmG05zQcJZSqQs_gDU4-S6BKM2CyQdrnEpKtbxi4Cv1VZ317DFBuVCk_3Yqn-qHYu_fZXn8_B-KYahad6KdUDkmVrVbw"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-green-500 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> 100% Pure Veg</span></div>
+<div class="p-md flex-grow flex flex-col justify-between">
+<div class="mb-md">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Cheese and Corn</h3>
+<span class="font-label-mono text-primary-container text-lg font-bold">₹99</span></div>
+<p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Golden crust loaded with melted mozzarella, sweet juicy golden corn kernels, and Italian herb seasoning.</p>
+<div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Golden Corn</span>
+<span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Herb Seasoning</span></div></div>
+<div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center">
+<span class="text-xs text-on-surface-variant font-label-mono">Personal 8-inch</span>
+<a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</a></div></div></div>
+<div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all">
+<div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> ~15-20 mins</div>
+<div class="relative overflow-hidden h-48">
+<img alt="Veg Classic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV8ykh-nhSBWGQNP6XYfquZY5LwgOFtlYgFnKojJWNgFsnxvsQSAx3MUmFXn4RD9y6XrBOoEiqGQhTJ_9eEVJvRaG-AeZ7Xg0Jx1AZDirJHnBcf1YTKpeWwMhkVFSNXpvsXLFC1I94dPvcAYETsM52MlGkMsZ9IzvnBL6h1AQQ-Zrp7x0Bk3c8gkd_1UlHeluFka6bgJR5zAixAILqHPiJRt3ciJyRg0APNF6zhuVPZjma-eiSedc"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-green-500 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> 100% Pure Veg</span></div>
+<div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Veg Classic</h3>
+<span class="font-label-mono text-primary-container text-lg font-bold">₹99</span></div>
+<p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Crisp garden bell peppers, crunchy red onions, juicy diced tomatoes, and mushrooms over bubbly melted cheese.</p>
+<div class="flex flex-wrap gap-1 mt-sm">
+<span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Bell Peppers</span>
+<span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Mushrooms</span></div></div>
+<div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center">
+<span class="text-xs text-on-surface-variant font-label-mono">Personal 8-inch</span>
+<a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</a></div></div></div></div></section>
+<!-- Non-Veg Section -->
+<section class="mb-xl"><div class="flex items-center justify-between mb-lg"><h2 class="font-headline-lg text-headline-lg md:font-headline-lg-mobile md:text-headline-lg-mobile text-on-background flex items-center gap-sm"><span class="inline-block w-4 h-4 border-2 border-red-500 rounded-sm flex items-center justify-center"><span class="inline-block w-0 h-0 border-l-[3px] border-r-[3px] border-b-[5px] border-transparent border-b-red-500"></span></span> Non-Veg</h2><span class="font-label-mono text-xs text-on-surface-variant">₹120 Flat Specials</span></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg"><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~15-20 mins</div><div class="relative overflow-hidden h-48"><img alt="Peri Peri Chicken Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgdp3pEgST8UufuhCzaElDagP1yub1uIv0N_TSsMIJWE2vXxQuWkJ4WkcyEBn035KhlMY9DEhQcqijYlRXLeDQyklBL44HJ1afHRPaicMr083iI7P6jBrFWbNwXmX5pQ-qi_QMkkJihKg6de7qaTg9c5e_U5RFO4GEwtJCLl2_kxCcAFnQL7HvyT8PX7A_c8d16-R9kXesh4qjVuk4DG6qGd03kFT6UVMdl5fi2hjPMAwqk7h4PV0"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-red-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Spicy Non-Veg</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Peri Peri Chicken</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹120</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Succulent grilled chicken chunks tossed in fiery peri peri seasoning with roasted bell peppers and melted cheese.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Peri Peri Glaze</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Roasted Peppers</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Personal 8-inch</span><a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</a></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~15-20 mins</div>
+<div class="relative overflow-hidden h-48"><img alt="Tikka Chicken Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIgFi5K2eXT5xl_Y5bIZspNpWPScxr2Mn0Xjc1axPuB1uQ8IssWp1AfjnXKTfrBrkOkVGM-b6l6XbTR_UHUr0VWup1oJF-zIKE_EMM75ALm6ergijsvIzPf7qWuySIULrn8amyXYdYvMmTck_9rWam0hPrIuqjMh8UC2eMT0BJQYAS60ZmafGEjY0RH_aM3zcWHXniuh3rn7LaFfbfcazQ67kezzHpMkQKtSTR3tAxWZwbLy4rzbw"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-red-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Tandoori Non-Veg</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Tikka Chicken</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹120</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Char-grilled tandoori chicken tikka chunks, crisp pickled onion rings, fresh coriander, and mint mayo drizzle over spiced makhani base.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Tandoori Chunks</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Mint Mayo</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Personal 8-inch</span><a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</a></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~15-20 mins</div><div class="relative overflow-hidden h-48"><img alt="Buddies Special Chicken Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoBxIKP8Rw72KuvIxoBZEGl1UEoxL03AeYcCiFLYE-sQxk6InbLLoGetl8zGUwfnrcVn01ZJvgAMgEF0T8IcuTVkzuivfYrUoUKLdSpPC1f33xRLiHk3v6h7ZKXXovmeZP0v9c8aYffgC0rzcBILFJ8lI9ul8AmvO4mt2f_aN1eBnByATqS8qWwb5V6LzJCxLP4jXOWze2QU3EkIq5a3PlPX0AqNvi-w_cCKHRJiIWbLmiVec6Sak"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-primary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Chef Signature</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Buddies Special Chicken</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹120</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Cafe's signature pie stacked with seasoned chicken, black olives, sauteed mushrooms, jalapenos, and double cheese melt.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Black Olives</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Double Cheese</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Personal 8-inch</span><a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</a></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~15-20 mins</div><div class="relative overflow-hidden h-48"><img alt="Andhra Chicken Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxA3aye6E5VGrOKbHs6jM9z_WgVUjgY0LM6d3FprlJs15Q4pcUG6m67MqURvOk8bXjcIa76SK4tAGY57thp4Q-amdt97hRNyr_VrJjMsQjLptbsEAKVqBin5BfrAd30snUYVRQFQ4Ifek3kbnPhWTaAUOapP5jAwTIuH3YNqEV2ZTyo01W3OyRx2ukTiDtgzDqsLQzHkxxqj-PzrOhpdw9go3pYasy5iy8VTmJ_a7bgOJe09uf5mo"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-red-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Extra Hot</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Andhra Chicken Pizza</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹120</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Spicy South-style roasted Andhra chili chicken with caramelized onions, curry leaf oil, and fiery red chili flakes.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Andhra Chili</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Curry Leaf Oil</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Personal 8-inch</span><a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</a></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~15-20 mins</div><div class="relative overflow-hidden h-48"><img alt="Mexican Salsa Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ0pap42CTiYwfdxytusOhCZNWIMPqP4h32hsL_X1PqtrQxKRO1z_oCzB2y3vojRyuCYURCqW-z75S4BkG4PbzoxaP1iicp7MEJ_SSC-_ThIkkXr53KF6bLg1x-1TFDDz463LvFWk6eglYG2Oi4Bg_dVUQ-LBkYvhWHqa3GHu_ah5my02iPWkA1ljXTG0yNsf2Z4I9aEr1FNFyJhQElb67qcN9C5oWWpKgD4f-3fwx26yu0ojK0A0"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-red-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Zesty Mexican</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Mexican Salsa Pizza</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹120</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Tangy chunky tomato-corn salsa base topped with spiced chicken, sliced pickled jalapenos, and mozzarella.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Corn Salsa Base</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Pickled Jalapenos</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Personal 8-inch</span><a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</a></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~15-20 mins</div><div class="relative overflow-hidden h-48"><img alt="Premium Pepper BBQ Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3C8CCIv4rV2Z1dyd4suSAJ81A8dBZpk1EmedW7W0m-GOYHkrhJ6wc-am8hWiIEqD4E_CCxDMjfuwrz7a4xmzFwqjC6G73nj8Jy26nkuk7qN6O_hZz6pFuuP_NRLH2ksJdhIjDU6AJREYm-wIoZKfc-Qi2igp_DaCmrNakj9P1x8FctCDEas5ocIhwDW5xGleanpdxkDoGD-fwcavuu1YqDg-XEi0G0nhIEeNMJJNjlKzE29Y9g4E"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-red-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Smoky Pepper</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Premium Pepper BBQ Pizza</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹120</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Smoky hickory BBQ glazed roasted chicken chunks, cracked black pepper crust, sweet red onions, and melted cheese.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Cracked Pepper</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Hickory BBQ</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Personal 8-inch</span><a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</a></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~15-20 mins</div><div class="relative overflow-hidden h-48"><img alt="Smoked BBQ Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjqA5CktN7DXHZhXROIZyr--Fi7OwQj-DnXThVgX047dEy18JPA0HMQWoXiuNjMVRUMji7400M0YxULytvDLtVOCpXXaH6WxBaLJ4-CNt6MuqUgbK2V-KA0Bz8qrbOXpQ7Xz6Ij4LhfrEd-QlWYOYVEYSpYvzB81liagkUOraFzfXhWtsT8oSuFCKK0FZqvKUkGyNbjbsf8rTnQcYF8JZbIreF2AoEw2CHCWt_PfTp7dwwsDb7iZE"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-red-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Smoky Sweet</span></div><div class="p-md flex-grow flex flex-col border-t-4 border-transparent hover:border-primary-container transition-colors justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Smoked BBQ Pizza</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹120</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Tender smoked chicken drenched in thick sweet-smoky barbecue drizzle with caramelized onion ribbons and mozzarella.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Smoked Chicken</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Caramelized Onions</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Personal 8-inch</span><a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</a></div></div></div></div></section><section class="mt-xl mb-xl"><div class="flex items-center justify-between mb-lg"><h2 class="font-headline-lg text-headline-lg md:font-headline-lg-mobile md:text-headline-lg-mobile text-on-background flex items-center gap-sm"><span class="inline-block w-4 h-4 border-2 border-red-500 rounded-sm flex items-center justify-center"><span class="inline-block w-0 h-0 border-l-[3px] border-r-[3px] border-b-[5px] border-transparent border-b-red-500"></span></span> Premium Chicken Pizza</h2><span class="font-label-mono text-xs text-primary font-bold">Gourmet Delights • ₹140</span></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg"><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~15-20 mins</div><div class="relative overflow-hidden h-48"><img alt="Chicken Sausage Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb9hR3tItQO-l-hnRLFseizMsxrfoVn2OztmQpzmNpJUALe89K0v23RBbDg6LVLyqpKlnfjAzRTT8DBENpo1zz8n1_wiwxSDV9TPHG9jhDzyWoic0xtAjnK-QRrIg0IoMp9_lSyVs20aKnV1H9259IDmUoqDBuvuSx3wFgQvFNbNeBlMHsiMI7lPja3AXAApPBlYuIA8T2-Dy3hqCv6QXRaL5IA0Ms9EHGMykd-k_U7pYLDFefHMM"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-primary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Premium Selection</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Chicken Sausage Pizza</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹140</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Generously sliced artisan chicken sausages, herb-infused tomato sauce, bell peppers, and extra mozzarella.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Artisan Sausage</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Extra Mozzarella</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Personal 8-inch</span><a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</a></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~15-20 mins</div><div class="relative overflow-hidden h-48"><img alt="Fried Chicken Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8CEc_ruI_AmSwt7KND5Xfu1ENbN5fC4ud_CHt1tFaNYlH-GISJMADQ_pvPZNeBnCxxHGB_rrSOKc4rOLrr08SyV9gI7x8O_THN9oWVePdHFAFB0CqiJYCejFh2fzAUXpVwpWrXP4b-qVqLT7ESXr1o3Jd0uTZcj-JXZT-yFEh-NuqFcujWDu0eCL86JrecRselaU6B-shSw5duaiGERK-yCvnC9m4EqvbLK8Y8s7lcPwAoc2SH2o"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-primary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Cafe Favorite</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Fried Chicken Pizza</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹140</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Golden crispy crunchy fried chicken poppers topped over melted mozzarella with garlic aioli drizzle.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Crispy Poppers</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Garlic Aioli</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Personal 8-inch</span><a class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</a></div></div></div></div><div class="mt-xl p-lg rounded-xl bg-surface-container border border-outline-variant/40 flex flex-col md:flex-row items-center justify-between gap-md"><div class="flex items-center gap-md"><div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container"><span class="material-symbols-outlined text-2xl">restaurant_menu</span></div><div><h4 class="font-headline-md text-lg font-bold text-on-surface">Craving More at Buddies?</h4><p class="text-body-md text-sm text-on-surface-variant">Pair your pizza with our Steamed &amp; Fried Momos, Crispy Hot Dogs, or Gaming Refreshers!</p></div></div><div class="flex gap-sm"><button class="bg-surface-container-high border border-outline-variant text-on-surface py-2 px-4 rounded hover:border-primary-container transition-colors text-sm font-label-mono">Explore Combos</button><button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm font-label-mono">View Full Menu</button></div></div></section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full pt-xl pb-lg bg-surface-container-lowest border-t border-outline-variant flat no shadows opacity-90 hover:opacity-100 transition-opacity">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg px-margin-desktop max-w-[1280px] mx-auto text-primary dark:text-primary font-body-md text-body-md">
+<div>
+<div class="flex items-center gap-2 mb-sm"><img alt="Buddies Cafe" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/></div>
+<p class="text-on-surface-variant">© 2024 Buddies Cafe. Eat – Play – Repeat.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">Link Road, Anna Nagar, opp to Fresh Point, Virudhunagar-626001</a>
+<a class="text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">9345695826</a>
+<a class="text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">@buddies_vnr</a>
+</div>
+</div>
+</footer>
+</body></html>

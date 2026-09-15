@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html class="dark" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Buddies Cafe - French Fries Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-high": "#33281f",
+                      "secondary": "#c6c6c6",
+                      "outline-variant": "#564334",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "inverse-surface": "#f3dfd1",
+                      "on-error": "#690005",
+                      "on-primary-fixed": "#2f1500",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "surface-variant": "#3f3229",
+                      "on-primary-fixed-variant": "#6e3900",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-secondary": "#303030",
+                      "inverse-on-surface": "#3a2e25",
+                      "surface": "#1b110a",
+                      "surface-container-low": "#241912",
+                      "primary-fixed-dim": "#ffb77d",
+                      "error-container": "#93000a",
+                      "on-tertiary-container": "#3d3f3f",
+                      "on-secondary-fixed": "#1b1b1b",
+                      "on-surface": "#f3dfd1",
+                      "outline": "#a48c7a",
+                      "background": "#1b110a",
+                      "on-primary": "#4d2600",
+                      "tertiary": "#c6c6c7",
+                      "on-tertiary": "#2f3131",
+                      "on-secondary-container": "#b5b5b5",
+                      "secondary-fixed-dim": "#c6c6c6",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-secondary-fixed-variant": "#474747",
+                      "surface-dim": "#1b110a",
+                      "surface-container-highest": "#3f3229",
+                      "on-primary-container": "#623200",
+                      "surface-tint": "#ffb77d",
+                      "primary": "#ffb77d",
+                      "inverse-primary": "#904d00",
+                      "primary-container": "#ff8c00",
+                      "tertiary-container": "#a9aaaa",
+                      "primary-fixed": "#ffdcc3",
+                      "surface-container-lowest": "#150c06",
+                      "error": "#ffb4ab",
+                      "on-error-container": "#ffdad6",
+                      "secondary-container": "#474747",
+                      "surface-container": "#281d15",
+                      "on-background": "#f3dfd1",
+                      "surface-bright": "#43372e",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-surface-variant": "#ddc1ae"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "4px",
+                      "margin-desktop": "64px",
+                      "gutter": "20px",
+                      "lg": "24px",
+                      "margin-mobile": "16px",
+                      "unit": "4px",
+                      "xl": "40px",
+                      "md": "16px",
+                      "sm": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-mono": [
+                              "JetBrains Mono"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-hero": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-mono": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-hero": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .glow-effect {
+            box-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface sticky top-0 w-full z-50 bg-surface-container dark:bg-surface-container shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-desktop py-md max-w-[1280px] mx-auto">
+<a class="flex items-center gap-2" href="#"><img alt="Buddies Cafe" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/><span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary">Buddies Cafe</span></a>
+<div class="hidden md:flex items-center gap-lg font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="home page.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="about page.html">About</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="menu page.html">Menu</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="combos page.html">Combos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="reviews page.html">Reviews</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="contact us.html">Contact</a>
+</div>
+<button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors">
+                Order Now
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<!-- Hero Section -->
+<div class="mb-xl"><div class="relative rounded-xl overflow-hidden min-h-[300px] flex items-center justify-center py-xl px-4">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full opacity-60" data-alt="Crispy golden french fries banner" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWMbhnxI4hhXWCdoGkCGeEKWpCK8yRXCTtWqLxXRmDSfGUXmHXalgx9xBPnsFU_49cJymI2k9i-G9YE4XY54NZZ1_Pp-xPuuuQqwMsW9382n5R60Qvb5ArtzhqEPFI8nLUzuwNHq4BTXX8SW8TE6bdDkHN9DqMCLdTC94_oNo5IZHPnGaXXJiZktwqy2a2-ZQnXr7JtnZJ_v8TW3dYHuAZSoNPmT7Sy9uVA5oV4seKHpiJI4R9TGo')"></div><div class="relative z-10 text-center max-w-[800px] mx-auto"><div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary-container/20 border border-primary-container text-primary-container text-xs font-label-mono mb-sm"><span class="material-symbols-outlined text-[16px]">restaurant</span> Crisp &amp; Golden • House Seasoned</div><h1 class="font-display-hero text-display-hero text-primary font-bold">French Fries</h1><p class="font-body-lg text-body-lg text-inverse-surface mt-sm">Eat – Play – Repeat • Golden Crispy, Hand-Cut &amp; Loaded to Savory Perfection</p><div class="flex flex-wrap justify-center gap-2 mt-md"><span class="px-3 py-1 bg-surface-container/80 border border-outline-variant rounded-full text-xs font-label-mono text-on-surface-variant">Hand-Cut Potatoes</span><span class="px-3 py-1 bg-surface-container/80 border border-outline-variant rounded-full text-xs font-label-mono text-primary">Double Fried Crisp</span><span class="px-3 py-1 bg-surface-container/80 border border-outline-variant rounded-full text-xs font-label-mono text-on-surface-variant">House Spice Dusted</span><span class="px-3 py-1 bg-surface-container/80 border border-outline-variant rounded-full text-xs font-label-mono text-primary">100% Signature Dip</span></div></div></div><div class="mt-md p-md bg-surface-container rounded-xl border border-primary-container/40 flex flex-col md:flex-row items-center justify-between gap-md"><div class="flex items-center gap-md"><span class="material-symbols-outlined text-primary-container text-3xl">sports_esports</span><div><h4 class="font-headline-md text-base font-bold text-primary">Challenge Your Friends While You Wait!</h4><p class="text-body-md text-sm text-on-surface-variant">Enjoy our cafe board games — Catan, Uno, Chess &amp; Jenga — while your fries are sizzling fresh!</p></div></div><span class="font-label-mono text-xs text-primary-container border border-primary-container/50 px-3 py-1 rounded-full">Board Games Free for Diners</span></div></div>
+<!-- Veg Section -->
+<section class="mb-xl"><div class="flex items-center justify-between mb-lg"><h2 class="font-headline-lg text-headline-lg md:font-headline-lg-mobile md:text-headline-lg-mobile text-on-background flex items-center gap-sm"><span class="inline-block w-4 h-4 border-2 border-green-500 rounded-sm flex items-center justify-center"><span class="inline-block w-2 h-2 bg-green-500 rounded-full"></span></span> Veg</h2><span class="font-label-mono text-xs text-on-surface-variant">9 Handcrafted Varieties</span></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg"><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~10-15 mins</div><div class="relative overflow-hidden h-48"><img alt="Salted Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWMbhnxI4hhXWCdoGkCGeEKWpCK8yRXCTtWqLxXRmDSfGUXmHXalgx9xBPnsFU_49cJymI2k9i-G9YE4XY54NZZ1_Pp-xPuuuQqwMsW9382n5R60Qvb5ArtzhqEPFI8nLUzuwNHq4BTXX8SW8TE6bdDkHN9DqMCLdTC94_oNo5IZHPnGaXXJiZktwqy2a2-ZQnXr7JtnZJ_v8TW3dYHuAZSoNPmT7Sy9uVA5oV4seKHpiJI4R9TGo"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-green-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> 100% Pure Veg</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Salted Fries</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹99</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Golden hand-cut potato fries lightly sprinkled with sea salt crystals, served hot and extra crispy.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Sea Salt</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Crispy Cut</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Regular Portion</span><button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</button></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~10-15 mins</div><div class="relative overflow-hidden h-48"><img alt="Peri Peri Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqd4d8Z3RoDdL-QukvsjKBuPQIRZ-DVVKyZjTFDlI2a3R0myWDDSVOfMF4cDn9Im-OSZ2hC2TmW9C7vrL6w-9mmBPFFcs3vo2-DtkBa_PgmgmzC7LEc0tYiloej1PVbqLSyM0cNob4UluVtbbH4kpVc-6uS-yf_FiIzaTNvYYqm8nR2Ti00whHquJdoPaQgFAoPWH3d38aNc2A4QFFlvwWk3lIQSxTCy85FPz_H6vyIEN7peBSxZM"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-green-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> 100% Pure Veg</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Peri Peri Fries</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹99</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Golden crispy fries generously dusted with vibrant spicy red-orange peri peri seasoning powder.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Peri Peri Dust</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Spicy Dip</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Regular Portion</span><button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</button></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~10-15 mins</div><div class="relative overflow-hidden h-48"><img alt="Cheesy Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBemn3vrxOqlcxKTn1gewRA_hDPh4VPdxpXbaVRioc1XEde_OfEtXOx_UamRt0CmUGZpzew7xgzqqc7c1RSom6hmTbkrhXF9WhVbv-QfaiL9muaGll_3BWsmhKbIV5-bJqwcs0oCYl5Y-7kiX1vB5lA6lbVktEZ_ZmeRpOUoN_n5gEl8qwGSa9yVfWmCzYxwTD0m8jtgawbOZhrkjRfOmoZA7fTSwUUKwBind3fcjpdR2P_8yJeWmo"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-green-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> 100% Pure Veg</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Cheesy Fries</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹99</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Crispy golden fries smothered in rich warm melted cheddar cheese sauce and garnished with chives.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Melted Cheddar</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Herb Sprinkle</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Regular Portion</span><button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</button></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~10-15 mins</div><div class="relative overflow-hidden h-48"><img alt="Mexican Salsa Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB36p0YmPPzcv6zX02VbVwZXcONP9Ui1RpqCJhndpUkOtUaj2WgPJnk5EbislGL8wnJTUWKC5KGpiIPTZ5K6iGb_kRX_a8J_2QL9XlsjEoH34simEbSITqIaXWz0bN04NewtB4mffD03lUASElH6ZFppeYbe9O_mIi1cEA_bLmSWxLNH89zX1bDzqECfKJtchMZXNCQoCtIo_4CY9ma97mq4At5B6Hm4NrrrfhBxIfXKmjoQKohfcw"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-green-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> 100% Pure Veg</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Mexican Salsa Fries</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹99</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Crispy fries loaded with zesty diced tomato salsa, corn kernels, pickled jalapenos, and melted cheese drizzle.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Corn Salsa</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Jalapenos</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Regular Portion</span><button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</button></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~10-15 mins</div><div class="relative overflow-hidden h-48"><img alt="Chilli Garlic Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-XJceku0MZUkb7usV613OpPbgAwzZRbtOAzCCbvGbLDM3HjxGeSbnU6WRCqlHnqMd0hOQJblrFkA3aJEh4hQxx8zlay0Mx2Z3GLn91idIooi4A_-v43eZLZV5a8IEVt9gtppDlH4Xm29ouKb1zBy71rb0FVr11a7tpIFY9T3y3GwihxAuH56pvMrMBXlcG8Kknz6blP6NyLoZ04Xd461Av0DLt9TlNIVuP3tpyV3hOAFyxG26lkE"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-green-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> 100% Pure Veg</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Chilli Garlic Fries</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹110</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Crispy fries tossed with roasted garlic bits and crushed red chilli flakes with spicy garlic dip.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Roasted Garlic</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Chilli Flakes</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Regular Portion</span><button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</button></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~10-15 mins</div><div class="relative overflow-hidden h-48"><img alt="Herbal Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMSC_YooxTYsvT4NXdFlxgcj0hYfRAHNkEgQBDI2CQ_-RtysQpKXOEO9PjtKsQRvK4c4tsHheB1K2MnykmhG3NlNOXCTTxXNI45oPdpV-jhbnesn10Kuk1nfLUTcfD__3Ra-bApPAjMsNIL6kxQ0_LwwszQ_fBI69z1Q5fLkJaICX-fdLLzO7Ce2hxlfEDS3I89ZOi14B8HJPML2XMW7VxLdkj0l0AOn77MDULx6780IgtcyDw4Ug"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-green-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> 100% Pure Veg</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Herbal Fries</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹99</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Crispy golden french fries tossed in aromatic green oregano, thyme, rosemary herbs and sea salt.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Aromatic Herbs</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Garlic Aioli</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Regular Portion</span><button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</button></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~10-15 mins</div><div class="relative overflow-hidden h-48"><img alt="Lemon Pepper Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC5REMq7onkTjuxp89vZhCqJhCWOJ4H6cj4-zTDsyJWuHdCf7yE1DzuaFt6z0P-fh1WGfJ-zlHKrrTwTu-o7PH7ZkKOWQZ2hUbUxrk2QJ2dDETOiBvK44Hzyqx-C3UdZHEmyY5glBlbR6vhyO87oayktqx52i9d4KehQXNkdZtcs_P-I9g9T5lRqGnnLJQsvrioRHVkaf9d1gvVf06X-btAtjSR4r84X359rM1vo9OFuWOKakAmAI"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-green-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> 100% Pure Veg</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Lemon Pepper Fries</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹110</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Golden crispy fries seasoned with zesty cracked black pepper and fresh lemon zest, garnished with parsley.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Cracked Pepper</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Lemon Zest</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Regular Portion</span><button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</button></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~10-15 mins</div><div class="relative overflow-hidden h-48"><img alt="Hot Flake Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJvUmTOdPMhTT_UYyfPhrvbHXrbr1kZtvNVWWY77b8vREpcwgEWs9L3GSUkW8hiIj25stmU1BpoTVtOpmXnLG5YuRoEsAa4f3SCzVky3ENm2enpklCyGXyuRkgVm6TBrtHYBjaP6aCVULMu6t8qdxQnzXELuxq5cWMHvFhiYnXGbCmf3KYolaV74W8zJSmOpzSc3_mP_7guS8sSgmcni9FxfksuS4h23ktVR7XroSpmqm-V_JlybQ"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-green-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> 100% Pure Veg</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Hot Flake Fries</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹99</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Crispy fries generously coated with fiery red pepper flakes, paprika rub, and spicy chili sauce drizzle.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Fiery Rub</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Red Pepper</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Regular Portion</span><button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</button></div></div></div><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all"><div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> ~10-15 mins</div><div class="relative overflow-hidden h-48"><img alt="Smoked Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmLswBQznAPr8cmf-7ng8jS6DSdS1yVlyFVTetF965tJLfTtE4uXLakblvvg4GYD-37jTacVzBt3BDmWrPDFBILWdGibhCN0e43k9HPSZ9zYjg8dFiRgOE2b8Z8MYHEUnNL2mIlgvHG6hhAWm9emm8G79KZCmmO1Qj6fedEhVFGHsATHQs_AReJfRgbG3CSnuN_BnFQCNp8F3qPgxtflrRodYuiSC3-uOkdyg8FQ1rUZb5XBMrAyM"/><span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-green-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> 100% Pure Veg</span></div><div class="p-md flex-grow flex flex-col justify-between"><div class="mb-md"><div class="flex justify-between items-start mb-1"><h3 class="font-headline-md text-headline-md text-on-surface font-bold">Smoked Fries</h3><span class="font-label-mono text-primary-container text-lg font-bold">₹99</span></div><p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Golden crispy fries infused with hickory smoke aroma, served with a smoked paprika dip.</p><div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Hickory Smoked</span><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Paprika Dip</span></div></div><div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Regular Portion</span><button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</button></div></div></div></div></section>
+<!-- Non-Veg Section -->
+<section class="mb-xl">
+<div class="flex items-center justify-between mb-lg">
+<h2 class="font-headline-lg text-headline-lg md:font-headline-lg-mobile md:text-headline-lg-mobile text-on-background flex items-center gap-sm">
+<span class="inline-block w-4 h-4 border-2 border-red-500 rounded-sm flex items-center justify-center">
+<span class="inline-block w-0 h-0 border-l-[3px] border-r-[3px] border-b-[5px] border-transparent border-b-red-500"></span></span> Non-Veg</h2>
+<span class="font-label-mono text-xs text-primary font-bold">Gourmet Loaded • ₹130</span></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg"><div class="bg-[#1A1A1A] rounded-xl overflow-hidden flex flex-col relative group border border-outline-variant/30 hover:border-primary-container transition-all">
+<div class="absolute top-md right-md z-10 bg-[#1A1A1A]/90 border border-primary-container text-primary-container font-label-mono text-label-mono px-2 py-1 rounded glow-effect flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> ~10-15 mins</div>
+<div class="relative overflow-hidden h-48">
+<img alt="Chicken Loaded Fries" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwSB9u0yYXM1DYbDyHMPOqj5DmJkMbPVwkAxeXasjXfjDzC_X3QOn6NlZZjFc7D42GgndFg19jr7qLW0sTAspRUDJe_7xYG3WX-PCgv5ttG8_Wv-4y7LJwNb_iaVivmUNVmG_Fg8PSJhzM4NavuVbqffK8MF_2BlyMXdNwJkyZ2n31dtErJ7N_Adj4cbVQaZ743MxLL0ucuLygWBqFaKq8CO3VAadiDO8v3bamKqCTrTXyilX2a-s"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 text-[11px] font-label-mono text-red-500 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Loaded Non-Veg</span></div>
+<div class="p-md flex-grow flex flex-col justify-between">
+<div class="mb-md">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Chicken Loaded Fries</h3>
+<span class="font-label-mono text-primary-container text-lg font-bold">₹130</span></div>
+<p class="text-body-md text-sm text-on-surface-variant line-clamp-2">Golden crispy french fries piled high and topped with succulent diced grilled chicken chunks, melted cheese drizzle, and spicy peri peri mayo.</p>
+<div class="flex flex-wrap gap-1 mt-sm"><span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Grilled Chicken</span>
+<span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Melted Cheese</span>
+<span class="text-[11px] font-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Peri Peri Mayo</span></div></div>
+<div class="mt-auto pt-sm border-t border-outline-variant/30 flex justify-between items-center"><span class="text-xs text-on-surface-variant font-label-mono">Loaded Platter</span>
+<button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span> Add to Order</button></div></div></div></div></section>
+<div class="mt-xl p-lg rounded-xl bg-surface-container border border-outline-variant/40 flex flex-col md:flex-row items-center justify-between gap-md">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary-container"><span class="material-symbols-outlined text-2xl">restaurant_menu</span></div><div>
+<h4 class="font-headline-md text-lg font-bold text-on-surface">Craving More at Buddies?</h4><p class="text-body-md text-sm text-on-surface-variant">Pair your loaded fries with handcrafted momos, juicy burgers, or chilled thick shakes while challenging your crew to board games.</p></div></div><div class="flex gap-sm"><button class="bg-surface-container-high border border-outline-variant text-on-surface py-2 px-4 rounded hover:border-primary-container transition-colors text-sm font-label-mono">Explore Combos</button>
+<button class="bg-primary-container text-[#000000] font-bold py-2 px-4 rounded hover:bg-primary transition-colors text-sm font-label-mono">View Full Menu</button></div></div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full pt-xl pb-lg bg-surface-container-lowest border-t border-outline-variant flat no shadows opacity-90 hover:opacity-100 transition-opacity">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg px-margin-desktop max-w-[1280px] mx-auto text-primary dark:text-primary font-body-md text-body-md">
+<div>
+<div class="flex items-center gap-2 mb-sm"><img alt="Buddies Cafe" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/><span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary">Buddies Cafe</span></div>
+<p class="text-on-surface-variant">© 2024 Buddies Cafe. Eat – Play – Repeat.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">Link Road, Anna Nagar, opp to Fresh Point, Virudhunagar-626001</a>
+<a class="text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">9345695826</a>
+<a class="text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">@buddies_vnr</a>
+</div>
+</div>
+</footer>
+</body></html>

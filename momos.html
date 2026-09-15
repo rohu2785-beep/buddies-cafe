@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html class="dark" lang="en" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary":"#ffb77d","surface":"#1b110a","on-tertiary-container":"#3d3f3f","secondary-fixed":"#e2e2e2","on-error-container":"#ffdad6","surface-dim":"#1b110a","surface-bright":"#43372e","background":"#1b110a","secondary":"#c6c6c6","on-tertiary":"#2f3131","on-primary-fixed-variant":"#6e3900","on-primary-container":"#623200","on-secondary-fixed":"#1b1b1b","surface-container-highest":"#3f3229","secondary-container":"#474747","tertiary-container":"#a9aaaa","primary-container":"#ff8c00","on-background":"#f3dfd1","on-primary":"#4d2600","secondary-fixed-dim":"#c6c6c6","on-secondary-container":"#b5b5b5","on-secondary":"#303030","on-tertiary-fixed":"#1a1c1c","on-primary-fixed":"#2f1500","surface-variant":"#3f3229","inverse-on-surface":"#3a2e25","outline-variant":"#564334","primary-fixed":"#ffdcc3","on-secondary-fixed-variant":"#474747","inverse-primary":"#904d00","surface-tint":"#ffb77d","inverse-surface":"#f3dfd1","surface-container-lowest":"#150c06","on-surface-variant":"#ddc1ae","on-error":"#690005","primary-fixed-dim":"#ffb77d","tertiary-fixed":"#e2e2e2","tertiary-fixed-dim":"#c6c6c7","surface-container":"#281d15","outline":"#a48c7a","surface-container-low":"#241912","error":"#ffb4ab","surface-container-high":"#33281f","error-container":"#93000a","tertiary":"#c6c6c7","on-tertiary-fixed-variant":"#454747","on-surface":"#f3dfd1"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"64px","gutter":"20px","xl":"40px","margin-mobile":"16px","unit":"4px","sm":"8px","xs":"4px","md":"16px","lg":"24px"},"fontFamily":{"display-hero":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-mono":["JetBrains Mono"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"display-hero":["48px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"1.2","fontWeight":"700"}],"label-mono":["12px",{"lineHeight":"1","letterSpacing":"0.05em","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"1.2","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"1.3","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"1.5","fontWeight":"400"}]}}}};</script></head>
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-md">
+<div class="flex items-center gap-md">
+<img alt="Buddies Cafe" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/>
+<span class="font-headline-md text-headline-md tracking-tight text-on-surface">Buddies Cafe</span>
+</div>
+<nav class="hidden lg:flex items-center gap-lg" data-active-classes="bg-primary-container text-on-primary font-headline-md rounded-lg">
+<a class="px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="home" href="home page.html">Home</a>
+<a class="px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="about" href="about page.html">About</a>
+<a aria-current="page" class="px-md py-sm transition-colors bg-primary-container text-on-primary font-headline-md rounded-lg" data-path="menu" href="menu page.html">Menu</a>
+<a class="px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="combos" href="combos page.html">Combos</a>
+<a class="px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="reviews" href="reviews page.html">Reviews</a>
+<a class="px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="contact" href="contact us.html">Contact</a></nav>
+<div class="flex items-center gap-md"><a class="hidden sm:inline-flex items-center justify-center bg-primary-container text-on-primary font-headline-md text-body-md px-lg py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" data-path="order-online" href="#">Order Now</a>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header>
+<main class="w-full pt-20 bg-background min-h-screen">
+<div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest py-16 px-margin-mobile lg:px-margin-desktop">
+<!-- Ambient backdrops -->
+<div class="absolute -top-24 -left-20 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-32 w-[30rem] h-[30rem] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative max-w-[1280px] mx-auto flex flex-col md:flex-row items-center justify-between gap-xl">
+<div class="flex flex-col gap-md max-w-2xl">
+<div class="inline-flex items-center gap-sm px-md py-xs bg-surface-container rounded-full w-fit">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-wider">Buddies Special Dumplings</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface">
+          Momos <span class="text-primary-container">(5 pcs)</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Eat – Play – Repeat • Pan-Fried, Crispy &amp; Tossed to Perfection. Handcrafted dumplings prepared fresh in-house, paired with our fiery signature house chutney.</p>
+<!-- Quick highlights -->
+<div class="flex flex-wrap items-center gap-lg pt-sm">
+<div class="flex items-center gap-xs text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[20px]">sports_esports</span>
+<span class="font-label-mono text-label-mono">Board Game Ready</span>
+</div>
+<div class="flex items-center gap-xs text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[20px]">outdoor_grill</span>
+<span class="font-label-mono text-label-mono">Tossed &amp; Charred</span>
+</div>
+<div class="flex items-center gap-xs text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[20px]">timer</span>
+<span class="font-label-mono text-label-mono">Fresh ~12-18 Mins</span>
+</div>
+<div class="flex items-center gap-xs text-primary"><span class="material-symbols-outlined text-primary-container text-[20px]">skillet</span>
+<span class="font-label-mono text-label-mono bg-primary-container/10 border border-primary-container/30 px-sm py-xs rounded-full">Pan-Fried &amp; Crispy Only (No Steamed)</span></div></div>
+</div>
+<!-- Quick Category Pills -->
+<div class="flex flex-col sm:flex-row md:flex-col gap-sm w-full md:w-auto self-stretch md:self-center justify-center">
+<a class="flex items-center justify-between gap-md p-md bg-surface-container-high rounded-xl hover:bg-surface-bright transition-all" href="#vegetarian-section">
+<div class="flex items-center gap-md">
+<div class="w-4 h-4 rounded-sm border border-[#22c55e] flex items-center justify-center p-[2px]">
+<div class="w-2 h-2 rounded-full bg-[#22c55e]"></div>
+</div>
+<span class="font-headline-md text-body-md text-on-surface">Vegetarian (5 pcs)</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary bg-surface-container-lowest px-sm py-xs rounded">3 Varieties</span>
+</a>
+<a class="flex items-center justify-between gap-md p-md bg-surface-container-high rounded-xl hover:bg-surface-bright transition-all" href="#non-vegetarian-section">
+<div class="flex items-center gap-md">
+<div class="w-4 h-4 rounded-sm border border-[#ef4444] flex items-center justify-center p-[2px]">
+<div class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[6px] border-b-[#ef4444]"></div>
+</div>
+<span class="font-headline-md text-body-md text-on-surface">Non-Vegetarian (5 pcs)</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary bg-surface-container-lowest px-sm py-xs rounded">8 Varieties</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Board Games Callout Bar -->
+<section class="w-full bg-surface-container py-md px-margin-mobile lg:px-margin-desktop">
+<div class="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-md">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container">casino</span>
+</div>
+<div>
+<p class="font-headline-md text-body-md text-on-surface">Challenge Your Friends While You Wait</p>
+<p class="font-body-md text-label-mono text-on-surface-variant">Enjoy our cafe board games — Catan, Uno, Chess &amp; Jenga — while your fresh momos are handcrafted!</p>
+</div>
+</div>
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-wider bg-surface-container-lowest px-md py-xs rounded-full">Level: Tastebuds 100%</span>
+</div>
+</section>
+<!-- Menu Content Section -->
+<div class="max-w-[1280px] w-full mx-auto px-margin-mobile lg:px-margin-desktop py-xl flex flex-col gap-xl">
+<!-- 1. VEGETARIAN MOMOS -->
+<section class="flex flex-col gap-lg" id="vegetarian-section">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-sm pb-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-md">
+<div class="w-5 h-5 rounded-sm border border-[#22c55e] flex items-center justify-center p-[2px] shrink-0" title="Pure Vegetarian">
+<div class="w-2.5 h-2.5 rounded-full bg-[#22c55e]"></div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Veg</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Hand-pleated artisan dumplings, 5 pieces per order</p>
+</div>
+</div>
+<span class="font-label-mono text-label-mono text-primary">3 Signature Plates</span>
+</div>
+<!-- Veg Items Grid (3 Columns) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Veg Item 1 -->
+<article class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="relative w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
+<img alt="Mixed Veg Momos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBORKhWGzHK1-grwBMrsdvaBMVDp_uuDkFjVn1CjupunwL0fgWIA5-1pZpclDr8oCV_BISKgL-GWyCp0U1gvWFUnaKPrEbJ0gEE5IZzatQBnCsborNF-JOfX1i9MCwMowZZLQ6pGbQQPfIg5kP-eIMFBz_AarL0VgIXlan568m5CBOyh-nqYrXPpsEs1pdbTnUb6hjin0_1GJE6kmyotxkoDxEje7_8MJa2_zGCzSxmv1-9jkT2W8s"/>
+<div class="absolute top-3 left-3 w-4 h-4 rounded-sm border border-[#22c55e] bg-surface-container-lowest/80 flex items-center justify-center backdrop-blur-sm">
+<div class="w-2 h-2 rounded-full bg-[#22c55e]"></div>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-xs px-sm py-xs bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">schedule</span>
+<span class="font-label-mono text-label-mono text-primary">~12-15 mins</span>
+</div>
+<span class="absolute bottom-3 left-3 font-label-mono text-label-mono text-on-surface bg-surface-container-highest/90 backdrop-blur-sm px-sm py-xs rounded">5 Pieces</span>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Mixed Veg Momos</h3>
+<span class="font-label-mono text-headline-md text-primary-container">₹99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Delicately pleated pan-fried dumplings packed with minced vegetables, ginger, and herbs. Served with fiery schezwan red chutney.</p>
+</div>
+<button class="w-full mt-sm py-sm px-md bg-transparent text-primary hover:bg-primary-container hover:text-on-primary border border-primary-container rounded-lg font-headline-md text-body-md transition-colors flex items-center justify-center gap-xs" onclick="addToCart('Mixed Veg Momos', 99)" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</article>
+<!-- Veg Item 2 -->
+<article class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="relative w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
+<img alt="Paneer Momos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8GFDF3zJx-OKRZ1wp_VSBTH-ZMVCn0d9sG5_M0FtWetJOckBLsBhmdUtCA-qWmwuVTB2pLZNRyFjfP-suEqr5zu5P_3wQNxg2hoA6SUVty3gUy3o-xiWL78dox2Qqj5oWbdBuSCT9vcLAf7EAgT4gjDSC1Vxi3M-c3Jy7Z6Y3Lz7X7JT8nVTT0z67ewmgVf4X-Rl7AuxmS0LxafvkSjHTxsaqq_BnpuqkVpyKwKEX0y8yRFvj1NE"/>
+<div class="absolute top-3 left-3 w-4 h-4 rounded-sm border border-[#22c55e] bg-surface-container-lowest/80 flex items-center justify-center backdrop-blur-sm">
+<div class="w-2 h-2 rounded-full bg-[#22c55e]"></div>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-xs px-sm py-xs bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">schedule</span>
+<span class="font-label-mono text-label-mono text-primary">~12-15 mins</span>
+</div>
+<span class="absolute bottom-3 left-3 font-label-mono text-label-mono text-on-surface bg-surface-container-highest/90 backdrop-blur-sm px-sm py-xs rounded">5 Pieces</span>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Paneer Momos</h3>
+<span class="font-label-mono text-headline-md text-primary-container">₹99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Pan-seared artisan dumplings stuffed with seasoned fresh cottage cheese, mild spices, and coriander.
+              </p>
+</div>
+<button class="w-full mt-sm py-sm px-md bg-transparent text-primary hover:bg-primary-container hover:text-on-primary border border-primary-container rounded-lg font-headline-md text-body-md transition-colors flex items-center justify-center gap-xs" onclick="addToCart('Paneer Momos', 99)" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</article>
+<!-- Veg Item 3 -->
+<article class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="relative w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
+<img alt="Cheese and Corn Momos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzKNAeUXrFfmiFbbLFSH8qn-c6HvZa2skRhZs1xYnFaKSJf5LmHGAkUsatccKJCHTyTS4rfUot04qvClBv1drFyl6AzTOa92fEouuSlRh-DeFLRGgSE1X_SeXqACatELI1aFX_cd_KP02-RCgscrrfr0N9WuNcQKNm8IHCE0YWa1q66pujU2O6Vv-RUTOIjTjGh3XiN-wHQnKa4AYodiPjN4KCZlGYCJgaV2f2UvX3IZcaZOJS_fM"/>
+<div class="absolute top-3 left-3 w-4 h-4 rounded-sm border border-[#22c55e] bg-surface-container-lowest/80 flex items-center justify-center backdrop-blur-sm">
+<div class="w-2 h-2 rounded-full bg-[#22c55e]"></div>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-xs px-sm py-xs bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">schedule</span>
+<span class="font-label-mono text-label-mono text-primary">~12-15 mins</span>
+</div>
+<span class="absolute bottom-3 left-3 font-label-mono text-label-mono text-on-surface bg-surface-container-highest/90 backdrop-blur-sm px-sm py-xs rounded">5 Pieces</span>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Cheese and Corn Momos</h3>
+<span class="font-label-mono text-headline-md text-primary-container">₹110</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Crispy golden dumplings oozing with molten cheese, sweet corn kernels, and aromatic herbs.
+              </p>
+</div>
+<button class="w-full mt-sm py-sm px-md bg-transparent text-primary hover:bg-primary-container hover:text-on-primary border border-primary-container rounded-lg font-headline-md text-body-md transition-colors flex items-center justify-center gap-xs" onclick="addToCart('Cheese and Corn Momos', 110)" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- 2. NON-VEGETARIAN MOMOS -->
+<section class="flex flex-col gap-lg pt-lg" id="non-vegetarian-section">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-sm pb-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-md">
+<div class="w-5 h-5 rounded-sm border border-[#ef4444] flex items-center justify-center p-[2px] shrink-0" title="Non-Vegetarian">
+<div class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[7px] border-b-[#ef4444]"></div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Non-Veg</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Signature handcrafted chicken delicacies, 5 pieces per order</p>
+</div>
+</div>
+<span class="font-label-mono text-label-mono text-primary">8 Loaded Plates</span>
+</div>
+<!-- Non-Veg Items Grid (3 Columns) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Non-Veg Item 1: Classic Chicken -->
+<article class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="relative w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
+<img alt="Classic Chicken Momos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuXkWI8y2rcDCgJA9peSzwnLqU6mQoljGN4fGNtClCwJub6WRhhZOy85fqY8PVGYeTmXsZ8ElhkfZYbQdECdBC-wFYBVk_reRLw05fdcJ7h0qh4AxC-V8ExU2Iv5Mk7nmGqxC2JYD5TkarM8ewTOglc3xHUXXARSt4uttw_YRT7bnCDZdaEEEG2cgiLYqprthvPWpuW5DJ3rFbrPC4lWD33trjQIc41vjCLXf8W5_ew4q8aD02O7c"/>
+<div class="absolute top-3 left-3 w-4 h-4 rounded-sm border border-[#ef4444] bg-surface-container-lowest/80 flex items-center justify-center backdrop-blur-sm">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-[#ef4444]"></div>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-xs px-sm py-xs bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">schedule</span>
+<span class="font-label-mono text-label-mono text-primary">~15-18 mins</span>
+</div>
+<span class="absolute bottom-3 left-3 font-label-mono text-label-mono text-on-surface bg-surface-container-highest/90 backdrop-blur-sm px-sm py-xs rounded">5 Pieces</span>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Classic Chicken Momos</h3>
+<span class="font-label-mono text-headline-md text-primary-container">₹99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Delicately pleated pan-fried crispy chicken dumplings packed with juicy minced chicken, scallions, and herbs, tossed to golden perfection.</p>
+</div>
+<button class="w-full mt-sm py-sm px-md bg-transparent text-primary hover:bg-primary-container hover:text-on-primary border border-primary-container rounded-lg font-headline-md text-body-md transition-colors flex items-center justify-center gap-xs" onclick="addToCart('Classic Chicken Momos', 99)" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</article>
+<!-- Non-Veg Item 2: Peri Peri Chicken -->
+<article class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="relative w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
+<img alt="Peri Peri Chicken Momos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkxROE8YSxjWwYpnz0SkLt2cNNy6TFbM5yaNVmKEu71_ZiSaa8lJiV3km8mXQA-Z7HjpvB6XwUMNhe2JhOTuwJ8XBr3R7lZjGs2lXRLYQ20U2yjyrzvbayOmQr1PCeHkHaPg_2uzF74I9SdE8PrcczhPvFQizricptO4nzrbhd72UrOvbN7x0gSN2InwejA7cxqNJxrmGEG4WndnblH8qw6anBXO97-jA1IVMb0OVkU-LMN0y6T-A"/>
+<div class="absolute top-3 left-3 w-4 h-4 rounded-sm border border-[#ef4444] bg-surface-container-lowest/80 flex items-center justify-center backdrop-blur-sm">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-[#ef4444]"></div>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-xs px-sm py-xs bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">schedule</span>
+<span class="font-label-mono text-label-mono text-primary">~15-18 mins</span>
+</div>
+<span class="absolute bottom-3 left-3 font-label-mono text-label-mono text-on-surface bg-surface-container-highest/90 backdrop-blur-sm px-sm py-xs rounded">5 Pieces</span>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Peri Peri Chicken Momos</h3>
+<span class="font-label-mono text-headline-md text-primary-container">₹99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Crisp pan-fried dumplings generously dusted with vibrant spicy peri-peri spice blend.</p>
+</div>
+<button class="w-full mt-sm py-sm px-md bg-transparent text-primary hover:bg-primary-container hover:text-on-primary border border-primary-container rounded-lg font-headline-md text-body-md transition-colors flex items-center justify-center gap-xs" onclick="addToCart('Peri Peri Chicken Momos', 99)" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</article>
+<!-- Non-Veg Item 3: Korean Momos -->
+<article class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="relative w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
+<img alt="Korean Momos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiPQ8Yh0SIZg35noRIs3vkR6z19bd9i6Aj6kqaMuv-49ysqdJvh_uhYl45MgcP9pLaCkwN-Zime3mq-JBJ3Ywtlhqa0xefkCMopmOEc2yikzk000ejSY5mGGK-6z0rVF9Ra-SVSIzNSWxWrRexlzMaoPl-KrMZv1eixqvQdM9A_tgKT5ronY0QWARfY5XkC_gY6RE2B8Ra6P-i42DPhu6RyjxLU_-W7fki4UibuD2xDkp0jcD8juQ"/>
+<div class="absolute top-3 left-3 w-4 h-4 rounded-sm border border-[#ef4444] bg-surface-container-lowest/80 flex items-center justify-center backdrop-blur-sm">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-[#ef4444]"></div>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-xs px-sm py-xs bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">schedule</span>
+<span class="font-label-mono text-label-mono text-primary">~15-18 mins</span>
+</div>
+<span class="absolute bottom-3 left-3 font-label-mono text-label-mono text-on-surface bg-surface-container-highest/90 backdrop-blur-sm px-sm py-xs rounded">5 Pieces</span>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Korean Momos</h3>
+<span class="font-label-mono text-headline-md text-primary-container">₹110</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Glazed in authentic sweet and spicy Korean gochujang sauce, topped with toasted sesame seeds.
+              </p>
+</div>
+<button class="w-full mt-sm py-sm px-md bg-transparent text-primary hover:bg-primary-container hover:text-on-primary border border-primary-container rounded-lg font-headline-md text-body-md transition-colors flex items-center justify-center gap-xs" onclick="addToCart('Korean Momos', 110)" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</article>
+<!-- Non-Veg Item 4: Chicken Tikka Momos -->
+<article class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="relative w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
+<img alt="Chicken Tikka Momos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdCc0vTu4riEIZUhQKcwi2N8h_NbEvFf9inNwe3BAuvXdWRtboOBY5NDZvpQTcZ0DXD6HzOd6GnpvHg64UzBq8_Pzefs0HP-V9RRiAQbCx2I1ESOMUbISi7yeZyNChxx-8zKN7q_tBUH3Hytld6GFKYnGIf7qQfDM5GOpNaSEhrYJ0wLd8owduQqoD5cmrlUm2yRQd5W-QchzBayrOeb2itn7LCqsXYnS7-AS-ufED4t4t2LycPRI"/>
+<div class="absolute top-3 left-3 w-4 h-4 rounded-sm border border-[#ef4444] bg-surface-container-lowest/80 flex items-center justify-center backdrop-blur-sm">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-[#ef4444]"></div>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-xs px-sm py-xs bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">schedule</span>
+<span class="font-label-mono text-label-mono text-primary">~15-18 mins</span>
+</div>
+<span class="absolute bottom-3 left-3 font-label-mono text-label-mono text-on-surface bg-surface-container-highest/90 backdrop-blur-sm px-sm py-xs rounded">5 Pieces</span>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Chicken Tikka Momos</h3>
+<span class="font-label-mono text-headline-md text-primary-container">₹99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Tandoor-charred chicken momos marinated in rich aromatic tikka spices with mint dip.
+              </p>
+</div>
+<button class="w-full mt-sm py-sm px-md bg-transparent text-primary hover:bg-primary-container hover:text-on-primary border border-primary-container rounded-lg font-headline-md text-body-md transition-colors flex items-center justify-center gap-xs" onclick="addToCart('Chicken Tikka Momos', 99)" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</article>
+<!-- Non-Veg Item 5: Schezwan Momos -->
+<article class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="relative w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
+<img alt="Schezwan Momos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzQHdtE3_8iLy9xbUK7fHs0SMNyKIAu5hJhxvzZP-RwMjHVEuhfGd54f97clFG-ubdmimY2GWBgSKE_AJlKPqZ5OG7AnCLnIUHU75CRS92TEqDpUldT8jDS1ez9vjdAeU-1MVobeD5uvcyLSlmQungykvJJ-Xnjj1DCpOGObSPdMgSEagchmxjweB3sQ6nWXWa9yaKJ2fZAzkPl2k4FsNX4b13O5U5K8E8-u-mArbTSXZJf4wlBZo"/>
+<div class="absolute top-3 left-3 w-4 h-4 rounded-sm border border-[#ef4444] bg-surface-container-lowest/80 flex items-center justify-center backdrop-blur-sm">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-[#ef4444]"></div>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-xs px-sm py-xs bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">schedule</span>
+<span class="font-label-mono text-label-mono text-primary">~15-18 mins</span>
+</div>
+<span class="absolute bottom-3 left-3 font-label-mono text-label-mono text-on-surface bg-surface-container-highest/90 backdrop-blur-sm px-sm py-xs rounded">5 Pieces</span>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Schezwan Momos</h3>
+<span class="font-label-mono text-headline-md text-primary-container">₹99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Wok-tossed in bold fiery Schezwan chili garlic gravy with crushed pepper and spring onions.
+              </p>
+</div>
+<button class="w-full mt-sm py-sm px-md bg-transparent text-primary hover:bg-primary-container hover:text-on-primary border border-primary-container rounded-lg font-headline-md text-body-md transition-colors flex items-center justify-center gap-xs" onclick="addToCart('Schezwan Momos', 99)" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</article>
+<!-- Non-Veg Item 6: Chicken BBQ Momos -->
+<article class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="relative w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
+<img alt="Chicken BBQ Momos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtgO65W-lhToGNcfPVIUcWaR_Db8V1fWt8fQjqVz9MGoDAUcWjrnt5--i0N9C8tXYpXsenXqb-V6t_HYWGWSWLcz3NL-gknfD-1z5v2O-_wtgJEF3bT4zIa4inY71tFoCstLHfLYfskf3wDUzHVanA-e4ScYmJsgEHXXLxWIeuuCv9TIDI5x_zChSJBZYMhBaKeCve0h8YFpF1M-rdDYq9k-bl_prAb4zzsKDeMKUwnpGHJMCZalA"/>
+<div class="absolute top-3 left-3 w-4 h-4 rounded-sm border border-[#ef4444] bg-surface-container-lowest/80 flex items-center justify-center backdrop-blur-sm">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-[#ef4444]"></div>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-xs px-sm py-xs bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">schedule</span>
+<span class="font-label-mono text-label-mono text-primary">~15-18 mins</span>
+</div>
+<span class="absolute bottom-3 left-3 font-label-mono text-label-mono text-on-surface bg-surface-container-highest/90 backdrop-blur-sm px-sm py-xs rounded">5 Pieces</span>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Chicken BBQ Momos</h3>
+<span class="font-label-mono text-headline-md text-primary-container">₹99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Char-grilled dumplings smothered in rich, smoky barbecue sauce with subtle grill marks.
+              </p>
+</div>
+<button class="w-full mt-sm py-sm px-md bg-transparent text-primary hover:bg-primary-container hover:text-on-primary border border-primary-container rounded-lg font-headline-md text-body-md transition-colors flex items-center justify-center gap-xs" onclick="addToCart('Chicken BBQ Momos', 99)" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</article>
+<!-- Non-Veg Item 7: Butter Chicken Momos -->
+<article class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="relative w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
+<img alt="Butter Chicken Momos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoXxVgo4HRA4Q8WmvYVrWT9h0zZutHN9wZlbTT0sqDRxbBiPI_LeG9nwy9GrJDdlTiu9ynWkvDjiby5mfbQqzD7PVD1kT2pYGca_oYTNuJhm3MG56_azciPqUfZp9HgeccIn3fl_JTL6fCj9nRN0xIWdGT0Sap5vZQChL7swebtcAEEmCGR2xN4V15nIizXrZKA2ctRU5kgAh5wd-Mchk0KyIxJjw3joj_2UuxqIg3j8XHkt7KIHY"/>
+<div class="absolute top-3 left-3 w-4 h-4 rounded-sm border border-[#ef4444] bg-surface-container-lowest/80 flex items-center justify-center backdrop-blur-sm">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-[#ef4444]"></div>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-xs px-sm py-xs bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">schedule</span>
+<span class="font-label-mono text-label-mono text-primary">~15-18 mins</span>
+</div>
+<span class="absolute bottom-3 left-3 font-label-mono text-label-mono text-on-surface bg-surface-container-highest/90 backdrop-blur-sm px-sm py-xs rounded">5 Pieces</span>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Butter Chicken Momos</h3>
+<span class="font-label-mono text-headline-md text-primary-container">₹99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Dipped in velvety, rich makhani gravy garnished with fresh cream swirl and fenugreek.
+              </p>
+</div>
+<button class="w-full mt-sm py-sm px-md bg-transparent text-primary hover:bg-primary-container hover:text-on-primary border border-primary-container rounded-lg font-headline-md text-body-md transition-colors flex items-center justify-center gap-xs" onclick="addToCart('Butter Chicken Momos', 99)" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</article>
+<!-- Non-Veg Item 8: Hariyali Momos -->
+<article class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
+<div class="relative w-full aspect-[4/3] bg-surface-container-lowest overflow-hidden">
+<img alt="Hariyali Momos" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvhtbZ4w7vS9Lwzfu_AtXKX7W_UnEHVgpa5LmW9ZS-Uvm5NEmdaPWpVOtOX22GRCXXRM5gXaOPT3HlCPgwYL7vBhkKwR0-B8VDd3oHwlBaczbyDB5gnYiOlSDbpt8jDDcW7Nr8yYLrtQ7CnZbIyoz4hlgLm8MABY_GcXBkQGQgJiGu_hnlIQr8q1-b594_kngrFi9jEnnoF2hBRlSiRgaRDmv_tP09Wh6jx_YI14iCXpGCTQ0cjb4"/>
+<div class="absolute top-3 left-3 w-4 h-4 rounded-sm border border-[#ef4444] bg-surface-container-lowest/80 flex items-center justify-center backdrop-blur-sm">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-[#ef4444]"></div>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-xs px-sm py-xs bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">schedule</span>
+<span class="font-label-mono text-label-mono text-primary">~15-18 mins</span>
+</div>
+<span class="absolute bottom-3 left-3 font-label-mono text-label-mono text-on-surface bg-surface-container-highest/90 backdrop-blur-sm px-sm py-xs rounded">5 Pieces</span>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Hariyali Momos</h3>
+<span class="font-label-mono text-headline-md text-primary-container">₹99</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Coated in a fragrant mint, coriander, and green chili marinade, lightly roasted.
+              </p>
+</div>
+<button class="w-full mt-sm py-sm px-md bg-transparent text-primary hover:bg-primary-container hover:text-on-primary border border-primary-container rounded-lg font-headline-md text-body-md transition-colors flex items-center justify-center gap-xs" onclick="addToCart('Hariyali Momos', 99)" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Interactive Bottom Floating Order Summary / Toast -->
+<div class="fixed bottom-6 right-6 z-40 transform translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-md bg-surface-bright text-on-surface px-lg py-md rounded-xl shadow-2xl border border-primary/20" id="order-toast">
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary text-[18px]">check</span>
+</div>
+<div>
+<p class="font-headline-md text-body-md text-on-surface font-semibold" id="toast-title">Item Added!</p>
+<p class="font-label-mono text-label-mono text-primary" id="toast-subtitle">Ready in ~12-18 mins</p>
+</div>
+</div>
+<!-- Bottom Navigation / Other Categories CTA -->
+<section class="mt-xl p-lg bg-surface-container-low rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-lg">
+<div class="flex flex-col gap-xs">
+<h4 class="font-headline-md text-headline-md text-on-surface">Craving More at Buddies?</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Pair your favorite momos with our artisanal smashed burgers or stone-fired pizzas.</p>
+</div>
+<div class="flex items-center gap-md flex-wrap">
+<a class="px-lg py-sm bg-surface-container-highest hover:bg-surface-bright text-on-surface rounded-lg font-headline-md text-body-md transition-colors" data-path="menu" href="menu page.html">
+          Browse Full Menu
+        </a>
+<a class="px-lg py-sm bg-primary-container text-on-primary hover:bg-primary rounded-lg font-headline-md text-body-md transition-colors" data-path="combos" href="combos page.html">
+          Explore Combos
+        </a>
+</div>
+</section>
+</div>
+<!-- Micro-interaction JS -->
+<script>
+    function addToCart(itemName, price) {
+      const toast = document.getElementById('order-toast');
+      const title = document.getElementById('toast-title');
+      const sub = document.getElementById('toast-subtitle');
+      
+      if (!toast) return;
+
+      title.textContent = itemName + ' Added (₹' + price + ')';
+      sub.textContent = '5 pieces freshly handcrafted';
+      
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      clearTimeout(window.__toastTimeout);
+      window.__toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2500);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant pt-xl pb-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col gap-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl">
+<div class="flex flex-col gap-md">
+<div class="flex items-center gap-sm">
+<img alt="Buddies Cafe" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/>
+<span class="font-headline-md text-headline-md text-primary-container">Buddies Cafe</span></div>
+<p class="font-body-md text-body-md text-on-surface">Eat – Play – Repeat.</p>
+<p class="font-label-mono text-label-mono text-primary">Level up your taste buds.</p></div>
+<div class="flex flex-col gap-sm">
+<h3 class="font-headline-md text-body-md text-on-surface">Address</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Link Road, Anna Nagar, opp to Fresh Point, Virudhunagar-626001</p></div>
+<div class="flex flex-col gap-sm">
+<h3 class="font-headline-md text-body-md text-on-surface">Get in Touch</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Phone: 9345695826</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Instagram: @buddies_vnr</p></div>
+<div class="flex flex-col gap-sm"><h3 class="font-headline-md text-body-md text-on-surface">Explore</h3>
+<nav class="flex flex-col gap-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="menu" href="menu page.html">Menu</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="combos" href="combos page.html">Combos</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="reviews" href="reviews page.html">Reviews</a></nav></div></div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-md pt-lg bg-surface-container-lowest text-center sm:text-left">
+<p class="font-label-mono text-label-mono text-on-surface-variant">© 2024 Buddies Cafe. Eat – Play – Repeat.</p><p class="font-label-mono text-label-mono text-on-surface-variant">Virudhunagar, Tamil Nadu</p></div></div></footer>
+</body></html>

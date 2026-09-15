@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary":"#ffb77d","surface":"#1b110a","on-tertiary-container":"#3d3f3f","secondary-fixed":"#e2e2e2","on-error-container":"#ffdad6","surface-dim":"#1b110a","surface-bright":"#43372e","background":"#1b110a","secondary":"#c6c6c6","on-tertiary":"#2f3131","on-primary-fixed-variant":"#6e3900","on-primary-container":"#623200","on-secondary-fixed":"#1b1b1b","surface-container-highest":"#3f3229","secondary-container":"#474747","tertiary-container":"#a9aaaa","primary-container":"#ff8c00","on-background":"#f3dfd1","on-primary":"#4d2600","secondary-fixed-dim":"#c6c6c6","on-secondary-container":"#b5b5b5","on-secondary":"#303030","on-tertiary-fixed":"#1a1c1c","on-primary-fixed":"#2f1500","surface-variant":"#3f3229","inverse-on-surface":"#3a2e25","outline-variant":"#564334","primary-fixed":"#ffdcc3","on-secondary-fixed-variant":"#474747","inverse-primary":"#904d00","surface-tint":"#ffb77d","inverse-surface":"#f3dfd1","surface-container-lowest":"#150c06","on-surface-variant":"#ddc1ae","on-error":"#690005","primary-fixed-dim":"#ffb77d","tertiary-fixed":"#e2e2e2","tertiary-fixed-dim":"#c6c6c7","surface-container":"#281d15","outline":"#a48c7a","surface-container-low":"#241912","error":"#ffb4ab","surface-container-high":"#33281f","error-container":"#93000a","tertiary":"#c6c6c7","on-tertiary-fixed-variant":"#454747","on-surface":"#f3dfd1"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"64px","gutter":"20px","xl":"40px","margin-mobile":"16px","unit":"4px","sm":"8px","xs":"4px","md":"16px","lg":"24px"},"fontFamily":{"display-hero":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-mono":["JetBrains Mono"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"display-hero":["48px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"1.2","fontWeight":"700"}],"label-mono":["12px",{"lineHeight":"1","letterSpacing":"0.05em","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"1.2","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"1.3","fontWeight":"600"}],"body-md":["16px",{"lineHeight":"1.5","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-md">
+<div class="flex items-center gap-md">
+<img alt="Buddies Cafe" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface">Buddies Cafe</span></div>
+<nav class="hidden lg:flex items-center gap-lg" data-active-classes="bg-primary-container text-on-primary font-headline-md rounded-lg">
+<a class="px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="home" href="home page.html">Home</a>
+<a class="px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="about" href="about page.html">About</a>
+<a aria-current="page" class="px-md py-sm transition-colors bg-primary-container text-on-primary font-headline-md rounded-lg" data-path="menu" href="menu page.html">Menu</a>
+<a class="px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="combos" href="combos page.html">Combos</a>
+<a class="px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="reviews" href="reviews page.html">Reviews</a>
+<a class="px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="contact" href="contact us.html">Contact</a></nav>
+<div class="flex items-center gap-md">
+<a class="hidden sm:inline-flex items-center justify-center bg-primary-container text-on-primary font-headline-md text-body-md px-lg py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" data-path="order-online" href="#">Order Now</a>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header>
+<main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Subtle Amber Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[340px] bg-gradient-to-b from-primary-container/15 via-primary/5 to-transparent blur-3xl pointer-events-none rounded-full"></div>
+<!-- Navigation Breadcrumb & Quick Filter Ribbon -->
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop pt-md pb-xs">
+<div class="flex flex-wrap items-center justify-between gap-sm text-on-surface-variant font-label-mono text-label-mono">
+<div class="flex items-center gap-xs">
+<a class="hover:text-primary transition-colors" data-path="home" href="home page.html">HOME</a>
+<span class="">/</span>
+<a class="hover:text-primary transition-colors" data-path="menu" href="menu page.html">MENU</a>
+<span class="">/</span>
+<span class="text-primary font-bold">DESSERTS</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="inline-flex items-center gap-xs bg-surface-container px-sm py-xs rounded-full text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            KITCHEN LIVE • BAKING &amp; SCOOPING
+          </span>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop py-lg lg:py-xl">
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto gap-md">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-xs px-md py-xs rounded-full bg-surface-container-high text-primary font-label-mono text-label-mono shadow-sm">
+<span class="text-primary-container">✦</span> DECADENT &amp; HANDCRAFTED • FRESHLY BAKED <span class="text-primary-container">✦</span>
+</div>
+<!-- Title -->
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">
+          Desserts
+        </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Eat – Play – Repeat • Warm Fudgy Brownies, Belgian Waffles &amp; Decadent Ice Cream Sundaes
+        </p>
+<!-- Feature Badges -->
+<div class="flex flex-wrap items-center justify-center gap-sm pt-xs">
+<span class="inline-flex items-center gap-xs px-md py-xs rounded-lg bg-surface-container text-on-surface font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[16px] text-primary">bakery_dining</span>
+            Freshly Baked Daily
+          </span>
+<span class="inline-flex items-center gap-xs px-md py-xs rounded-lg bg-surface-container text-on-surface font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[16px] text-primary">cookie</span>
+            Pure Belgian Chocolate
+          </span>
+<span class="inline-flex items-center gap-xs px-md py-xs rounded-lg bg-surface-container text-on-surface font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[16px] text-primary">icecream</span>
+            Artisan Scoops
+          </span>
+<span class="inline-flex items-center gap-xs px-md py-xs rounded-lg bg-surface-container text-on-surface font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-[16px] text-primary">favorite</span>
+            100% Sweet Indulgence
+          </span>
+</div>
+</div>
+</section>
+<!-- Lounge Banner (Game Callout) -->
+<section class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop mb-xl">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high p-md lg:p-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-md shadow-md">
+<div class="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-primary-container/10 to-transparent pointer-events-none"></div>
+<div class="flex items-start sm:items-center gap-md z-10">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[28px]">sports_esports</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Challenge Your Friends While You Wait!</h2>
+<span class="hidden sm:inline-flex px-xs py-0.5 rounded bg-primary/20 text-primary font-label-mono text-[10px] uppercase">Lounge Hub</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">
+              Enjoy our cafe board games — Catan, Uno, Chess &amp; Jenga — while your waffles and sundaes are handcrafted fresh!
+            </p>
+</div>
+</div>
+<div class="z-10 shrink-0 self-stretch sm:self-auto flex items-center">
+<span class="w-full sm:w-auto inline-flex items-center justify-center gap-xs px-lg py-sm rounded-lg bg-surface-container text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[16px]">casino</span>
+            Board Games Free for Diners
+          </span>
+</div>
+</div>
+</section>
+<!-- CATEGORY 01: SUNDAES -->
+<section class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop mb-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-sm mb-lg">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center gap-sm">
+<span class="font-label-mono text-label-mono text-primary font-bold">CATEGORY 01</span>
+<span class="w-8 h-[2px] bg-primary/40"></span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">ICE CREAM PARLOUR</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Sundaes</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Tall chilled glass goblets layered with gourmet ice creams, sauces &amp; crunchy toppings</p>
+</div>
+<div class="hidden md:flex items-center gap-xs text-on-surface-variant font-label-mono text-label-mono">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="">3 ARTISAN FLAVORS</span>
+</div>
+</div>
+<!-- Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Item 1: Kitkat Sundae -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-video bg-surface-container-lowest overflow-hidden">
+<img alt="Kitkat Sundae" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_rrxHHokR9CdiSsOkk_6vL0QtVOrejY7zO_nABbCZ22eTjX_DRS75vFG-I1g7IBwGA8hPGsp5u1Lm2A1u4n2RNDZM7ZEyAN6QWUaichau-LPDOdbx1cBpTXfzCytCHRxv49ANbetsjIwW6xlE85D5hLvxm5vSijnu8EjrJUmxFql0bGJK9jsC6LSnJPEWFdELQR4GGf91CNfgtSn6be_20cG16eKk2bcVtLJimVdtrdTwSdTHluE"/>
+<!-- Prep Badge -->
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 5-10 MINS
+              </span>
+</div>
+<!-- Veg Badge -->
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm" title="Pure Vegetarian">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Kitkat Sundae</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹99</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">KitKat Crisp</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Vanilla Bean</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Chocolate Fudge</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Layers of creamy vanilla ice cream, crunchy KitKat wafer bars, rich chocolate fudge drizzle, and whipped cream.
+              </p>
+</div>
+<div class="pt-xs flex items-center justify-between gap-md">
+<span class="font-label-mono text-label-mono text-on-surface-variant">Chef Special</span>
+<button class="inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Kitkat Sundae', 99)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                Add to Order
+              </button>
+</div>
+</div>
+</div>
+<!-- Item 2: Oreo Sundae -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-video bg-surface-container-lowest overflow-hidden">
+<img alt="Oreo Sundae" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrU9G8XEfYJDcZTtXFvU29MBhmnOybhBY6GIBYFCi2Cyeu-5Bpn7PygZpTFOB7iRqkaMxVahTKUHczfahOgEDfjPTOT0cPTcpDtB-txOOC7yf5aRPPhltGD9c-19uOtpuTYXWr5Egsh0mkx-Fr6zEtch553r4qUxicq4hNn3JcLGWqmtKKujW8bLP7i9pTA6NbtIOtexpCEoNTjIlwfRwDp96y66gYVwrlfruASuCBdalTpPA2VmU"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 5-10 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm" title="Pure Vegetarian">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Oreo Sundae</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹99</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Crushed Oreos</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Cookies &amp; Cream</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Chocolate Drizzle</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Decadent tall sundae layered with cookies &amp; cream ice cream, crushed Oreo crunch, and velvety chocolate sauce.
+              </p>
+</div>
+<div class="pt-xs flex items-center justify-between gap-md">
+<span class="font-label-mono text-label-mono text-on-surface-variant">Bestseller</span>
+<button class="inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Oreo Sundae', 99)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                Add to Order
+              </button>
+</div>
+</div>
+</div>
+<!-- Item 3: Brownie Loaded Sundae -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-video bg-surface-container-lowest overflow-hidden">
+<img alt="Brownie Loaded Sundae" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcAuweLcNWSR1r2JQeQoNtOuJYAWRLJ5cRl9Dle5FontG8BQump92R6oeLddTsvNa_FUGnvG44WntVukE32R_7Pcvtqhsc95BMA6d4i7xbvMNiSl2OGmAFjNetOPYzpHbSmbgPCmM3pihS522hW0RLUqAUqQ4c83at6n56OHc15F3K9bWqiEpmI4jH-YXINFL9P6xZz0GAom_Z3yZKzfVwsmDMAJNq3RfyPEkqU48Z-gu3QK-wbts"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 8-12 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm" title="Pure Vegetarian">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Brownie Loaded Sundae</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹120</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Warm Brownie Chunks</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Vanilla Scoops</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Toasted Nuts</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Artisan dessert goblet loaded with rich fudge brownie cubes, vanilla ice cream, hot chocolate drizzle, and roasted nuts.
+              </p>
+</div>
+<div class="pt-xs flex items-center justify-between gap-md">
+<span class="font-label-mono text-label-mono text-on-surface-variant">House Signature</span>
+<button class="inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Brownie Loaded Sundae', 120)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+                Add to Order
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CATEGORY 02: BROWNIES -->
+<section class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop mb-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-sm mb-lg">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center gap-sm">
+<span class="font-label-mono text-label-mono text-primary font-bold">CATEGORY 02</span>
+<span class="w-8 h-[2px] bg-primary/40"></span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">OVEN FRESH FUDGE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Brownies</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Warm, fudgy melt-in-the-mouth cocoa squares baked with premium chocolate</p>
+</div>
+<div class="hidden md:flex items-center gap-xs text-on-surface-variant font-label-mono text-label-mono">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="">4 FUDGY SPECIALTIES</span>
+</div>
+</div>
+<!-- Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+<!-- Item 1: Dark Chocolate Brownie -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="Dark Chocolate Brownie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdeuNnNjwfY5kKU0hQMWZHk8PXadwtxD8nB9NDPdY6GYL6APoIeH36XtB2uwRkY-qFK_rsV9qA_yIXIFB6zNF50mN9fpIBsEpBElh6_QTSz4NNGAJnTrR4khuFcRWWJ71x7So6MKlJz0gmMUETHIBASUsUeYdXgbrNiEOMlqWpbA8FH9WGjW1H_HzuV-125O1rEa1uB3xy9ZSkKa7U_ULJ7s5mfNX591b_SPW_PFh9MP3F65pYrX4"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 5-8 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm" title="Pure Vegetarian">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Dark Chocolate Brownie</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹99</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Rich Fudgy Cocoa</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Dark Ganache</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                Intense dark chocolate fudge brownie with a glossy dark ganache glaze and artisan chocolate curls.
+              </p>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Dark Chocolate Brownie', 99)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              Add to Order
+            </button>
+</div>
+</div>
+<!-- Item 2: Milk Chocolate Brownie -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="Milk Chocolate Brownie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQbRUbFDt5BldO9lt4w0HtjT0rq-EsNVYAYtL-p53TVyewUigHpmYnxpivKcqBMHSykSWT3SgHMYM4Y830uPv3MWLiHbfQMkKLK6PiDBtEFtd0PIIhStyLbKmmejQ_ZrlwmBXaLhbFeBr9dpDZOGMnSZLGap0d6OfGIanFcBkKsW4iBNmf05C2nb96Mq53zWlEiVeDW3eoRIiF3HAKzl4OIIG9jCn8mTXdhz3DUmPDEHEDgu7snUw"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 5-8 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm" title="Pure Vegetarian">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Milk Chocolate Brownie</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹99</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Silky Milk Choco</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Ganache Drizzle</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                Smooth, velvety milk chocolate brownie drizzled with warm chocolate glaze and chocolate shavings.
+              </p>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Milk Chocolate Brownie', 99)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              Add to Order
+            </button>
+</div>
+</div>
+<!-- Item 3: White Chocolate Brownie -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="White Chocolate Brownie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgY-LZsDHZSFOZtaDMpTQeCD0pvgtPxilm-xUtH9Z-MKtTFMVo5yg40qIdFHvFBFfPEKrhao9Wm5IUr4z3zQOjJXgO-KmuTGpMIs9ez5a_nVf2hH5yVzuSBEw6orVQLzEuX3iuHGRq_ki6wDDMPjcUFdc8VGUz16Yfhz2YiV3pJjuHir5aKygN3gUL2s6V1khF4MLwSoWMbFqUgGE9xQ6TxJp-v_AP9aqcE9YnGdPeibYDhb4Y_co"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 5-8 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm" title="Pure Vegetarian">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">White Choco Brownie</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹99</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">White Curls</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Soft Baked</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                Decadent blonde brownie infused with creamy white chocolate chunks and rich white vanilla drizzle.
+              </p>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('White Chocolate Brownie', 99)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              Add to Order
+            </button>
+</div>
+</div>
+<!-- Item 4: Brownie with Ice Cream -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="Brownie with Ice Cream" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLjUb0-P5KEkxanpJ7NIJcKr_ZRB-RT-Y5Y0F0-v18P4c4cW5q-1kZgw9yN1mlyJYyvDCPNNX8yQb0ls0C0rRI7aMKRwRZjz8wRE6mW4cl0hlfvY0sMxE4I4xFQf_f_IWrq0bfQSrtv9cWQ-JuilaOrJ34aUuMkury8lTdDt3AdfJee_khLL6rufldiw3e2N32YQIm8Y8jvM_r7rm1avPBTeDn2W-yLo-10yvrD1VyfUSpEjYQc5E"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 8-10 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm" title="Pure Vegetarian">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Brownie + Ice Cream</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹120</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Sizzling Brownie</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Vanilla Scoop</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">
+                Warm artisan fudge brownie served with a generous scoop of vanilla bean ice cream and cascading hot fudge sauce.
+              </p>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Brownie with Ice Cream', 120)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              Add to Order
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- CATEGORY 03: WAFFLES -->
+<section class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop mb-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-sm mb-lg">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center gap-sm">
+<span class="font-label-mono text-label-mono text-primary font-bold">CATEGORY 03</span>
+<span class="w-8 h-[2px] bg-primary/40"></span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">BELGIAN CRISP GRIDS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Waffles</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Crispy golden Belgian waffle grids smothered in gourmet glazes and artisan drizzles</p>
+</div>
+<div class="hidden md:flex items-center gap-xs text-on-surface-variant font-label-mono text-label-mono">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="">8 DECADENT TOPPINGS</span>
+</div>
+</div>
+<!-- Card Grid (8 Items Bento Grid) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+<!-- 1. Milk Chocolate Waffles -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="Milk Chocolate Waffles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnRtMLitBMzD6wTEIO69ZF-3Jvg7eozkLoi9mP9fG4l4cY2Lq3OsxZTuIdusBOm4II360uHRlkYBjOVYD1RRo4te-4SlGbkeH4d8YL_D3hlKk7Fm0ufNlNdH-Xu25k7ff6hvYlDy_Jh9sVYZ3623LX_s4PbtT926VKfZCpkptcXb0GovRNdzRRf-kwpP12SPb-0TOH_v6y4SOZSrsrq9WyCboL7BTDeuGaMhZ9rFRPmP-0G70-m7o"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 10-15 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Milk Choco Waffles</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹99</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Belgian Grid</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Milk Drizzle</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Freshly pressed crispy golden waffle grids smothered with generous milk chocolate sauce and crunchy choco chips.
+              </p>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Milk Chocolate Waffles', 99)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              Add to Order
+            </button>
+</div>
+</div>
+<!-- 2. White Chocolate Waffles -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="White Chocolate Waffles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmm5Dw8W_ZUH5vsTayEy3S34XXxOR2Fh7AXy-WzP8Lk889k1iLutWTQje5HZdI-8M7WZth5PX93J80cKNV8SHrulcip4CMaPJTFeNnZh_8_bG2X6RRSliO40iNwcWLwqs_R_JMH4NaY2nbmTinZKtiA77goMUP1Y2sHLqHTX8grKnrx8UuLVOmzZIT9DOv8-k6p7iQYhtrrLcMwfjC_MlxOG3oPU-_hepTYK5iJeDbbzDymFZez0c"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 10-15 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">White Choco Waffles</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹99</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Silky White</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Golden Crisp</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Golden crisp Belgian waffle smothered in velvety white chocolate ganache with sweet berry accents.
+              </p>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('White Chocolate Waffles', 99)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              Add to Order
+            </button>
+</div>
+</div>
+<!-- 3. Dark Chocolate Waffles -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="Dark Chocolate Waffles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDLtF6BrlECKgIL1_8DtCemgYCNFAT2LTNDWcx1qiGLsU43UFv-u7cvEQyu-JN32dNRla1ut3YgiHEqcgP20KKvJojTLv96dLo3CYH61ZNaWyI_JP0y94aG-EmZ86KEedeJUzPgznMi6RbITDpE2OafSfBj7HO9aUooGbeLg0j4lEd8elxts3njaOOX7rr5SjG58r9uSAOIwIn5XvQTNjSFpDv815kQtHSwhhn1EA47yb8OICyI0k"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 10-15 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Dark Choco Waffles</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹99</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Dark Cocoa</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Chocolate Curls</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Decadent waffle drizzled heavily with rich bittersweet dark chocolate sauce and finished with cocoa shavings.
+              </p>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Dark Chocolate Waffles', 99)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              Add to Order
+            </button>
+</div>
+</div>
+<!-- 4. Cookie and Cream Waffles -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="Cookie and Cream Waffles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1gGhlFkGuc6EkKUXyC7_eEnhYILwnJIrU52R3_szV4mmYvV3KJ0B_pAyUcPMZ2GX0GkYKiGLhTsacJjXuY_yuOWJMc1tl8ChObvoC1siAgQcKhyuWmm-r-0ez2sthvUUnByL2vyJ5eJlOkZl_xrHz75qwtcQuXfWB_YuwamnSFKDbZPGmcce5K-oWezgZWZEB6j7vHoWp627I-CHrhsMiiCwLHbs6dpstsccRL7w8FoqkfRvMooU"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 10-15 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Cookie &amp; Cream Waffles</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹120</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Oreo Crumbs</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Cream Glaze</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Crunchy waffle layered with generous Oreo cookies-and-cream ice cream and drizzled with vanilla glaze.
+              </p>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Cookie and Cream Waffles', 120)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              Add to Order
+            </button>
+</div>
+</div>
+<!-- 5. Cotton Candy Waffles -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="Cotton Candy Waffles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDroHbb1ZecYxifhBTkneaThlFi2Fmhg7aev99h9JC-E2QXZC7Y6N9Jkf80oU5APYLO1zPQ0FnfdSJRs6Wxb-wyvM0ynusozYmSWkMmT-TfFstqDqFR8XPK75kt_fjtn30IDiBlgfMauSReXywhwcZcL6MefebSK9CQKZX8W0S8IYVE7yMyYgTJaoQ5isTOBoAxYzNS9VqJyLSx-NPH7e1GCmk0pwln7hyNTMKcCfotg1aV7s88RA0"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 10-15 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Cotton Candy Waffles</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹120</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Pastel Cloud</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Berry Swirl</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Fluffy golden waffle crowned with playful cotton candy cloud swirls and strawberry drizzle for the sweet tooth.
+              </p>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Cotton Candy Waffles', 120)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              Add to Order
+            </button>
+</div>
+</div>
+<!-- 6. Butterscotch Waffles -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="Butterscotch Waffles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRCtziYJkm0nUKYgicShqbX0efMgpi4s8e3J-3Rntqiak-ZAfzCVLnb0tSnqtuVCYwBKvFrxFROc-XPQMFKCe6FgyNBb2jvfpgeq9LZGDix4zD0biFY7igaO8r3q8MURREcz7UcJTTjlKTkixDjwGahim0XQMQc50QB4qPIQe-3fjjn7pwnBTWA4RoJp5JVK2g5MWJUwl1S0Bt8ws6FRah23wcKDpqtJSKdhmpY6eseCMfEH9-gdA"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 10-15 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Butterscotch Waffles</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹120</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Buttery Caramel</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Crunchy Bits</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Fresh golden waffle drenched in warm butterscotch caramel sauce and sprinkled with crunchy butterscotch bits.
+              </p>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Butterscotch Waffles', 120)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              Add to Order
+            </button>
+</div>
+</div>
+<!-- 7. Malai Waffles -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="Malai Waffles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Z7VRy4fWvY77kHrmwpyu5m5zgqjV6qxylJ03Mvi6xe7WS7thsR0DPRJdPuRguFMFKi3-Zvx3uh1NC8T900QYw3g7e7UgRTcSodQHsNNGIF7HHBM4uF2wapEa609S6gHq8zVfgXjEtLTWgZHzUAWeD0CU8ci4Uu0nbapEQW_oKXIflfYABYDJsyfw8eaq_uLvNg92_hDfhjzPuwNm1luqmR_R85Hcg1q-rJ0nqvWHg6ZHMo5LHaw"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 10-15 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Malai Waffles</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹130</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Cardamom Malai</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Pistachio Saffron</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Royal fusion dessert waffle soaked in rich cardamom-infused malai cream, garnished with pistachios and saffron.
+              </p>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Malai Waffles', 130)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              Add to Order
+            </button>
+</div>
+</div>
+<!-- 8. Nutella Waffles -->
+<div class="group flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden">
+<img alt="Nutella Waffles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtRdpXLIbbCTskkEqF5DagarmH_Cd3IGU0i3YzxndtGs-2zfYC3I7PfuOyKH04kIxzg_5CjE0JUyjtZYY4F_496FzNtAc9zwtX4uFKCLywFMgyqk5h2oFDjv5mUMzJgEbzqF7DUSJLHXrePb2rJ6Mw88OpauNeSyK4ZbIQFawMfLVy2yyBS1g253uNwydRZW3wF3Ud49sLls3L1Fj3LdpcfT5JbEb1oZsWfFQJEv0Mf3zkMdijsq0"/>
+<div class="absolute top-sm right-sm z-10">
+<span class="inline-flex items-center gap-xs px-sm py-xs rounded bg-surface/90 backdrop-blur-md text-primary font-label-mono text-label-mono shadow-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 10-15 MINS
+              </span>
+</div>
+<div class="absolute top-sm left-sm z-10">
+<div class="w-5 h-5 bg-surface/90 backdrop-blur-md rounded flex items-center justify-center shadow-sm">
+<div class="w-3 h-3 border-2 border-emerald-500 rounded-sm flex items-center justify-center p-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-md">
+<div class="flex flex-col gap-xs">
+<div class="flex items-start justify-between gap-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Nutella Waffles</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹140</span>
+</div>
+<div class="flex flex-wrap gap-xs my-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Pure Hazelnut</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Hazelnut Praline</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+                Signature warm Belgian waffle lavishly covered in rich creamy Nutella and roasted chopped hazelnut praline.
+              </p>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-md py-sm rounded-lg hover:bg-primary transition-colors shadow-sm" onclick="addToCart('Nutella Waffles', 140)">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+              Add to Order
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Callout Banner before Footer -->
+<section class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop mb-xl">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high p-lg lg:p-xl shadow-lg">
+<div class="absolute -right-16 -bottom-16 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-lg text-center md:text-left">
+<div class="flex flex-col gap-sm max-w-2xl">
+<span class="font-label-mono text-label-mono text-primary font-bold tracking-wider uppercase">PAIR &amp; LEVEL UP</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Craving More at Buddies?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Pair your sweet artisan waffles and sundaes with smoky burgers, stone-fired pizzas, or chilled gaming mocktails while dominating the board game table.
+            </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-md shrink-0 w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-xs bg-primary-container text-on-primary font-headline-md text-body-md px-lg py-sm rounded-lg hover:bg-primary transition-colors shadow-md" data-path="combos" href="combos page.html">
+<span class="material-symbols-outlined text-[20px]">lunch_dining</span>
+              Explore Combos
+            </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-xs bg-surface-container text-on-surface font-headline-md text-body-md px-lg py-sm rounded-lg hover:bg-surface-container-highest transition-colors shadow-sm" data-path="menu" href="menu page.html">
+<span class="material-symbols-outlined text-[20px]">restaurant_menu</span>
+              View Full Menu
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Page Quick Info / Footer Specs -->
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop py-lg text-on-surface-variant font-label-mono text-label-mono flex flex-wrap items-center justify-between gap-md border-none">
+<div class="flex items-center gap-md">
+<img alt="Buddies Cafe" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/>
+<span class="">BUDDIES CAFE • VIRUDHUNAGAR</span>
+</div>
+<div class="flex flex-wrap items-center gap-lg">
+<span class="">⏰ HOURS: 11:00 AM - 11:00 PM</span>
+<span class="">📞 ORDER HOTLINE: 9345695826</span>
+<span class="">📸 INSTAGRAM: @buddies_vnr</span>
+</div>
+</div>
+</div>
+<!-- Micro-interaction Toast for Order Actions -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toast-notification">
+<div class="bg-surface-bright text-on-surface px-lg py-sm rounded-xl shadow-2xl flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-body-md text-body-md font-medium" id="toast-message">Added to order!</span>
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+</div>
+</div>
+<script>
+    function addToCart(itemName, price) {
+      const toast = document.getElementById('toast-notification');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast && toastMsg) {
+        toastMsg.innerText = itemName + ' (₹' + price + ') added!';
+        toast.classList.remove('translate-y-24', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+        setTimeout(() => {
+          toast.classList.remove('translate-y-0', 'opacity-100');
+          toast.classList.add('translate-y-24', 'opacity-0');
+        }, 2200);
+      }
+    }
+  </script>
+</div></main>
+<footer class="w-full bg-surface-container-lowest text-on-surface-variant pt-xl pb-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin-desktop flex flex-col gap-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl">
+<div class="flex flex-col gap-md">
+<div class="flex items-center gap-sm">
+<img alt="Buddies Cafe" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/>
+<span class="font-headline-md text-headline-md text-primary-container">Buddies Cafe</span></div>
+<p class="font-body-md text-body-md text-on-surface">Eat – Play – Repeat.</p>
+<p class="font-label-mono text-label-mono text-primary">Level up your taste buds.</p></div>
+<div class="flex flex-col gap-sm">
+<h3 class="font-headline-md text-body-md text-on-surface">Address</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Link Road, Anna Nagar, opp to Fresh Point, Virudhunagar-626001</p></div>
+<div class="flex flex-col gap-sm">
+<h3 class="font-headline-md text-body-md text-on-surface">Get in Touch</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Phone: 9345695826</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Instagram: @buddies_vnr</p></div>
+<div class="flex flex-col gap-sm">
+<h3 class="font-headline-md text-body-md text-on-surface">Explore</h3>
+<nav class="flex flex-col gap-xs">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="menu" href="menu page.html">Menu</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="combos" href="combos page.html">Combos</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="reviews" href="reviews page.html">Reviews</a></nav></div></div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-md pt-lg bg-surface-container-lowest text-center sm:text-left">
+<p class="font-label-mono text-label-mono text-on-surface-variant">© 2024 Buddies Cafe. Eat – Play – Repeat.</p>
+<p class="font-label-mono text-label-mono text-on-surface-variant">Virudhunagar, Tamil Nadu</p></div></div></footer>
+</body></html>

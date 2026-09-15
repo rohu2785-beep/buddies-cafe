@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style="">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Buddies Cafe</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#c6c6c7", "on-surface-variant": "#ddc1ae", "primary-fixed": "#ffdcc3", "on-primary-fixed": "#2f1500", "tertiary-container": "#a9aaaa", "primary": "#ffb77d", "secondary": "#c6c6c6", "on-tertiary-fixed": "#1a1c1c", "secondary-fixed": "#e2e2e2", "surface-container-high": "#33281f", "surface-container-highest": "#3f3229", "surface": "#1b110a", "on-secondary-fixed": "#1b1b1b", "outline-variant": "#564334", "on-secondary-fixed-variant": "#474747", "secondary-fixed-dim": "#c6c6c6", "surface-tint": "#ffb77d", "error-container": "#93000a", "outline": "#a48c7a", "on-primary-container": "#623200", "surface-container-lowest": "#150c06", "primary-fixed-dim": "#ffb77d", "inverse-surface": "#f3dfd1", "surface-container": "#281d15", "background": "#1b110a", "surface-dim": "#1b110a", "on-tertiary-container": "#3d3f3f", "error": "#ffb4ab", "secondary-container": "#474747", "on-surface": "#f3dfd1", "on-tertiary-fixed-variant": "#454747", "surface-variant": "#3f3229", "tertiary-fixed": "#e2e2e2", "on-background": "#f3dfd1", "on-primary-fixed-variant": "#6e3900", "on-error": "#690005", "on-primary": "#4d2600", "on-secondary": "#303030", "surface-bright": "#43372e", "primary-container": "#ff8c00", "inverse-on-surface": "#3a2e25", "on-secondary-container": "#b5b5b5", "surface-container-low": "#241912", "on-error-container": "#ffdad6", "inverse-primary": "#904d00", "on-tertiary": "#2f3131", "tertiary": "#c6c6c7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "xl": "40px", "margin-mobile": "16px", "margin-desktop": "64px", "xs": "4px", "lg": "24px", "sm": "8px", "md": "16px", "unit": "4px", "gutter": "20px" }, "fontFamily": { "headline-lg-mobile": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "display-hero": [ "Plus Jakarta Sans" ], "label-mono": [ "JetBrains Mono" ], "body-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg-mobile": [ "28px", { "lineHeight": "1.2", "fontWeight": "700" } ], "headline-lg": [ "28px", { "lineHeight": "1.2", "fontWeight": "700" } ], "headline-md": [ "24px", { "lineHeight": "1.3", "fontWeight": "600" } ], "body-md": [ "16px", { "lineHeight": "1.5", "fontWeight": "400" } ], "display-hero": [ "48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "label-mono": [ "12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" } ], "body-lg": [ "18px", { "lineHeight": "1.6", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<div class="h-16 w-full px-md md:px-margin-desktop flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<img alt="Buddies Cafe" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/>
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight font-bold">BUDDIES</span></div>
+<nav class="hidden lg:flex items-center gap-lg" data-active-classes="text-primary-container font-semibold">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="home" href="home page.html">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="about" href="about page.html">About</a>
+<a aria-current="page" class="transition-colors text-primary-container font-semibold" data-path="menu" href="menu page.html">Menu</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="combos" href="combos page.html">Combos</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="reviews" href="reviews page.html">Reviews</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" data-path="contact" href="contact us.html">Contact</a></nav>
+<div class="flex items-center gap-md">
+<a class="hidden sm:inline-flex items-center justify-center px-md py-sm bg-primary-container text-on-primary-container font-headline-md text-body-md rounded-lg hover:bg-primary transition-colors" data-path="order-now" href="#">Order Now</a>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header>
+<main class="w-full pt-16 bg-background">
+<div class="flex flex-col w-full">
+<!-- BREADCRUMBS & TOP NAV CONTEXT -->
+<section class="w-full px-md md:px-margin-desktop pt-md pb-xs">
+<div class="flex items-center gap-xs text-label-mono font-label-mono text-on-surface-variant">
+<a class="hover:text-primary transition-colors" data-path="home" href="home page.html">Home</a>
+<span class="">/</span>
+<a class="hover:text-primary transition-colors" data-path="menu" href="menu page.html">Menu</a>
+<span class="">/</span>
+<span class="text-primary-container font-semibold">Chicken &amp; Coastal Tenders</span>
+</div>
+</section>
+<!-- HERO SECTION -->
+<section class="w-full px-md md:px-margin-desktop py-lg">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-lowest p-lg md:p-xl shadow-xl">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-md max-w-3xl">
+<div class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-surface-bright/80 w-fit">
+<span class="material-symbols-outlined text-primary text-[18px]">local_fire_department</span>
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-wider">Crispy &amp; Golden • House Seasoned &amp; Glazed</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight">
+          Chicken Tenders &amp; Coastal Tenders
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<span class="text-primary-container font-semibold">Eat – Play – Repeat</span> • Sizzling, Hand-Breaded, Tossed in Fiery Glazes &amp; Fresh from the Coast
+        </p>
+<!-- Feature Pills -->
+<div class="flex flex-wrap items-center gap-sm pt-xs">
+<span class="px-md py-xs rounded-lg bg-surface-container-highest text-on-surface font-label-mono text-label-mono flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span> Fresh Cuts
+          </span>
+<span class="px-md py-xs rounded-lg bg-surface-container-highest text-on-surface font-label-mono text-label-mono flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">layers</span> Double Crunch Batter
+          </span>
+<span class="px-md py-xs rounded-lg bg-surface-container-highest text-on-surface font-label-mono text-label-mono flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">ramen_dining</span> House Dips &amp; Glazes
+          </span>
+<span class="px-md py-xs rounded-lg bg-surface-container-highest text-on-surface font-label-mono text-label-mono flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">stars</span> 100% Signature Taste
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- GAMING CALLOUT BANNER -->
+<section class="w-full px-md md:px-margin-desktop pb-lg">
+<div class="rounded-xl bg-surface-container p-md md:p-lg flex flex-col sm:flex-row items-center justify-between gap-md shadow-md">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container text-[28px]">sports_esports</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-body-lg text-on-surface font-semibold">Challenge Your Friends While You Wait!</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Enjoy our cafe board games — Catan, Uno, Chess &amp; Jenga — while your tenders are sizzling crisp!</p>
+</div>
+</div>
+<button class="shrink-0 px-md py-sm rounded-lg bg-surface-bright text-primary hover:bg-surface-container-highest font-headline-md text-body-md transition-colors flex items-center gap-xs">
+<span class="material-symbols-outlined text-[20px]">casino</span>
+<span class="">Board Games Free for Diners</span>
+</button>
+</div>
+</section>
+<!-- SECTION 1: CHICKEN TENDERS -->
+<section class="w-full px-md md:px-margin-desktop py-lg">
+<!-- Category Header -->
+<div class="flex flex-col gap-xs pb-lg">
+<div class="flex items-center gap-sm">
+<!-- Non-Veg Icon Indicator -->
+<span class="w-4 h-4 rounded-[2px] bg-surface-container-highest flex items-center justify-center p-[2px]">
+<span class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[8px] border-b-error"></span>
+</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">🍗 Chicken Tenders (3 pcs &amp; Signature Cuts)</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Crispy fried tenders, wings, lollipops and house specials seasoned with Buddies secret crunch coating.</p>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Card 1: Fried Chicken Strips -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Golden crisp fried chicken tenders strips placed on a dark slate board with house made spicy mayo dip and parsley in ambient cafe lighting" src="https://lh3.googleusercontent.com/aida/AEtjO1Wjh2_mP-3lGPNWgyUMTDvjN5XWL_D2DMM71njA1wuh4vyedkZLQyIptaqhVHwwzxvBNgUC3tGkJQ6EX7Qcv7G56mQgZKfIHmv7jSS4DE1qNYWSBL1m0FcQ77PwsXLxOUwNLddikyOcKFlj_rjvoYBRv5-7qwFUSvSKFKiOZX0JLZjI5BVT4xnwn_ReBonDgtMQKj-BRv3mnaU65qcxKeLpcPGfhl_axoextM_e7tkx7TDBA39RCiVFWg"/>
+<div class="absolute top-sm right-sm px-xs py-[2px] rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">timer</span>
+<span class="font-label-mono text-label-mono text-primary-fixed">~10-15 mins</span>
+</div>
+<div class="absolute top-sm left-sm w-4 h-4 rounded-[2px] bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center">
+<span class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[6px] border-b-error"></span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between gap-sm">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">Fried Chicken Strips (3 pcs)</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹110</span>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Crunchy Breaded</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Tender Chicken Breast</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Garlic Mayo Dip</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+              Golden hand-breaded crispy chicken strips fried to tender juicy perfection, served with house special spicy garlic dip.
+            </p>
+</div>
+<button class="w-full mt-sm py-sm px-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Fried Chicken Wings -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-highest">
+<img alt="Gourmet Fried Chicken Wings" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xt6alVBSaNEel822LlUALCg6VAwaeejWCknAsDG2hv8rNj8jX62cAMKQpC97jTSDn3-4H10X7b8fXf-lSwe6uedK5wRLFiMFeC25pqkw9AJOnXr64fVKJXpL6hzV3ibY1P1zsz7RGvkl4T9QUEyNZ-fKcgNNFU7B8g9Z5h9LM0YJCqaF3Uo0aQukvHEGKZc1KOaM-7AU96DsEuKjxs7sGXSycpzTunohua9VtcDXT4Xpl_i1I2MppY5w"/>
+<div class="absolute top-sm right-sm px-xs py-[2px] rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">timer</span>
+<span class="font-label-mono text-label-mono text-primary-fixed">~10-15 mins</span>
+</div>
+<div class="absolute top-sm left-sm w-4 h-4 rounded-[2px] bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center">
+<span class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[6px] border-b-error"></span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between gap-sm">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">Fried Chicken Wings (3 pcs)</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹110</span>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Golden Crisp</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Subtle Herbs</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Garlic Aioli</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+              Succulent 3-piece chicken wings with a crisp herb-crusted coating, seasoned to perfection and served with cooling garlic mayo.
+            </p>
+</div>
+<button class="w-full mt-sm py-sm px-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Red Dragon Strips -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-highest">
+<img alt="Gourmet Red Dragon Chicken Strips" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WT0xuUQQ_4SsJEy0ULVQAsD5y8JW4X3ic0YZsIsp3yH0FaiW4EtUqTve6G_6McjVLkW6lWu7A7PqMPvRDeDokJJsJe3gWrdmryyabRA2EclezCc2-2ScD9z-m1BbFvckRDmclGBro3UrEwINkKbg7azxK5ZbpOEQ8fkMYKFJE5RfrTUn1vMQEvcfT8RfHXEK2xi2zSJtsp4lvcnPvElQo6bBNinzmbyj8Oal7a9EV94h6m-mNYPoNoNQ"/>
+<div class="absolute top-sm right-sm px-xs py-[2px] rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">timer</span>
+<span class="font-label-mono text-label-mono text-primary-fixed">~12-15 mins</span>
+</div>
+<div class="absolute top-sm left-sm w-4 h-4 rounded-[2px] bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center">
+<span class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[6px] border-b-error"></span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between gap-sm">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">Red Dragon Strips (3 pcs)</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹130</span>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Fiery Dragon Glaze</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Crushed Chili</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Spring Onions</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+              Spicy glazed crispy chicken tenders tossed in fiery red dragon sauce with roasted chili flakes and fresh spring onions.
+            </p>
+</div>
+<button class="w-full mt-sm py-sm px-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Fried Chicken Popcorn -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-highest">
+<img alt="Gourmet Fried Chicken Popcorn" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VGpKI9nPiDqWxZzCKDqiHvDmxWPTdO974Y1NzxE0hOUc_EfAho9fQjrJyR7PIxCdz-FcJqcy5N8TGXm6qnywfFhHYn16lGb2-a0gXJLUMt16nqLRQXjyvR8qjPd6fN5qZy8WfZZVh4tVbAJ0lE9Xjrb3PMICWzniWx9DgXnP8hvXDP-HSyNEDvc1Riha_aEbsSzPM4M5QQ5dEK_eBE4PwM0rbT8Q2dLaixmSALHome8qr3qpggneOO"/>
+<div class="absolute top-sm right-sm px-xs py-[2px] rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">timer</span>
+<span class="font-label-mono text-label-mono text-primary-fixed">~10 mins</span>
+</div>
+<div class="absolute top-sm left-sm w-4 h-4 rounded-[2px] bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center">
+<span class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[6px] border-b-error"></span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between gap-sm">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">Fried Chicken Popcorn</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹99</span>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Bite-Sized Crunchy</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">House Masala</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Tangy Dip</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+              Irresistible bite-sized crispy chicken poppers seasoned with cafe spices, perfect for snacking while rolling dice over board games.
+            </p>
+</div>
+<button class="w-full mt-sm py-sm px-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Card 5: Buddies Fried Chicken (2 pcs) -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Two large golden fried chicken pieces in a rustic metal wire basket lined with parchment paper, accompanied by creamy house dip in a dark cafe lounge with ambient bokeh" src="https://lh3.googleusercontent.com/aida/AEtjO1X0oeNrZqpBoIuXiwsLvWBL5f_1Xp1wnRIUqYqZR0YpHVVnDmMhTBjJrHDgGUlkMaQxj4lNytMUylU1jh9xI6xIc7m8GghFUkZ6XJdr9zbmuJa1DsSgVbY8y8i3nBmgtcYAwCNAsyEAG91GVsvRWL6Ja4bb14cPjmeVopDvKOkvU0P9LKxHxEbDt09bMOXSQpLRsAiSZ9N-lFYbtTYc1_s2Gk8clcRRp1XkZX2MAPsE1E2OgtnkFXIVGw"/>
+<div class="absolute top-sm right-sm px-xs py-[2px] rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">timer</span>
+<span class="font-label-mono text-label-mono text-primary-fixed">~15 mins</span>
+</div>
+<div class="absolute top-sm left-sm w-4 h-4 rounded-[2px] bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center">
+<span class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[6px] border-b-error"></span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between gap-sm">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">Buddies Fried Chicken (2 pcs)</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹120</span>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Southern Crunchy</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Large Juicy Pieces</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">House Dip</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+              Two large pieces of authentic golden crunchy fried chicken with tender, juicy meat inside, served steaming hot in a wire basket.
+            </p>
+</div>
+<button class="w-full mt-sm py-sm px-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Card 6: Fried Chicken Lollipop (3 pcs) -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-highest">
+<img alt="Gourmet Fried Chicken Lollipop" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Vbwl0BwR7-kEGjtMPSdlHKKJp60F29JD52N09InTlEsEQV_Gkt4lLxdbOuIdNhlGJHWHkfVXpVLaxdJt724Kk7ta9IcNf1er6tTUipoTvPcIRGfFgt7CFrPIsE-Sr2eu94RRQlM_1XMf6LjvJguTFNrPUEnCe3EuCM5I291Ydglgj5reOA6ERJos2jtjfQVfJbcn_07sFMnErjkPT1Pot6J2S_vKW-xDmqhydVEpkk_hAlPz8pwJYLfg"/>
+<div class="absolute top-sm right-sm px-xs py-[2px] rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">timer</span>
+<span class="font-label-mono text-label-mono text-primary-fixed">~12-15 mins</span>
+</div>
+<div class="absolute top-sm left-sm w-4 h-4 rounded-[2px] bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center">
+<span class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[6px] border-b-error"></span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between gap-sm">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">Fried Chicken Lollipop (3 pcs)</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹130</span>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Indo-Chinese Spiced</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Foil Wrapped</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Schezwan Dip</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+              Frenched chicken drumettes fried crisp, seasoned in aromatic oriental spices, served with zesty fiery schezwan chutney.
+            </p>
+</div>
+<button class="w-full mt-sm py-sm px-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Card 7: Honey Chilli Wings -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-highest">
+<img alt="Gourmet Honey Chilli Wings" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1V-3PzPJui7uTZ2cIF24TqdRgQtPtMqs2Oiz6qMltm2Hn9HDN39eiXyMVsHfpW9Xsyd1tz4h7DOc1TFKZb_5OeILvU-qacQaO6_SNngdGVbyOe112KF7Afj7PaBAHfIp7-La1f6qA0MV0z6oCIYr1euc1vZ-P60p5eeBSLApDbHOJ-mLScVY62QeEke1huX2ffW43lnxfHecBUHzseSN1MAUprvyit0BQT3a8KeOzz_-0F1rmdu7B1PBg"/>
+<div class="absolute top-sm right-sm px-xs py-[2px] rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">timer</span>
+<span class="font-label-mono text-label-mono text-primary-fixed">~12-15 mins</span>
+</div>
+<div class="absolute top-sm left-sm w-4 h-4 rounded-[2px] bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center">
+<span class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[6px] border-b-error"></span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between gap-sm">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">Honey Chilli Wings</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹130</span>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Sweet &amp; Spicy</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Toasted Sesame</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Sticky Glaze</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+              Crispy fried wings tossed in glossy sticky honey chili glaze, garnished with toasted sesame seeds and fresh scallions.
+            </p>
+</div>
+<button class="w-full mt-sm py-sm px-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Card 8: Honey Chilli Strips -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-highest">
+<img alt="Gourmet Honey Chilli Strips" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1V-3PzPJui7uTZ2cIF24TqdRgQtPtMqs2Oiz6qMltm2Hn9HDN39eiXyMVsHfpW9Xsyd1tz4h7DOc1TFKZb_5OeILvU-qacQaO6_SNngdGVbyOe112KF7Afj7PaBAHfIp7-La1f6qA0MV0z6oCIYr1euc1vZ-P60p5eeBSLApDbHOJ-mLScVY62QeEke1huX2ffW43lnxfHecBUHzseSN1MAUprvyit0BQT3a8KeOzz_-0F1rmdu7B1PBg"/>
+<div class="absolute top-sm right-sm px-xs py-[2px] rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">timer</span>
+<span class="font-label-mono text-label-mono text-primary-fixed">~12-15 mins</span>
+</div>
+<div class="absolute top-sm left-sm w-4 h-4 rounded-[2px] bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center">
+<span class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[6px] border-b-error"></span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between gap-sm">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">Honey Chilli Strips</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹130</span>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Sticky Honey Chili</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Juicy Strips</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Sesame Crunch</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+              Tender chicken breast strips coated in rich sweet and fiery honey chili sauce, delivering the ultimate flavor kick.
+            </p>
+</div>
+<button class="w-full mt-sm py-sm px-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Card 9: Chilli Garlic Wings -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-highest">
+<img alt="Gourmet Chilli Garlic Wings" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Un5cxy3xFNlWLQiLCPTZiFiA7vS20UAyxJPw5N_y5UNF56Rn6hNGn2hd2gb_hn2Gpn4pcsCDE42wxVhbY2d33JIiYAux1fzNzFIS2u7ODdIF0NgJTuSLXUix-dJxmcxmEEoX-5pT1mpDiX1CBG_POhhShM_OnEi83CO6os_GGA8BThhh8nicsbZLc5yXeyayEKR3fZRemM2gKJMHLIQmml-RVnJxaBQ5ZmeDqOUvtLDR1xKoQIkHT_Fw"/>
+<div class="absolute top-sm right-sm px-xs py-[2px] rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">timer</span>
+<span class="font-label-mono text-label-mono text-primary-fixed">~12-15 mins</span>
+</div>
+<div class="absolute top-sm left-sm w-4 h-4 rounded-[2px] bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center">
+<span class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[6px] border-b-error"></span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between gap-sm">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">Chilli Garlic Wings</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹130</span>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Roasted Garlic Bits</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Crushed Chili Flakes</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Spicy Glaze</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+              Crispy chicken wings vigorously tossed in roasted aromatic garlic chunks, crushed chili flakes, and sizzling cafe herbs.
+            </p>
+</div>
+<button class="w-full mt-sm py-sm px-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Card 10: Chilli Garlic Strips -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-highest">
+<img alt="Chilli Garlic Strips" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WF4DSmKNy19fEH_CE1N7HQ_47nAWc6K67mLbJRrxAezSqu1oDn7tc23kLe5rOEhj_2_k5CgBFVL8A-PybzS8wFBUe5tEhDFrlurxB-JiY6I4VEZGpnqJbLEkl83xN8mB5u3vhnZhAmXLjlOCu4Q1IJ1gzxP4lNYHMCJCnQ-uc3uKEP_HD3AXrdywKnWkGrgB6U_W30LyyDZAoE1S7pUxvrhmv4jLoSBKRLi7DxVOtSdwpbeuF9iRpN"/>
+<div class="absolute top-sm right-sm px-xs py-[2px] rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">timer</span>
+<span class="font-label-mono text-label-mono text-primary-fixed">~12-15 mins</span>
+</div>
+<div class="absolute top-sm left-sm w-4 h-4 rounded-[2px] bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center">
+<span class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[6px] border-b-error"></span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between gap-sm">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">Chilli Garlic Strips</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹130</span>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Roast Garlic</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Spicy Flakes</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Crispy Tenders</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+              Crunchy golden tenders loaded with roasted garlic bits and spicy chili glaze for garlic-loving spice enthusiasts.
+            </p>
+</div>
+<button class="w-full mt-sm py-sm px-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: COASTAL TENDERS -->
+<section class="w-full px-md md:px-margin-desktop py-lg">
+<!-- Category Header -->
+<div class="flex flex-col gap-xs pb-lg">
+<div class="flex items-center gap-sm">
+<!-- Non-Veg Icon Indicator -->
+<span class="w-4 h-4 rounded-[2px] bg-surface-container-highest flex items-center justify-center p-[2px]">
+<span class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[8px] border-b-error"></span>
+</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">🌊 Coastal Tenders (4 pcs)</h2>
+<span class="px-sm py-xs rounded bg-surface-bright text-primary font-label-mono text-label-mono font-semibold uppercase">Fresh Catch</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Fresh coastal catch, seasoned and fried golden crisp with artisanal dips.</p>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Card 11: Fish Fingers (4 pcs) -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Golden crisp breaded fish fingers served on a black slate platter with fresh tartar dipping sauce, lemon slice, and parsley in a dark atmospheric restaurant lounge" src="https://lh3.googleusercontent.com/aida/AEtjO1WiC5jRbWPV0j54hwB33js0vNWaYd6VOgTfSuPCJckulbLUWlZcMCg6-LVaOFgPGC9eIf-wrTD0jyq9IUmvE1DXEZ_uQOl_HeuWkFpS7SAD71cWu3CKHSSb1h2DBIMe9w6pyHiDyAial7iTbI0wqn3LQZVYxa1GoZxJ6trbQzTTRij84r24jJ9r2pnA3ZERzsMQgvmbQy1tFPQlB94IEcaVaGh2eivTS2EtjyB6b0o8VTu8v_FNLaM-vA"/>
+<div class="absolute top-sm right-sm px-xs py-[2px] rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">timer</span>
+<span class="font-label-mono text-label-mono text-primary-fixed">~10-15 mins</span>
+</div>
+<div class="absolute top-sm left-sm w-4 h-4 rounded-[2px] bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center">
+<span class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[6px] border-b-error"></span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between gap-sm">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">Fish Fingers (4 pcs)</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹130</span>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Golden Breaded</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Flaky White Fish</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Tartar Dip &amp; Lemon</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+              Golden crispy panko-breaded tender fish fingers made from fresh catch, served with zesty lemon wedge and creamy homemade tartar sauce.
+            </p>
+</div>
+<button class="w-full mt-sm py-sm px-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</div>
+<!-- Card 12: Crab Lollipop (4 pcs) -->
+<div class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
+<div class="relative aspect-video w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Four crispy golden fried breaded crab claws lollipops with cocktail sauce dip in a moody dark amber cafe background with subtle warm highlights" src="https://lh3.googleusercontent.com/aida/AEtjO1VAfwubjMsjgxWYRoEHUJYYapge5_JR-Kp9F83TsQPF77qqa9s2q2jbuMN5jhLtXo0Y6LKN28q3E4wOvzwGtX_5nTKQXcr_C6iq2NIJHZLpDHuEZDwzErlGPPCqGB3b1UX8NOXX6fc3zpyAqggqSyjSpmLOWLHXaM7r-W_FZA_89meKZw_t2KggY4J4hm3AZd_AO2dpuOYkazpjmak0W-ESkzI2UtNHaAobmdj0Vvf4AzhBjzS1utLpdQ"/>
+<div class="absolute top-sm right-sm px-xs py-[2px] rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">timer</span>
+<span class="font-label-mono text-label-mono text-primary-fixed">~12-15 mins</span>
+</div>
+<div class="absolute top-sm left-sm w-4 h-4 rounded-[2px] bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center">
+<span class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[6px] border-b-error"></span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-1 justify-between gap-sm">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between gap-sm">
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">Crab Lollipop (4 pcs)</h3>
+<span class="font-label-mono text-headline-md text-primary font-bold">₹140</span>
+</div>
+<div class="flex flex-wrap gap-xs">
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Crispy Breaded Crab</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Fresh Herbs</span>
+<span class="px-xs py-[2px] rounded bg-surface-container-highest font-label-mono text-label-mono text-on-surface-variant">Cocktail Dip</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mt-xs">
+              Artisan crispy breaded coastal crab claws and lollipops seasoned with herbs and lime, served with a velvety signature dipping sauce.
+            </p>
+</div>
+<button class="w-full mt-sm py-sm px-md rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span class="">Add to Order</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- PROMO CALLOUT BANNER -->
+<section class="w-full px-md md:px-margin-desktop py-xl">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-low p-lg md:p-xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-lg">
+<div class="absolute -left-12 -bottom-12 w-64 h-64 rounded-full bg-primary-container/10 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-xs max-w-xl text-center md:text-left">
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-wider font-semibold">Hungry for More?</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold">Craving More at Buddies?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Pair your crunchy chicken and coastal tenders with handcrafted momos, smoky burgers, or chilled thick shakes while challenging your crew to board games.
+        </p>
+</div>
+<div class="relative z-10 flex flex-wrap items-center justify-center gap-md shrink-0">
+<a class="px-lg py-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-md text-body-md font-bold transition-colors shadow-md" data-path="combos" href="combos page.html">
+          Explore Combos
+        </a>
+<a class="px-lg py-sm rounded-lg bg-surface-bright hover:bg-surface-container-highest text-on-surface font-headline-md text-body-md font-semibold transition-colors" data-path="menu" href="menu page.html">
+          View Full Menu
+        </a>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE TOAST FOR ADD TO ORDER -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="orderToast">
+<div class="rounded-lg bg-primary text-on-primary px-md py-sm font-headline-md text-body-md shadow-2xl flex items-center gap-sm">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span class="" id="toastMessage">Added to your order!</span>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const orderButtons = document.querySelectorAll('button:has(.material-symbols-outlined)');
+      const toast = document.getElementById('orderToast');
+      const toastMessage = document.getElementById('toastMessage');
+      let timeoutId = null;
+
+      orderButtons.forEach(btn => {
+        if (btn.textContent.includes('Add to Order')) {
+          btn.addEventListener('click', (e) => {
+            const card = e.currentTarget.closest('.rounded-xl');
+            const itemName = card ? card.querySelector('h3').textContent : 'Item';
+            
+            if (toast && toastMessage) {
+              toastMessage.textContent = `${itemName} added to order!`;
+              toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+              toast.classList.add('translate-y-0', 'opacity-100');
+
+              clearTimeout(timeoutId);
+              timeoutId = setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+              }, 2500);
+            }
+          });
+        }
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low">
+<div class="w-full px-md md:px-margin-desktop py-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-xl">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center gap-sm">
+<img alt="Buddies Cafe" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/>
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight font-bold">BUDDIES</span></div>
+<p class="text-primary-container font-headline-md text-body-md tracking-wider uppercase">Eat – Play – Repeat</p>
+<p class="text-on-surface-variant font-body-md text-body-md">High-energy social gaming and premier cafe dining experience tailored for gamers and food lovers.</p></div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-headline-md text-body-lg text-on-surface">Visit Our Cafe</h4>
+<p class="text-on-surface-variant font-body-md text-body-md leading-relaxed">Link Road, Anna Nagar,<br/>opp to Fresh Point,<br/>Virudhunagar-626001</p></div>
+<div class="flex flex-col gap-sm"><h4 class="font-headline-md text-body-lg text-on-surface">Get In Touch</h4>
+<div class="flex flex-col gap-xs">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-mono text-label-mono" href="tel:9345695826">Tel: +91 9345695826</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="https://instagram.com/buddies_vnr" rel="noopener noreferrer" target="_blank">Instagram: @buddies_vnr</a>
+<span class="text-on-surface-variant font-label-mono text-label-mono">Hours: 11:00 AM – 11:00 PM</span></div></div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-headline-md text-body-lg text-on-surface">Quick Bites</h4>
+<div class="flex flex-col gap-xs font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="menu" href="menu page.html">Chef's Special Burgers</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="combos" href="combos page.html">LAN Party Combos</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="order-now" href="#">Express Pickup</a></div></div></div>
+<div class="mt-xl pt-lg flex flex-col sm:flex-row items-center justify-between gap-md"><p class="text-on-surface-variant font-label-mono text-label-mono">© 2024 Buddies Cafe. All rights reserved.</p>
+<p class="text-on-surface-variant font-label-mono text-label-mono uppercase tracking-wider">Crafted with Nocturnal Amber Core</p></div></div></footer>
+</body></html>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Buddies Cafe - Eat. Play. Repeat.</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-container": "#b5b5b5",
+            "primary-fixed-dim": "#ffb77d",
+            "on-error-container": "#ffdad6",
+            "error": "#ffb4ab",
+            "on-tertiary-fixed": "#1a1c1c",
+            "on-tertiary": "#2f3131",
+            "surface": "#1b110a",
+            "on-error": "#690005",
+            "secondary-fixed": "#e2e2e2",
+            "secondary-container": "#474747",
+            "surface-bright": "#43372e",
+            "inverse-surface": "#f3dfd1",
+            "surface-variant": "#3f3229",
+            "on-primary-fixed": "#2f1500",
+            "primary-fixed": "#ffdcc3",
+            "on-primary": "#4d2600",
+            "secondary-fixed-dim": "#c6c6c6",
+            "surface-dim": "#1b110a",
+            "primary-container": "#ff8c00",
+            "surface-container-highest": "#3f3229",
+            "inverse-primary": "#904d00",
+            "background": "#1b110a",
+            "on-primary-container": "#623200",
+            "on-secondary": "#303030",
+            "on-background": "#f3dfd1",
+            "on-secondary-fixed": "#1b1b1b",
+            "on-surface-variant": "#ddc1ae",
+            "tertiary-container": "#a9aaaa",
+            "on-tertiary-container": "#3d3f3f",
+            "error-container": "#93000a",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "on-primary-fixed-variant": "#6e3900",
+            "on-secondary-fixed-variant": "#474747",
+            "on-surface": "#f3dfd1",
+            "primary": "#ffb77d",
+            "surface-container-lowest": "#150c06",
+            "surface-container-high": "#33281f",
+            "surface-container": "#281d15",
+            "tertiary": "#c6c6c7",
+            "outline": "#a48c7a",
+            "outline-variant": "#564334",
+            "inverse-on-surface": "#3a2e25",
+            "tertiary-fixed": "#e2e2e2",
+            "surface-tint": "#ffb77d",
+            "secondary": "#c6c6c6",
+            "on-tertiary-fixed-variant": "#454747",
+            "surface-container-low": "#241912"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "margin-desktop": "64px",
+            sm: "8px",
+            md: "16px",
+            unit: "4px",
+            xs: "4px",
+            gutter: "20px",
+            "margin-mobile": "16px",
+            xl: "40px",
+            lg: "24px"
+          },
+          fontFamily: {
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-mono": ["JetBrains Mono"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"]
+          },
+          fontSize: {
+            "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+            "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
+            "headline-lg-mobile": ["28px", { lineHeight: "1.2", fontWeight: "700" }],
+            "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+            "label-mono": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "500" }],
+            "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+            "display-hero": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1b110a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3f3229;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ff8c00;
+    }
+    .text-glow {
+      text-shadow: 0 0 16px rgba(255, 140, 0, 0.45);
+    }
+    .amber-glow {
+      box-shadow: 0 0 24px rgba(255, 140, 0, 0.22);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-black min-h-screen flex flex-col">
+<!-- 1. Top Navigation Bar (matching SCREEN_5 brand shell) -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)] border-b border-surface-container">
+<div class="h-20 w-full px-margin-mobile md:px-margin-desktop flex items-center justify-between max-w-7xl mx-auto">
+<!-- Logo & Identity -->
+<a class="flex items-center gap-3 group" href="#">
+<img alt="Buddies Cafe Logo" class="h-10 w-10 object-contain rounded transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/>
+<div class="flex flex-col">
+<span class="font-headline-md text-[20px] font-bold tracking-tight uppercase text-on-surface">BUDDIES CAFE</span>
+<span class="text-[10px] font-label-mono tracking-widest text-primary-container -mt-1 uppercase">Taste The Difference</span>
+</div>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden xl:flex items-center gap-lg">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="home page.html">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="menu page.html">Menu</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="menu page.html">Categories</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="combos page.html">Combos</a>
+<a aria-current="page" class="text-primary-container font-bold border-b-2 border-primary-container pb-1 transition-colors flex items-center gap-1" href="about page.html">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="menu page.html">Board Games</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#contact-section">Contact</a>
+</nav>
+<!-- Right CTAs -->
+<div class="flex items-center gap-md">
+<a class="px-lg py-sm rounded-full bg-primary-container text-on-primary font-headline-md text-body-md font-bold hover:bg-primary transition-all flex items-center gap-xs shadow-[0_0_12px_rgba(255,140,0,0.35)]" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span class="hidden sm:inline">Order Online</span>
+<span class="sm:hidden">Order</span>
+</a>
+<a class="w-9 h-9 rounded-full bg-surface-container-high border border-outline-variant/60 flex items-center justify-center hover:bg-primary-container hover:text-black transition-colors" href="tel:+919345695826" title="Call Buddies Cafe">
+<span class="material-symbols-outlined text-primary text-[18px]">call</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Content Wrapper -->
+<main class="w-full pt-20 flex-grow bg-surface">
+<!-- 2. Hero Section -->
+<section class="relative w-full px-margin-mobile md:px-margin-desktop pt-8 pb-16 overflow-hidden bg-gradient-to-b from-surface via-surface-container-low to-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-8">
+<!-- Top Sub-badge -->
+<div class="inline-flex items-center gap-xs self-start px-md py-xs rounded-full bg-surface-container-highest border border-primary/20 shadow-sm">
+<span class="material-symbols-outlined text-primary-container text-[18px]">local_fire_department</span>
+<span class="font-label-mono text-label-mono uppercase tracking-wider text-primary font-semibold">
+            OUR STORY &amp; CULTURE • EST. 2024 / 2025 • VIRUDHUNAGAR
+          </span>
+</div>
+<!-- Grand Titles & Subtitle -->
+<div class="flex flex-col gap-3 max-w-4xl">
+<h1 class="font-display-hero text-headline-lg md:text-display-hero text-on-surface tracking-tight leading-tight">
+            Eat. Play. <span class="text-primary-container text-glow">Repeat.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            Virudhunagar's ultimate social hub where handcrafted gourmet food meets high-stakes tabletop battles and vibrant youth energy. Built for squad hangouts, endless laughter, and authentic flavors.
+          </p>
+</div>
+<!-- Hero Panorama Photography -->
+<div class="relative w-full rounded-2xl overflow-hidden border border-surface-bright shadow-2xl amber-glow group">
+<img alt="Interior of vibrant modern youth cafe Buddies Cafe at night in Virudhunagar with friends playing board games" class="w-full h-[360px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwOWGUk8w-zbdyih9Tv-6WWSFZxPLeyATpGcEPDWfKw_-khYv8tMV7zyhKia4oyPPk3BE9jIesii96l4gcD3mnwBcphvdYdL8iTIfHdmqfocSLU9wYQ3VMm-q5zsIPbbh-DpkjpcIJM6YiomcWZw4zk8GidK4Ams_ZxwiNiIUanGP_SseZbZ0vFkI9HkWJBnaAKe-kUUdauzQzVmf6ofmqqVHIMYge3fMIJixAXovu2-AWlgZxjEA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div class="bg-surface/85 backdrop-blur-md px-5 py-3 rounded-xl border border-primary/20 max-w-lg">
+<span class="font-label-mono text-[11px] text-primary-container uppercase font-bold tracking-widest block mb-1">
+                The Buddies Ambience
+              </span>
+<p class="text-sm font-body-md text-on-surface leading-snug">
+                Warm amber neon glows, wooden communal benches, curated artisan beverages, and a full shelf of tabletop challenges.
+              </p>
+</div>
+<a class="self-start sm:self-auto px-5 py-2.5 rounded-full bg-primary-container text-on-primary font-bold text-sm hover:bg-primary transition-all flex items-center gap-2 shadow-lg" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">electric_bolt</span>
+              Experience Tonight
+            </a>
+</div>
+</div>
+<!-- Quick Stat Badges Bar -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-md pt-2">
+<div class="flex items-center gap-sm p-md rounded-xl bg-surface-container border border-surface-bright/60 shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">casino</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-mono text-label-mono text-outline">TABLETOP</span>
+<span class="font-headline-md text-body-md text-on-surface font-semibold truncate">8 Curated Board Games</span>
+</div>
+</div>
+<div class="flex items-center gap-sm p-md rounded-xl bg-surface-container border border-surface-bright/60 shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">skillet</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-mono text-label-mono text-outline">KITCHEN CRAFT</span>
+<span class="font-headline-md text-body-md text-primary-fixed-dim font-semibold truncate">100% Fresh Daily Bites</span>
+</div>
+</div>
+<div class="flex items-center gap-sm p-md rounded-xl bg-surface-container border border-surface-bright/60 shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">grade</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-mono text-label-mono text-outline">RATING</span>
+<span class="font-headline-md text-body-md text-on-surface font-semibold truncate">4.8★ Community Love</span>
+</div>
+</div>
+<div class="flex items-center gap-sm p-md rounded-xl bg-surface-container border border-surface-bright/60 shadow-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">volunteer_activism</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-mono text-label-mono text-outline">SQUAD PERK</span>
+<span class="font-headline-md text-body-md text-primary font-semibold truncate">Zero Table Fee</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. "The Buddies Story" Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-16 bg-surface-container-lowest border-y border-surface-container">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Text Story Left -->
+<div class="lg:col-span-6 flex flex-col gap-6">
+<div class="inline-flex items-center gap-xs px-md py-xs rounded-full bg-surface-variant self-start">
+<span class="material-symbols-outlined text-primary-container text-[18px]">history_edu</span>
+<span class="font-label-mono text-label-mono text-primary font-bold">THE GENESIS OF BUDDIES</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+              More Than Just Coffee. <br/>
+<span class="text-primary">A Sanctuary For Real Connections.</span>
+</h2>
+<div class="space-y-4 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+<p class="">
+                Buddies Cafe was born out of a simple, rebellious belief: <strong class="text-on-surface">waiting for food shouldn't mean staring down at glowing smartphone screens</strong>, and hanging out with your friends deserves more than sterile fast-food counters.
+              </p>
+<p class="">
+                We envisioned a cozy, dimly lit nocturnal hideout right in Anna Nagar, Virudhunagar, where the smell of freshly toasted brioche buns and spicy chicken marinades mixes with the click-clack of dice rolls and victory cheers over Catan tiles.
+              </p>
+<p class="">
+                Whether you are a college squad looking to celebrate after exams, a couple escaping routine for an artisanal cold brew, or a competitive group of tabletop tacticians, Buddies was built from the ground up for you.
+              </p>
+</div>
+<!-- Highlights checklist -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+<div class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[20px]">check_circle</span>
+<span class="">Crafted Fresh On Order</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[20px]">check_circle</span>
+<span class="">Unlimited Free Gaming</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[20px]">check_circle</span>
+<span class="">Student-Friendly Pricing</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[20px]">check_circle</span>
+<span class="">Warm Acoustic Ambience</span>
+</div>
+</div>
+<div class="pt-2">
+<div class="inline-flex items-center gap-3 p-3 bg-surface-container rounded-xl border border-surface-bright">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<div class="font-headline-md text-sm font-semibold text-on-surface">Open Daily for Midday Feasts &amp; Late Night Rounds</div>
+<div class="font-label-mono text-[11px] text-outline">12:00 PM – 10:30 PM (Weekdays) | 12:00 PM – 11:00 PM (Weekends)</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Kitchen Photo Right (IMAGE_190) -->
+<div class="lg:col-span-6 relative">
+<div class="relative rounded-2xl overflow-hidden border border-surface-bright shadow-2xl group">
+<img alt="Artisan cafe kitchen at Buddies Cafe with chef delicately crafting gourmet burgers and crispy snacks" class="w-full h-[460px] object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGB9qTe6wZfR1gT-3wqUr6hS0gqw24CjQT28NuuAduefEjPE01NExu74cF9lAm2O5ncHUrn9Af43-bA89VhC2zhlEGZUmT4NL6zjQlLGt9ZUWXsUxyH6_b0ybVMSkcnEOoT-QncONdSsa-TDsoH1LZ_gZFBtz_QXBB1hbpAiSmE_tckwa2vWdTZYlFnpv9YDNAiwTbe4PBfJEcxsKaw-Y1KFsIiLa-B7-Tl17FtCX1gXk8Hp74ci4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<!-- Floating Pill Badge -->
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-surface-container-high/90 backdrop-blur-md border border-outline-variant flex items-center justify-between">
+<div>
+<div class="font-label-mono text-label-mono text-primary font-bold">100% ARTISANAL KITCHEN</div>
+<div class="font-headline-md text-body-md text-on-surface font-semibold">Scratch-made sauces &amp; flame-seared patties</div>
+</div>
+<span class="material-symbols-outlined text-primary-container text-[28px]">restaurant</span>
+</div>
+</div>
+<!-- Behind decorative glow -->
+<div class="absolute -bottom-6 -right-6 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. "What Sets Us Apart" — The 3 Pillars of Buddies Cafe -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-20 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-12">
+<div class="flex flex-col items-center text-center gap-3 max-w-3xl mx-auto">
+<div class="inline-flex items-center gap-xs px-md py-xs rounded-full bg-surface-container-highest">
+<span class="material-symbols-outlined text-primary-container text-[18px]">stars</span>
+<span class="font-label-mono text-label-mono text-primary uppercase font-bold">THE CORE PHILOSOPHY</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg md:text-[36px] text-on-surface">What Sets Buddies Cafe Apart</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            We don't do compromises. Here is how we engineered Virudhunagar's most loved youth community space.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Pillar 1: Artisan Comfort Food -->
+<div class="flex flex-col rounded-2xl bg-surface-container border border-surface-bright p-8 hover:border-primary/50 transition-all group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high text-primary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">lunch_dining</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-wider mb-2">Pillar 01</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Artisan Comfort Food</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed flex-grow">
+              From our famous glazed Korean momos and loaded BBQ thin-crust pizzas to crispy coastal chicken crispers and decadent molten brownies, our menu is designed to satisfy genuine cravings without burning a hole in your wallet.
+            </p>
+<div class="pt-4 border-t border-surface-bright flex items-center justify-between text-xs font-label-mono text-primary">
+<span class="">FRESH INGREDIENTS ONLY</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 2: The Tabletop Arena (With IMAGE_188) -->
+<div class="flex flex-col rounded-2xl bg-surface-container border-2 border-primary-container/40 p-8 relative overflow-hidden group shadow-lg amber-glow">
+<div class="absolute top-0 right-0 bg-primary-container text-black font-label-mono text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase">
+              Free Access
+            </div>
+<div class="w-14 h-14 rounded-2xl bg-primary-container/20 text-primary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">casino</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary-container uppercase tracking-wider mb-2">Pillar 02</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">The Tabletop Arena</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">Forget waiting silently. Enjoy our handpicked collection of 8 classic board games including Chess, Uno, Business, Jenga, and more with <strong class="text-on-surface">zero extra table fees</strong> for any cafe guest.</p>
+<!-- Miniature Boardgame Shelf Preview (IMAGE_188) -->
+<div class="rounded-xl overflow-hidden mb-4 border border-surface-bright aspect-video">
+<img alt="Cozy board game shelf and tabletop gaming zone at Buddies Cafe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC33eSqPcQ1-TvzhPCTEhQwKA4uC43OlRcj4-0Ri7bp-OqV8m1zBpmBxPARiITSGjzx_zFnRHa94pqoukk6Wbdy9xWOk0LV1tNUX79j91RO4oSucAXTENnpV3u6w_oRhA-lqksYOfbSdSZS3fF4iOlW-_ATQGqwfO8Rqro2SntTYF-L1QXMxBAilIbxOCRH96LaQ8HvbQn4nqsF5zBphq5UE_pp2RtfyvFPtq0lyxwGgu97yKAL4uY"/>
+</div>
+<div class="pt-2 border-t border-surface-bright flex items-center justify-between text-xs font-label-mono text-primary-container font-bold">
+<span class="">ZERO TABLE CHARGES</span>
+<span class="material-symbols-outlined text-[16px]">sports_esports</span>
+</div>
+</div>
+<!-- Pillar 3: A Space For Everyone -->
+<div class="flex flex-col rounded-2xl bg-surface-container border border-surface-bright p-8 hover:border-primary/50 transition-all group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-high text-primary-container flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">groups</span>
+</div>
+<span class="font-label-mono text-label-mono text-primary uppercase tracking-wider mb-2">Pillar 03</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">A Space For Everyone</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed flex-grow">
+              Cozy booths, atmospheric warm amber neon, high-speed Wi-Fi, soothing playlists, and squad-sized wooden tables. Whether you're coding for hours, on a casual date, or holding your weekly gaming showdown, you're always welcome.
+            </p>
+<div class="pt-4 border-t border-surface-bright flex items-center justify-between text-xs font-label-mono text-primary">
+<span class="">COMMUNITY FIRST</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. "Meet The Board Game Vault" Interactive Showcase -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-16 bg-surface-container-lowest border-y border-surface-container">
+<div class="max-w-7xl mx-auto flex flex-col gap-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<div class="inline-flex items-center gap-xs text-primary-container mb-2">
+<span class="material-symbols-outlined text-[20px]">extension</span>
+<span class="font-label-mono text-label-mono uppercase tracking-wider font-semibold">THE TABLETOP VAULT</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">20+ Board Games At Your Fingertips</h2>
+</div>
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high border border-primary/30 text-xs font-label-mono text-primary">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="">Full 8-game collection free with any food or beverage order • Ask crew for rules!</span>
+</div>
+</div>
+<!-- Games Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+<!-- Catan -->
+<div class="p-6 rounded-xl bg-surface-container border border-surface-bright flex flex-col justify-between gap-4 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-primary/10 text-primary-container flex items-center justify-center font-bold">01</span>
+<span class="px-2 py-1 rounded bg-surface-container-highest text-[10px] font-label-mono text-primary font-bold uppercase">Strategy</span>
+</div>
+<div>
+<h4 class="font-headline-md text-lg text-on-surface font-bold mb-1">Catan</h4>
+<p class="text-xs text-on-surface-variant leading-normal">
+                Trade sheep for ore, build settlements, and claim victory over your friends.
+              </p>
+</div>
+<div class="text-[11px] font-label-mono text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">group</span> 3-4 Players • 60m
+            </div>
+</div>
+<!-- Jenga -->
+<div class="p-6 rounded-xl bg-surface-container border border-surface-bright flex flex-col justify-between gap-4 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-primary/10 text-primary-container flex items-center justify-center font-bold">02</span>
+<span class="px-2 py-1 rounded bg-surface-container-highest text-[10px] font-label-mono text-primary font-bold uppercase">Tension</span>
+</div>
+<div>
+<h4 class="font-headline-md text-lg text-on-surface font-bold mb-1">Giant Jenga</h4>
+<p class="text-xs text-on-surface-variant leading-normal">
+                High-stakes wooden block balance. One tremor and the whole squad erupts.
+              </p>
+</div>
+<div class="text-[11px] font-label-mono text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">group</span> 2-8 Players • 15m
+            </div>
+</div>
+<!-- Cards Against Humanity -->
+<div class="p-6 rounded-xl bg-surface-container border border-surface-bright flex flex-col justify-between gap-4 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-primary/10 text-primary-container flex items-center justify-center font-bold">03</span>
+<span class="px-2 py-1 rounded bg-surface-container-highest text-[10px] font-label-mono text-primary font-bold uppercase">Laughs</span>
+</div>
+<div>
+<h4 class="font-headline-md text-lg text-on-surface font-bold mb-1">Cards / Party</h4>
+<p class="text-xs text-on-surface-variant leading-normal">
+                Pure comedy and unfiltered party rounds. Perfect ice-breaker for large squads.
+              </p>
+</div>
+<div class="text-[11px] font-label-mono text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">group</span> 4-12 Players • 30m
+            </div>
+</div>
+<!-- Uno & Monopoly -->
+<div class="p-6 rounded-xl bg-surface-container border border-surface-bright flex flex-col justify-between gap-4 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-primary/10 text-primary-container flex items-center justify-center font-bold">04</span>
+<span class="px-2 py-1 rounded bg-surface-container-highest text-[10px] font-label-mono text-primary font-bold uppercase">Classics</span>
+</div>
+<div>
+<h4 class="font-headline-md text-lg text-on-surface font-bold mb-1">Uno &amp; Monopoly</h4>
+<p class="text-xs text-on-surface-variant leading-normal">
+                Draw 4 cards or bankrupt your best buddy. The ultimate friendship tests!
+              </p>
+</div>
+<div class="text-[11px] font-label-mono text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">group</span> 2-6 Players • 45m
+            </div>
+</div>
+<!-- Chess & Carcassonne -->
+<div class="p-6 rounded-xl bg-surface-container border border-surface-bright flex flex-col justify-between gap-4 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-primary/10 text-primary-container flex items-center justify-center font-bold">05</span>
+<span class="px-2 py-1 rounded bg-surface-container-highest text-[10px] font-label-mono text-primary font-bold uppercase">Tactics</span>
+</div>
+<div>
+<h4 class="font-headline-md text-lg text-on-surface font-bold mb-1">Chess &amp; Tiles</h4>
+<p class="text-xs text-on-surface-variant leading-normal">
+                Classic tournament wooden boards and Carcassonne tile placement maps.
+              </p>
+</div>
+<div class="text-[11px] font-label-mono text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">group</span> 2 Players • 30m
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. "Our Values & Promise" -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-16 bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-10">
+<div class="text-center max-w-2xl mx-auto">
+<span class="font-label-mono text-label-mono text-primary uppercase font-bold tracking-widest block mb-2">Our Standard of Excellence</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Buddies Cafe Promise</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-6 rounded-xl bg-surface-container border border-surface-bright flex flex-col gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container/15 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">eco</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface">Fresh Ingredients Always</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              No stale reheats. Every patty, bun, drizzle, and shake is handcrafted on order using fresh dairy and crisp greens.
+            </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container border border-surface-bright flex flex-col gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container/15 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">sell</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface">Affordable Squad Pricing</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              Engineered with student pockets in mind. Big portions, combo savings up to 30%, and zero cover charge for games.
+            </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container border border-surface-bright flex flex-col gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container/15 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">favorite</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface">Inclusive &amp; Welcoming</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              A judgment-free haven where everyone is treated like family. Solo readers, dating pairs, or noisy gaming parties welcome.
+            </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container border border-surface-bright flex flex-col gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary-container/15 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+</div>
+<h4 class="font-headline-md text-body-lg font-bold text-on-surface">FSSAI Certified Quality</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              Impeccable hygiene standards, sparkling clean prep stations, and transparent operations meeting food safety benchmarks.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Store Visit, Timings & Location Card -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-16 bg-surface-container-lowest" id="contact-section">
+<div class="max-w-7xl mx-auto">
+<div class="rounded-2xl p-8 md:p-12 bg-gradient-to-br from-surface-container-high via-surface-variant to-surface-container border border-outline-variant/60 shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/20 text-primary-container font-label-mono text-xs font-bold self-start">
+<span class="material-symbols-outlined text-[16px]">storefront</span>
+<span class="">PLAN YOUR VISIT</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg md:text-[34px] text-on-surface leading-tight">
+                Drop By Today. <br/>
+<span class="text-primary-container">We’ll Have A Table &amp; Board Ready.</span>
+</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+<!-- Timings -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-headline-md text-sm font-semibold">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+<span class="">Opening Hours</span>
+</div>
+<div class="text-sm text-on-surface-variant space-y-1">
+<p class=""><strong class="text-on-surface">Weekdays:</strong> 12:00 PM – 10:30 PM</p>
+<p class=""><strong class="text-on-surface">Weekends:</strong> 12:00 PM – 11:00 PM</p>
+<p class="text-xs text-outline pt-1">Open 7 days a week</p>
+</div>
+</div>
+<!-- Location -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-headline-md text-sm font-semibold">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+<span class="">Address</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                    174, Link Rd, Anna Nagar,<br/>
+                    opp. to Fresh Point,<br/>
+                    Virudhunagar, Tamil Nadu 626001
+                  </p>
+</div>
+</div>
+<!-- Contact specifics -->
+<div class="flex flex-wrap items-center gap-6 pt-2 text-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">call</span>
+<a class="hover:text-primary transition-colors font-medium" href="tel:+919345695826">+91 9345695826</a>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">photo_camera</span>
+<a class="hover:text-primary transition-colors font-medium" href="https://instagram.com/buddies_vnr" rel="noopener noreferrer" target="_blank">@buddies_vnr</a>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px]">mail</span>
+<a class="hover:text-primary transition-colors font-medium" href="mailto:buddies@gmail.com">buddies@gmail.com</a>
+</div>
+</div>
+</div>
+<!-- Action buttons card right -->
+<div class="lg:col-span-5 flex flex-col gap-4 bg-surface-container-lowest/80 p-6 rounded-xl border border-surface-bright">
+<span class="font-label-mono text-label-mono text-outline uppercase">Quick Actions</span>
+<a class="w-full py-3 px-6 rounded-xl bg-primary-container text-on-primary font-headline-md text-body-md font-bold hover:bg-primary transition-all flex items-center justify-center gap-2 shadow-[0_0_14px_rgba(255,140,0,0.35)]" href="tel:+919345695826">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span class="">Reserve a Table (+91 9345695826)</span>
+</a>
+<a class="w-full py-3 px-6 rounded-xl bg-surface-container text-on-surface font-headline-md text-body-md font-semibold hover:bg-surface-bright transition-colors flex items-center justify-center gap-2 border border-outline-variant" href="https://maps.google.com/?q=Buddies+Cafe+Anna+Nagar+Virudhunagar" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-primary text-[20px]">directions</span>
+<span class="">Get Directions (Google Maps)</span>
+</a>
+<a class="w-full py-3 px-6 rounded-xl bg-surface-container-high text-primary font-headline-md text-body-md font-bold hover:bg-surface-bright transition-colors flex items-center justify-center gap-2 border border-primary/30" href="https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">delivery_dining</span>
+<span class="">Order On Swiggy</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 8. Full Footer matching exact brand specifications (from SCREEN_5) -->
+<footer class="w-full bg-surface-container-lowest text-on-surface-variant pt-xl pb-lg border-t border-surface-container">
+<div class="w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl pb-xl">
+<!-- Col 1: Brand Info -->
+<div class="flex flex-col gap-md">
+<div class="flex items-center gap-sm">
+<img alt="Buddies Cafe" class="h-10 w-10 object-contain rounded" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/>
+<span class="font-headline-md text-headline-md text-on-surface uppercase font-bold tracking-tight">Buddies Cafe</span>
+</div>
+<div>
+<span class="font-headline-md text-body-md text-primary-container font-semibold">Eat. Play. Repeat.</span>
+<span class="text-on-surface"> — Taste the Difference!</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Virudhunagar's premier gaming cafe destination. Enjoy artisanal bites, handcrafted beverages, and endless board game challenges with your squad in an electrifying social hangout.
+          </p>
+</div>
+<!-- Col 2: Visit -->
+<div class="flex flex-col gap-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Visit Our Cafe</h3>
+<div class="flex flex-col gap-sm font-body-md text-body-md">
+<div class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">location_on</span>
+<span class="">174, Link Rd, Anna Nagar, opp. to Fresh Point, Virudhunagar - 626001.</span>
+</div>
+<div class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">schedule</span>
+<span class="">
+                Weekdays: 12:00 PM – 10:30 PM<br/>
+                Weekends: 12:00 PM – 11:00 PM
+              </span>
+</div>
+</div>
+</div>
+<!-- Col 3: Connect -->
+<div class="flex flex-col gap-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Connect With Us</h3>
+<div class="flex flex-col gap-sm font-body-md text-body-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">call</span>
+<a class="hover:text-primary transition-colors" href="tel:+919345695826">+91 9345695826</a>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">photo_camera</span>
+<a class="hover:text-primary transition-colors" href="https://instagram.com/buddies_vnr" rel="noopener noreferrer" target="_blank">@buddies_vnr</a>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">mail</span>
+<a class="hover:text-primary transition-colors" href="mailto:buddies@gmail.com">buddies@gmail.com</a>
+</div>
+</div>
+</div>
+<!-- Col 4: Navigation -->
+<div class="flex flex-col gap-md">
+<h3 class="font-headline-md text-headline-md text-on-surface">Quick Navigation</h3>
+<ul class="flex flex-col gap-xs font-body-md text-body-md">
+<li class=""><a class="hover:text-primary transition-colors" href="menu page.html">Full Menu</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="menu page.html">Categories Hub</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="combos page.html">Combos Deals</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="menu page.html">Board Game Library</a></li>
+<li class=""><a class="hover:text-primary transition-colors text-primary-container font-semibold" href="about page.html">About Buddies Cafe</a></li>
+</ul>
+</div>
+</div>
+<!-- Footer Bottom Bar -->
+<div class="pt-lg border-t border-surface-container flex flex-col sm:flex-row items-center justify-between gap-md font-label-mono text-label-mono text-outline">
+<p class="">© 2025 Buddies Cafe. All rights reserved. Virudhunagar.</p>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-container text-[16px]">verified</span>
+<span class="">FSSAI Certified Quality</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

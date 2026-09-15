@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html class="dark" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Buddies Cafe - Burger Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb77d",
+                        "on-surface-variant": "#ddc1ae",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-container-low": "#241912",
+                        "background": "#1b110a",
+                        "surface-container-highest": "#3f3229",
+                        "surface-variant": "#3f3229",
+                        "outline-variant": "#564334",
+                        "on-secondary": "#303030",
+                        "primary-container": "#ff8c00",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-primary-container": "#623200",
+                        "on-primary-fixed": "#2f1500",
+                        "surface-tint": "#ffb77d",
+                        "on-error": "#690005",
+                        "on-tertiary": "#2f3131",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#f3dfd1",
+                        "surface-bright": "#43372e",
+                        "inverse-primary": "#904d00",
+                        "primary": "#ffb77d",
+                        "surface-container": "#281d15",
+                        "on-primary": "#4d2600",
+                        "on-surface": "#f3dfd1",
+                        "secondary-fixed": "#e2e2e2",
+                        "secondary": "#c6c6c6",
+                        "surface-dim": "#1b110a",
+                        "on-tertiary-container": "#3d3f3f",
+                        "surface-container-high": "#33281f",
+                        "primary-fixed": "#ffdcc3",
+                        "outline": "#a48c7a",
+                        "on-secondary-container": "#b5b5b5",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-background": "#f3dfd1",
+                        "surface": "#1b110a",
+                        "surface-container-lowest": "#150c06",
+                        "tertiary": "#c6c6c7",
+                        "secondary-container": "#474747",
+                        "tertiary-container": "#a9aaaa",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "inverse-on-surface": "#3a2e25",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#6e3900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "gutter": "20px",
+                        "md": "16px",
+                        "margin-mobile": "16px",
+                        "lg": "24px",
+                        "unit": "4px",
+                        "sm": "8px",
+                        "xl": "40px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-hero": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-mono": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "display-hero": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .prep-badge-glow { box-shadow: 0 0 8px rgba(255, 140, 0, 0.4); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopNavBar Component -->
+<header class="bg-surface dark:bg-surface text-primary dark:text-primary font-body-md text-body-md sticky top-0 w-full z-50 bg-surface-container dark:bg-surface-container shadow-sm transition-all duration-300 ease-in-out border-b-0">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-md max-w-[1280px] mx-auto w-full">
+<a class="flex items-center gap-3" href="#"><img alt="Buddies Cafe" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/><span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary">Buddies Cafe</span></a>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="home page.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="about page.html">About</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-all duration-300 ease-in-out" href="menu page.html">Menu</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="combos page.html">Combos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="reviews page.html">Reviews</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact us.html">Contact</a>
+</nav>
+<button class="bg-primary-container text-background font-bold px-lg py-sm rounded-DEFAULT hover:bg-primary transition-colors hidden md:block">
+                Order Now
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col relative z-0">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[360px] py-xl flex items-center justify-center overflow-hidden bg-surface-container-high">
+<div class="absolute inset-0 bg-cover bg-center opacity-60" data-alt="A massive, gourmet double cheeseburger dripping with melted cheese, crispy bacon, and fresh lettuce, illuminated by high-contrast studio lighting. The background is a sleek, dark modern gaming cafe environment with subtle glowing amber and neon blue accents, conveying an energetic 'dark mode' aesthetic. High resolution food photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9Pn9NuMPnSa_M_yvW32VG5o1WO9zaSodtBz5YUZRZl3IW26fF2jmnucwGJ9nbEl4bkDsqt6B8M2YdUXMqeTgpG4c_PnPClX0vDo-dU5y386lumgxjXt4YTTwyGog_HJg0JCTafyxeIUvzXk-lsCQjUYJsSIc_QVju38AKT6H95OrHO5bxdE8bpzNJwVqgPIBsJtKlp0x6FReUFNRjhb1f4gzzMok8dLlsMdLw4Z3UzxWo_kwzNiI')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-[900px] mx-auto flex flex-col items-center gap-md">
+<span class="px-md py-xs rounded-full bg-surface-container border border-primary-container text-primary-container font-label-mono text-label-mono">Artisan Grill &amp; Smash</span>
+<h1 class="font-display-hero text-display-hero text-on-background leading-tight">Burgers &amp; Mo-Burgers</h1>
+<p class="font-headline-md text-[20px] text-primary font-bold">Eat – Play – Repeat • Smashed, Stacked &amp; Loaded to Savory Perfection</p>
+<div class="flex flex-wrap items-center justify-center gap-sm mt-xs">
+<span class="px-sm py-xs rounded bg-surface-container/80 border border-outline-variant text-on-surface-variant font-label-mono text-label-mono">Toasted Brioche Buns</span>
+<span class="px-sm py-xs rounded bg-surface-container/80 border border-outline-variant text-on-surface-variant font-label-mono text-label-mono">House Smashed Patties</span>
+<span class="px-sm py-xs rounded bg-surface-container/80 border border-outline-variant text-on-surface-variant font-label-mono text-label-mono">Prep Time ~15-20 Mins</span>
+<span class="px-sm py-xs rounded bg-surface-container/80 border border-outline-variant text-on-surface-variant font-label-mono text-label-mono">100% Signature Taste</span>
+</div>
+<div class="mt-sm p-sm md:px-lg rounded-lg bg-surface-container/90 border border-primary-container/40 flex items-center gap-sm text-left max-w-[650px]">
+<span class="material-symbols-outlined text-primary-container text-[24px]">sports_esports</span>
+<div class="flex flex-col">
+<span class="font-bold text-primary text-sm">Challenge Your Friends While You Wait!</span>
+<span class="text-on-surface-variant text-xs">Enjoy our cafe board games — Catan, Uno, Chess &amp; Jenga — while your burgers are freshly grilled!</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Section -->
+<section class="w-full max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-xl flex flex-col gap-xl">
+<!-- Category: Classic Burgers -->
+<div class="flex flex-col gap-lg">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary border-b border-outline-variant pb-xs">Classic Burgers</h2>
+<!-- Sub: Veg -->
+<div class="flex flex-col gap-md">
+<h3 class="font-headline-md text-headline-md text-on-surface-variant flex items-center gap-sm">
+<div aria-label="Vegetarian" class="w-[16px] h-[16px] border border-green-500 flex items-center justify-center">
+<div class="w-[8px] h-[8px] rounded-full bg-green-500"></div>
+</div>
+                        Veg</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Spicy Classic Veg Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Spicy Classic Veg Burger with a crispy spiced patty, fresh lettuce, tomatoes, and spicy sauce, gourmet cafe style, dark background, cinematic lighting with orange amber glow." style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1WMdLtXSNbqwOsP1OirYYirM3egb1g-XofK7fVNTOfp-Hy3z8sdgB1HK2AtNPCbg8vJFjTXvHT7V7tQwkXesST52LR21EXQLZ7BtE1U7ZIAnwJ7AFpE82EgrYZwcFtgTp7xpU42wj9gXKPj2BJ5bGKcfWG08k_0MMTjotkdx-rmo84AC59gy11xJgGQriwsWyrAUb5d3qqu4XfeGqa9c-If-67uzCFhrGG8cf113feJ80z_N9__w01HYg");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Vegetarian" class="w-[14px] h-[14px] border border-green-500 flex items-center justify-center">
+<div class="w-[6px] h-[6px] rounded-full bg-green-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Spicy Classic Veg Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹99</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Crispy spiced vegetable patty topped with melted cheddar, crunchy lettuce, juicy tomatoes, and house spicy mayo in a toasted brioche bun.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Crispy Veg Patty</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Spicy Mayo</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Brioche Bun</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Paneer Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Tandoori Paneer Crunch Burger with marinated grilled paneer, onions, and tandoori mayo, gourmet cafe style, dark background, cinematic lighting with warm highlights." style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1UhRev6tLLAaHJrb3251gpODkQYAYlSHbJMMXYuMQFMyuxUXNRzSFWP6P53uMZlqdD4mxi_x8UfQBo8eltIBLTssoOfT-2_UnvPgK9suovKElcRgFAbZd-wLZixBVzhBchcFSKbpIPaXwrcJniilQlH0UUN5PqLEdByKHccjjIbCMNj3SMougGD91LbMvnaSttVXYu8ZHUMpIft0BanCdjdYfFnz5TpSrXeLWlwQSmSLxRyuq-XzSUq");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Vegetarian" class="w-[14px] h-[14px] border border-green-500 flex items-center justify-center">
+<div class="w-[6px] h-[6px] rounded-full bg-green-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Paneer Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹130</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Thick slab of char-grilled spiced cottage cheese patty, topped with crunchy onion rings, mint herb mayo, and tangy house sauce.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Char-Grilled Paneer</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Mint Herb Mayo</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Crispy Rings</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sub: Non-Veg -->
+<div class="flex flex-col gap-md mt-md">
+<h3 class="font-headline-md text-headline-md text-on-surface-variant flex items-center gap-sm">
+<div aria-label="Non-Vegetarian" class="w-[16px] h-[16px] border border-red-500 flex items-center justify-center">
+<div class="w-[0px] h-[0px] border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[6px] border-b-red-500"></div>
+</div>
+                        Non-Veg</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Fried Chicken Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Fried Chicken Burger with a large crispy golden fried chicken fillet, melting cheese, and pickles, gourmet cafe style, dark background, cinematic lighting." style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1WuIPMN29kLgQ2J2GC0HAOLplWHJNxux763NndvkqTwByy5R_7fOa0jQQ_5GXqK9kVjbaodqOPMVYM328fg4-2If5-fOQ7ZDdLqVc66Ftz9mlBoGy7zTMRTTKtynk5Yfhix7iNZma12HrMiyC7FKLCIEZrXXBLtFOSMZyGyaP5jJLUrdLaiCGlSXu93E6DO9WPidSH_nuBFWeumqTK60uTcpOjfO0E7DEFRecGY40Ba2dT1BRbqc_VUFg");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Fried Chicken Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹120</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Golden crispy buttermilk fried chicken breast, creamy coleslaw, melted cheese slice, and sweet-spicy relish in a butter-toasted bun.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Crispy Buttermilk</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Creamy Slaw</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Melted Cheese</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Burger Maxi -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Gourmet Burger Maxi with a thick juicy patty, melted cheese, fresh lettuce, and signature sauce on a toasted bun, gourmet cafe style, dark background, cinematic lighting with warm amber highlights." style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1WBvLeX_nN1UxgxVSQsAYL0HJ3R7zi6z7XoNTHcE7Zg0pl9uRm3prqpnpQXiTsZaTao3U-cdYjzpelPCERg2rIgpXfgO9JiEdZ67iC8U_jcGgmft8g4KpPSdjeZV3VU4g2BbguZR7EjenRKVqNwFP_Xcq0gsEw85PamcO87V-WYNYN_0LvVMPeiK8gHlqUf_yMnrVOcOTxOhFlGfhW2ZVGxW6omN3HJMyrvlnTepcCnr-oc5tO2OoFk");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Burger Maxi</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹120</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Monster stacked double patty layered with melted double cheese, crisp lettuce, gherkins, and Buddies secret special burger sauce.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Double Patty</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Double Cheese</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Secret Sauce</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Ghost Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Ghost Burger with a charcoal bun, spicy ghost pepper sauce, and premium patty, dark atmospheric restaurant setting, cinematic lighting with orange highlights." style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1XqBGj9c2g0HurCcvfU52dNJAgmlKPN9o9ufOZBda8qoYyA1LhUzhqQ5aDy83hLq39E_s4h-5rm2wExbIDErDgra6n9VqZws5VyGs8PkuWGbJ0OSXkFDjlfQiKIXiZGag4JrqTWFUWHGnWL54HeB0ov13MTIoLV4mTz2mbZdw59cFRV7HfKMB1LrvXjVeIoGjV0owtthmVaZalTI7Sc2-3oPdWm4YvbN34vJX9FW2mdYaj3dUsnwZTM2w");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Ghost Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹120</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Dramatic activated-charcoal black bun packed with a fiery ghost-pepper spiced patty, jalapenos, and smoked chipotle cheese melt.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Charcoal Bun</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Ghost Pepper</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Smoked Chipotle</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Dragon Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Gourmet Dragon Burger with spicy red sauce, jalapeños, and a premium beef patty, dark atmospheric restaurant setting, cinematic lighting with orange fire-like highlights." style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1VxBoVMfxMR-my3bYU7Se4PkUyy9OIA7a3FZLttrdGIhdH-CBOHQuQbrLLzXLCdsd18WjclPs19CzHnLyduYaeT1FoD92STRn1SUxudjCMEeKatDoM0ArPs5DrxRj08ikiLLo2Glo05WC-jU88_QDbuS8-XNraNcFfH2fcStv80SHkgZpIuMO_BieuAq1YMq33NVjnz4PkEGPpm9tNmBlzDW9vsykQUHSmdrBlWY4UAje6GGmKySt5O1A");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Dragon Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹120</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Fiery grilled patty coated in dragon chili glaze, tossed red peppers, sriracha mayo, and crisp greens.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Dragon Glaze</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Sriracha Mayo</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Fiery Tossed</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Crazy Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Gourmet Crazy Burger with multiple layers of cheese, onion rings, and a special messy sauce, gourmet food photography, dark background, warm lighting." style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1Ubzgv49y7em4Uge0qg0R_TXNkTI8mho7eK8RcltUiQ1OdIujRgGIz9Q0gjKr6UjsUS2MtOQQziakfzkx278GuV3bgZywrYa6JitGa802-7jfF4ADv6tEJcZrSkykq8EFK80LDuWiawZokCLsO3b-G_WR6FULlFTVdtkVKEAO1_xJvHW0lZXpXBRGFp1UbyPEl6E284YYmo0osyWAqg8GWmGRcdEmaeTr5CU2rCgKdeomvpBcG7zO-prQ");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Crazy Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹120</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Decadent tall-stack burger with crispy golden onion rings, bacon/patty layers, overflowing cheese volcano, and barbecue glaze.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Cheese Volcano</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Tall-Stack</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Crispy Rings</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Smoked BBQ Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Gourmet Smoked BBQ Burger with thick BBQ sauce drizzle, onion rings, and a juicy patty, gourmet food photography, dark background, warm lighting." style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1VbuuiM3Mrt0fs3LaNhVW7dt1-S6kSjKjAdFOMZHZH6PIxyGIDYhEb7xWzfCRmo8Z1BTXBJUERO1LpK5A9YA21QzIg-EK2z6I4zqYODszTdel9VmixmFqr4tQ4iqce-8tDGF06VNxl_C-mq3-uOgg8G6htYsYpmOn_reH7C2hSvyYV9UGW0iYBOs7fAiK-g-uYtpwAQOeIy3bBrv8RlsKaYsOCZOHqOxFo6GnikvwO1W787Cu8XHxnQ");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Smoked BBQ Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹120</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Succulent patty brushed with hickory smoked barbecue glaze, crowned with crispy fried onions and melted smoked cheese.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Hickory Glaze</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Crispy Straws</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Smoked Cheese</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Fish Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Crispy Fried Fish Burger with golden breaded fish fillet, tartar sauce, and pickles in a soft bun, gourmet cafe style, dark background, cinematic lighting." style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1VNhCzf-l3lTyo4L4hM8KzhVj9REQfdWyBD9I8S04fiVEo9bxIH0X6YyReDKLe0EGk5WsT78OmvB6Z2MaQRRbM71OCkJLqdrHM3jRUHdrR2jbPoO0OjJAqBBaFgLrem2n4XgpRXkcgSgQysK7SxbDIzMAgnHj03qKNCSSS8k9pXjM0Z8JmerBb5DLKXOR6zqgolhnDuTILTqt3BcGsHYK5Ie1wy9Wt6oLTwODp4iQ1oz9vdczfsbIy7Yg");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Fish Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹170</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Golden panko-crusted fish fillet served with fresh house dill tartar sauce, crisp lettuce, and lemon herb drizzle.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Panko Crusted</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Dill Tartar</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Lemon Herb</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Category: Signature Mo-Burgers -->
+<div class="flex flex-col gap-lg mt-xl">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary border-b border-outline-variant pb-xs">Signature Mo-Burgers</h2>
+<!-- Sub: Veg -->
+<div class="flex flex-col gap-md">
+<h3 class="font-headline-md text-headline-md text-on-surface-variant flex items-center gap-sm">
+<div aria-label="Vegetarian" class="w-[16px] h-[16px] border border-green-500 flex items-center justify-center">
+<div class="w-[8px] h-[8px] rounded-full bg-green-500"></div>
+</div>
+                        Vegetarian
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Veg Momo Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Gourmet Veg Momo Burger featuring steamed momos inside a burger bun with spicy green and red chutneys, gourmet cafe style, dark background, cinematic lighting." style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1XJaDrCSzyAu7oO7plq4D_gma-_uR0VRDjC519ysjaFBNvup6SJXxSqIfc9z1UTzh7ZyVIMf1eP9rEC-4xPeLgFlJTjoPxb1-ZzR_vb3g55-74MOMTPYwa1M29oayCkp5BPpQeLLhFGQAJA0Od2-DrcVCZxlKxb4lroZBI7mlT87DPI8sKeWjxdjuO3Q5gWhJ7VyzG86b7zL1FlnSDaJoylWGZ-xdfX4-2X_j4Jy1Bq6RV1CLm6tAwV");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Vegetarian" class="w-[14px] h-[14px] border border-green-500 flex items-center justify-center">
+<div class="w-[6px] h-[6px] rounded-full bg-green-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Veg Momo Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹99</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Crispy pan-fried vegetable momos nestled inside a toasted bun with spicy schezwan chutney, creamy mayo, and crisp lettuce.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Crispy Veg Momos</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Schezwan Dip</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Fusion Bun</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Paneer Momo Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Gourmet Paneer Momo Burger with grilled paneer and momos, drizzled with tandoori sauce, gourmet food photography, dark background, warm orange lighting." style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1Xa4qsnIOxCQlUQH-jNwhMRFrTWLnj6hJ7twPV01YP0V4hDk8nOjotSPHUvO27kdQzUXGeostoATVXVEBy8PkvtoLMMeon4CxNP7kQY3yroy2yXR4d_AclM_Uargdebq8iqsExL3jpGhuAOT8CzFfU_xgTWTzVCjA65xCq0k8CeWwBohFb2aGFz08Lgvd1V1h4dQ03KzZfy-QKuPow9Y0z8NfNFCwBiQ9C6yNzX66ekOlIDt8xJR7oA");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Vegetarian" class="w-[14px] h-[14px] border border-green-500 flex items-center justify-center">
+<div class="w-[6px] h-[6px] rounded-full bg-green-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Paneer Momo Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹99</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Golden paneer momos stacked inside a soft bun, layered with tandoori mayo, mint chutney, and crunchy bell pepper slaw.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Paneer Momos</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Tandoori Mayo</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Pepper Slaw</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Cheese Corn Momo Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Gourmet Cheese Corn Momo Burger with melting cheese and sweet corn inside, gourmet cafe style, dark background, cinematic lighting with warm highlights." style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1UoPoDdMehwGB-hITGB-R69_xKB0M_-8DgGyQ9up0sfsA18HyUVpZe6hI6d0YnMZOrD2z0EdfyuQ3BGRERJEoPrte40OGhSJNTHZSBcHOXve6YYDUAv5uHq4KJ0gyUrDsV2ImjgTV6mso-wSpwd_roInar42vqCTVZfM-IXZKJtvFKCqrKmh3C9YrEmV_RNZUk67QpA0BvZAmlEWN4PREpBFuAphktXNwYuCeQ1NSlUC3Grce98ql0-");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Vegetarian" class="w-[14px] h-[14px] border border-green-500 flex items-center justify-center">
+<div class="w-[6px] h-[6px] rounded-full bg-green-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Cheese Corn Momo Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹110</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Molten cheese &amp; sweet corn momos packed in a warm bun, oozing with extra melted cheese and herbs.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Molten Cheese</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Sweet Corn</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Herb Burst</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sub: Non-Veg -->
+<div class="flex flex-col gap-md mt-md">
+<h3 class="font-headline-md text-headline-md text-on-surface-variant flex items-center gap-sm">
+<div aria-label="Non-Vegetarian" class="w-[16px] h-[16px] border border-red-500 flex items-center justify-center">
+<div class="w-[0px] h-[0px] border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-b-[6px] border-b-red-500"></div>
+</div>
+                        Non-Vegetarian
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Classic Chicken Momo Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Classic Chicken Momo Burger with juicy chicken momos and spicy mayo inside a toasted bun" style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1UedKbdFjR8H88aQOuTVwvus-ocZcpLz5OIAMy4UuNmkz2iZqQUCqhmbibG9cgx0W1gEAWCHCrhjbAmc3BEZv4_RD3pgq3L80JrEBIKJ1bc1MXirfbw2tGYFpv_lsrDLRd5ukY4PDlmUNnRd5g3u9OZIt0n6F-fUQsVto4G8ymkM6p6uFmwo-xj0Cqczuc18KTT2Q1D1dnUQSidvGPQqJx-LjUMicuFq8-LxgVfBVAWHzGLb7gLyH5m");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Classic Chicken Momo Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹99</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Golden pan-fried chicken momos paired with fiery momo chili sauce, garlic mayo, and toasted brioche.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Pan-Fried Momos</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Chili Momo Sauce</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Garlic Mayo</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Chicken Tikka Momo Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Signature Chicken Tikka Momo Burger featuring fried momos inside a burger bun with spicy sauces" style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1VSl2S2vF_sENB_CGup2G2LhAMfVQwQcWIynKacruRDdPxlpKnZICqtSogwECizmpqxv1L2mAJ7-qeuXbd0XXn0sO-BAnIAqaJF2VmVhXq1JlAkxeOzR6v-c4TowSJJ9YQtScA4OPp_yUzuVbQhk7cyNBMOtinqKX5AVjhVNPUvfAakXpFDF0nq-Pkj6lFQih-venERyUsddWfY5cD2vAdYLhXtd4Sr6arUpODr1F4Slte2L79_KY2j5w");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Chicken Tikka Momo Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹120</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Tandoori charred chicken momos stuffed inside a bun with aromatic tikka sauce and pickled onion rings.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Charred Tikka</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Pickled Onions</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Aromatic Spices</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Peri Peri Momo Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Peri Peri Momo Burger with spicy peri peri sauce drizzle and fried momos" style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1W8HAcC_HtuPoUvjVVKPqTEZH8v28tIdJqbOAhT-iW04N9M6VAq5bFECGV9-oNuK1Rmy3boapVOCzMm-wQOwV2nKMvHkpOrK3bM3yBpFt8giFFXq4XycAzrWArD_LcD0qDTwp9yp7EZs9_WjSPHRXpx8hinhrF-rXaj2_bdwP2zb3kLalOOUQ1vkWPyivEkCGNZ4tmoIddsthWOOorW1dHFu4_B9BW5pBe8lklXL1-79ld9EhS7kJ1koA");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Peri Peri Momo Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹110</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Crispy momos tossed in spicy peri peri dust and smothered in peri peri mayo inside a toasted bun.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Peri Peri Dust</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Spicy Peri Mayo</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Crisp Crunch</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- BBQ Momo Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="BBQ Momo Burger with thick smoky BBQ sauce and momos" style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1WVUT_h6plQDrAR8hizENpT5GcNobSysL7FtL49dWUE8vI-EpFz5IE5wzJsWrDe3FsvB5kYhK1sqQ65tccsp2MZ0ltK3YIf7xzUGt9gWNsPEnf0xun041c9vj2s-VH4vaMDuXP6GvOteJBdshlZt6ighJRcbX1SQaiDrM5Sis1r-2imQQ8VdXfEA3uu1guLmwxYPSlSSjiY_fo16jUq5xXWFdtEJijn8rwHiDH_9LI1BbBhCCAx9Wsbew");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">BBQ Momo Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹120</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Juicy chicken momos drenched in rich smoky BBQ sauce, topped with crisp onion straws in a soft bun.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Smoky BBQ</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Crisp Straws</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Glazed Momos</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Hariyali Momo Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Hariyali Momo Burger with green mint and coriander sauce and momos" style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1XTgarVH1Gqyoht69OlxuFZQbWB-PVsekDtQ3R2Akn-eQw7_2zrawGvWq8QWGYU7He-SxfPxgfD706cEykoc_trBvfAWnwnDmdfRI99yn3aFamjhNuvyWlUs7e5J9fomxOZMobqTa3cUAmDy_wsDS24ztLwG7q5SvFARUQrMEVKyee-ii09QFehEbX8YQd6LKMHUnQ5ZeYNx99ZrlEHQzhP3AsnXSwivE6b1nMJFiSPh6mhOGEYExD1fg");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Hariyali Momo Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹120</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Fresh herb, mint and coriander marinated momos tucked inside a bun with spicy green dip and fresh greens.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Mint &amp; Coriander</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Herb Marinated</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Spicy Green Dip</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+<!-- Butter Chicken Momo Burger -->
+<div class="bg-surface-container rounded-lg overflow-hidden border border-surface-bright/50 hover:border-primary/30 transition-colors flex flex-col relative group">
+<div class="absolute top-sm right-sm z-10 bg-surface-container/90 backdrop-blur-sm border border-primary-container text-primary-container font-label-mono text-label-mono px-xs py-xs rounded flex items-center gap-xs prep-badge-glow">
+<span class="material-symbols-outlined text-[14px]" data-icon="timer">timer</span>
+~15-20 mins
+</div>
+<div class="bg-cover bg-center w-full aspect-video" data-alt="Butter Chicken Momo Burger with creamy butter chicken sauce and momos in a toasted bun" style='background-image: url("https://lh3.googleusercontent.com/aida/AEtjO1VsicOrEd3Nw0IVyVFuLLUayhLXdmo-sdJU3iSXievBZ-MerZrskDGjowdpCYd4bKaxJ-x3bxvZj89prTg6PM-lzjDHi_H1BAJvDWMRFuj8GfA6mRHwLV_0zZjp9U8Hz-T4bqFqUgMUk9BXwO7K4RXzdetm5qOZbKfDh4jsVspLnRA829U4lLXptSSEHF-0kn6qBMcRTrm9v8MMgRQGNtLzVpO9oiRtdxsYkz385Qz5uiVF7bkV8HBMow");'></div>
+<div class="p-md flex flex-col gap-sm flex-grow justify-between">
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div aria-label="Non-Vegetarian" class="w-[14px] h-[14px] border border-red-500 flex items-center justify-center">
+<div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-b-[5px] border-b-red-500"></div>
+</div>
+<h4 class="font-headline-md text-[20px] text-on-background leading-tight">Butter Chicken Momo Burger</h4>
+</div>
+<span class="font-label-mono text-[16px] font-bold text-primary-container">₹120</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Tender momos coated in rich, velvety makhani butter chicken gravy inside a toasted brioche bun.</p>
+<div class="flex flex-wrap gap-xs mt-xs">
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Velvety Makhani</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Butter Glaze</span>
+<span class="px-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-mono text-[11px]">Brioche Bun</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary-container text-primary-container font-bold py-sm rounded hover:bg-primary-container hover:text-background transition-colors mt-sm">Add to Order</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<div class="max-w-[1280px] mx-auto px-4 md:px-8 mb-16">
+<div class="p-8 rounded-2xl bg-gradient-to-r from-surface-container to-surface-container-high border border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden">
+<div class="flex items-center gap-4 z-10">
+<div class="w-14 h-14 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-2xl">restaurant</span>
+</div>
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">The Social Hub Experience</span>
+<h3 class="text-2xl font-bold text-on-surface">Craving More at Buddies?</h3>
+<p class="text-sm text-on-surface-variant max-w-xl">Pair your artisan smashed burgers with handcrafted momos, sizzling loaded hot dogs, or stone-fired pizzas while challenging your crew to board games.</p>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 z-10">
+<a class="px-5 py-2.5 rounded-lg border border-outline-variant hover:border-primary text-on-surface hover:text-primary text-sm font-semibold transition-all" href="#">Browse Full Menu</a>
+<a class="px-5 py-2.5 rounded-lg bg-primary hover:bg-primary-hover text-on-primary text-sm font-bold shadow-md shadow-primary/20 transition-all flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-base">local_offer</span>
+        Explore Combos
+      </a>
+</div>
+</div>
+</div><footer class="bg-surface-container-lowest dark:bg-surface-container-lowest text-primary dark:text-primary font-body-md text-body-md w-full pt-xl pb-lg bg-surface-container-lowest border-t border-outline-variant flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg px-margin-mobile md:px-margin-desktop max-w-[1280px] mx-auto opacity-90 hover:opacity-100 transition-opacity">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center gap-3 mb-sm"><img alt="Buddies Cafe" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V1ol5qpseZIJjkPO3MeJomapFPfq4z_J2SR0RYhTvvaLrOLEzrJdP-jfuGb2K50NzNvRzaMKJ2mG8GTAzbyBQSKbp1XV3-yBSzBA7fQGk0YitIlMge5rCaQ6tXnQ6SMpi4_W5MinN5Ba1ELEpyPC6N1cQrM7y21w0S3u2kNHaZAoxPtYdmuH45h9cryfncsEV3NeYsmiExERl-J9kUUuMn2SuVkG1oYoUUYSKL7qIi0Kt7QIRN0UcLpA"/><span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary">Buddies Cafe</span></div>
+<p class="text-on-surface-variant">© 2024 Buddies Cafe. Eat – Play – Repeat.</p>
+</div>
+<div class="flex flex-col gap-xs text-on-surface-variant">
+<a class="hover:text-primary-fixed transition-colors" href="#">Link Road, Anna Nagar, opp to Fresh Point, Virudhunagar-626001</a>
+<a class="hover:text-primary-fixed transition-colors" href="#">9345695826</a>
+<a class="hover:text-primary-fixed transition-colors" href="#">@buddies_vnr</a>
+</div>
+<div class="flex flex-col gap-sm items-start md:items-end">
+<p class="text-on-surface-variant text-sm">Level up your taste buds.</p>
+</div>
+</div>
+</footer>
+</body></html>
