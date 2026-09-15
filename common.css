@@ -1,23 +1,23 @@
 /* Buddies Cafe - Common Design System */
 :root{--bc-bg:#1b110a;--bc-surface:#241912;--bc-card:#281d15;--bc-card2:#33281f;--bc-border:#564334;--bc-text:#f3dfd1;--bc-muted:#ddc1ae;--bc-orange:#ff8c00;--bc-orange-light:#ffb77d}
-html,body{background:var(--bc-bg)!important;color:var(--bc-text)!important}
-body{font-family:'Plus Jakarta Sans',Arial,sans-serif!important}
-header{background:rgba(27,17,10,.94)!important;border-bottom:1px solid rgba(86,67,52,.55)!important;backdrop-filter:blur(16px)!important}
-header nav{display:flex!important;align-items:center!important;gap:8px!important}
-header nav a{color:var(--bc-muted)!important;text-decoration:none!important;border-radius:10px!important;padding:10px 14px!important;font-weight:600!important;transition:.2s ease!important}
-header nav a:hover,header nav a:focus{background:var(--bc-card2)!important;color:var(--bc-orange-light)!important}
-header nav a[aria-current='page'],header nav a.active{background:var(--bc-orange)!important;color:#241000!important}
-main,section{border-color:var(--bc-border)}
-
-/* One common style for every clickable button/link */
-button,.btn,a[class*='btn'],a[class*='button'],a[href*='swiggy'],a[href^='tel:']{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;min-height:44px!important;padding:11px 20px!important;border:1px solid var(--bc-orange)!important;border-radius:10px!important;background:var(--bc-orange)!important;color:#241000!important;font-family:'Plus Jakarta Sans',Arial,sans-serif!important;font-weight:700!important;text-decoration:none!important;cursor:pointer!important;transition:transform .2s ease,background .2s ease,box-shadow .2s ease!important;box-shadow:0 4px 14px rgba(255,140,0,.18)!important}
-button:hover,.btn:hover,a[class*='btn']:hover,a[class*='button']:hover,a[href*='swiggy']:hover,a[href^='tel:']:hover{background:var(--bc-orange-light)!important;color:#241000!important;transform:translateY(-1px)!important;box-shadow:0 6px 18px rgba(255,140,0,.28)!important}
-button:focus-visible,.btn:focus-visible,a[class*='btn']:focus-visible,a[class*='button']:focus-visible{outline:2px solid var(--bc-orange-light)!important;outline-offset:2px!important}
-
-/* Keep secondary clickable controls consistent */
-a:not(nav a):not([class*='btn']):not([class*='button']):not([href*='swiggy']):not([href^='tel:']){transition:.2s ease}
-
-footer{background:var(--bc-surface)!important;color:var(--bc-muted)!important;border-top:1px solid var(--bc-border)!important}
+*{box-sizing:border-box}
+html,body{margin:0!important;background:var(--bc-bg)!important;color:var(--bc-text)!important;font-family:'Plus Jakarta Sans',Arial,sans-serif!important}
+body{min-height:100vh;line-height:1.6}
+header{background:rgba(27,17,10,.97)!important;border-bottom:1px solid rgba(86,67,52,.65)!important;backdrop-filter:blur(16px)!important;z-index:1000!important}
+header nav{display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;flex-wrap:nowrap!important;width:100%!important}
+header nav a{display:inline-flex!important;align-items:center!important;justify-content:center!important;color:var(--bc-muted)!important;background:transparent!important;text-decoration:none!important;border:1px solid transparent!important;border-radius:10px!important;padding:10px 16px!important;min-height:42px!important;font-weight:600!important;font-size:15px!important;line-height:1!important;transition:all .2s ease!important}
+header nav a:hover,header nav a:focus{background:var(--bc-card2)!important;color:var(--bc-orange-light)!important;border-color:var(--bc-border)!important}
+header nav a[aria-current='page'],header nav a.active{background:var(--bc-orange)!important;color:#241000!important;border-color:var(--bc-orange)!important}
+main{background:var(--bc-bg)!important;color:var(--bc-text)!important}
+section{border-color:var(--bc-border)!important}
+h1,h2,h3,h4,h5,h6{color:var(--bc-text)!important}
+p{color:var(--bc-muted)!important}
+/* ONE button design for every page */
+button,.btn,a.btn,a.button,.button,a[class*='btn'],a[class*='button'],[role='button'],a[href*='swiggy'],a[href^='tel:']{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;min-height:46px!important;padding:12px 22px!important;border:1px solid var(--bc-orange)!important;border-radius:10px!important;background:var(--bc-orange)!important;color:#241000!important;font-family:inherit!important;font-size:15px!important;font-weight:700!important;line-height:1.1!important;text-decoration:none!important;cursor:pointer!important;transition:transform .2s ease,background .2s ease,box-shadow .2s ease!important;box-shadow:0 4px 14px rgba(255,140,0,.18)!important}
+button:hover,.btn:hover,a.btn:hover,a.button:hover,.button:hover,a[class*='btn']:hover,a[class*='button']:hover,[role='button']:hover,a[href*='swiggy']:hover,a[href^='tel:']:hover{background:var(--bc-orange-light)!important;color:#241000!important;transform:translateY(-1px)!important;box-shadow:0 8px 22px rgba(255,140,0,.25)!important}
+button:focus-visible,.btn:focus-visible,a.btn:focus-visible,a.button:focus-visible,.button:focus-visible,[role='button']:focus-visible{outline:2px solid var(--bc-orange-light)!important;outline-offset:2px!important}
 .card,.menu-card,.category-card,.review-card,.combo-card,.item-card{background:var(--bc-card)!important;border:1px solid rgba(86,67,52,.65)!important;border-radius:16px!important}
-h1,h2,h3,h4{color:var(--bc-text)}
-@media(max-width:1023px){header nav{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;overflow-x:auto!important}header nav a{white-space:nowrap!important;padding:8px 10px!important;font-size:14px!important}button,.btn,a[class*='btn'],a[class*='button']{min-height:42px!important;padding:10px 16px!important}}
+footer{background:var(--bc-surface)!important;color:var(--bc-muted)!important;border-top:1px solid var(--bc-border)!important}
+input,textarea,select{background:var(--bc-card)!important;color:var(--bc-text)!important;border:1px solid var(--bc-border)!important;border-radius:10px!important}
+input::placeholder,textarea::placeholder{color:#a99080!important}
+@media(max-width:1023px){header nav{justify-content:flex-start!important;overflow-x:auto!important;scrollbar-width:none!important;padding:4px 8px!important}header nav::-webkit-scrollbar{display:none!important}header nav a{white-space:nowrap!important;padding:9px 12px!important;font-size:14px!important;min-height:40px!important}button,.btn,a.btn,a.button,.button,a[class*='btn'],a[class*='button'],[role='button']{min-height:44px!important;padding:11px 18px!important}}
