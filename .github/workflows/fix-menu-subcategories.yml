@@ -22,25 +22,35 @@ jobs:
           p = Path('menu_page.html')
           s = p.read_text(encoding='utf-8')
           replacements = {
-              'href="#cat-chicken"': 'href="tenders.html"',
-              'href="#cat-pizzas"': 'href="pizza.html"',
-              'href="#cat-burgers"': 'href="Burger.html"',
-              'href="#cat-momos"': 'href="momos.html"',
-              'href="#cat-hotdogs"': 'href="hotdog.html"',
-              'href="#cat-fries"': 'href="french fries.html"',
-              'href="#cat-snacks"': 'href="snacks.html"',
-              'href="#cat-desserts"': 'href="dessert.html"',
-              'href="#cat-beverages"': 'href="Bevarages.html"',
+              'href="#cat-chicken"': 'href="./tenders.html"',
+              'href="#cat-pizzas"': 'href="./pizza.html"',
+              'href="#cat-burgers"': 'href="./Burger.html"',
+              'href="#cat-momos"': 'href="./momos.html"',
+              'href="#cat-hotdogs"': 'href="./hotdog.html"',
+              'href="#cat-fries"': 'href="./french_fries.html"',
+              'href="#cat-snacks"': 'href="./snacks.html"',
+              'href="#cat-desserts"': 'href="./dessert.html"',
+              'href="#cat-beverages"': 'href="./Bevarages.html"',
+              'href="tenders.html"': 'href="./tenders.html"',
+              'href="pizza.html"': 'href="./pizza.html"',
+              'href="Burger.html"': 'href="./Burger.html"',
+              'href="momos.html"': 'href="./momos.html"',
+              'href="hotdog.html"': 'href="./hotdog.html"',
+              'href="french fries.html"': 'href="./french_fries.html"',
+              'href="snacks.html"': 'href="./snacks.html"',
+              'href="dessert.html"': 'href="./dessert.html"',
+              'href="Bevarages.html"': 'href="./Bevarages.html"',
           }
           for old, new in replacements.items():
               s = s.replace(old, new)
           p.write_text(s, encoding='utf-8')
           PY
+          cp -f "french fries.html" french_fries.html
 
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add menu_page.html
+          git add menu_page.html french_fries.html
           git diff --cached --quiet || git commit -m "Fix menu subcategory navigation"
           git push
