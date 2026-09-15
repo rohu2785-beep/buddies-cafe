@@ -5,7 +5,7 @@
   if (!document.querySelector('link[data-buddies-common-css]')) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = 'common.css?v=2';
+    link.href = 'common.css?v=3';
     link.dataset.buddiesCommonCss = 'true';
     document.head.appendChild(link);
   }
@@ -29,22 +29,46 @@
   }
 
   function fixNavigation() {
-    document.querySelectorAll('nav').forEach(function (nav) {
-      const links = Array.from(nav.querySelectorAll('a'));
-      if (!links.length) return;
-      const wanted = ['home', 'about us', 'menu', 'combos', 'review', 'contact'];
-      const matched = [];
-      wanted.forEach(function (name) {
-        const link = links.find(function (a) { const t = clean(a.textContent); return t === name || (name === 'review' && t === 'reviews'); });
-        if (link) {
-          if (name === 'review') link.textContent = 'Review';
-          link.href = routes[name];
-          link.setAttribute('data-path', name);
-          matched.push(link);
-        }
-      });
-      if (matched.length >= 4) matched.forEach(function (link) { nav.appendChild(link); });
+    const allNavs = Array.from(document.querySelectorAll('nav'));
+    if (!allNavs.length) return;
+
+    // Use the header nav when present; otherwise use the page's first nav.
+    // This prevents extra in-page navs (for example on Combos) from becoming a second main menu.
+    const nav = document.querySelector('header nav') || allNavs[0];
+    allNavs.forEach(function (other) {
+      if (other !== nav && other.closest('main')) other.remove();
     });
+
+    const wanted = [
+      ['Home', routes.home],
+      ['About Us', routes['about us']],
+      ['Menu', routes.menu],
+      ['Combos', routes.combos],
+      ['Review', routes.review],
+      ['Contact', routes.contact]
+    ];
+
+    const oldLinks = Array.from(nav.querySelectorAll('a'));
+    const finalLinks = [];
+    wanted.forEach(function (item) {
+      const label = item[0];
+      let link = oldLinks.find(function (a) {
+        const text = clean(a.textContent);
+        return text === clean(label) || (label === 'Review' && text === 'reviews') || (label === 'About Us' && text === 'about');
+      });
+      if (!link) {
+        link = document.createElement('a');
+        link.textContent = label;
+      }
+      link.textContent = label;
+      link.href = item[1];
+      link.setAttribute('data-path', clean(label));
+      finalLinks.push(link);
+    });
+
+    // Remove all existing nav anchors and rebuild the exact same six-link sequence.
+    oldLinks.forEach(function (link) { link.remove(); });
+    finalLinks.forEach(function (link) { nav.appendChild(link); });
   }
 
   function fixHomePage() {
