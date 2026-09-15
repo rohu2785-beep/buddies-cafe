@@ -14,51 +14,88 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fix navigation in all HTML pages
+      - name: Apply the same six-item navigation to every HTML page
         run: |
           python3 <<'PY'
           from pathlib import Path
           import re
 
-          files = [p for p in Path('.').glob('*.html') if p.name != '404.html']
+          NAV = '''<nav class="hidden xl:flex items-center gap-lg" data-active-classes="text-primary-container font-bold">
+          {HOME}
+          {ABOUT}
+          {MENU}
+          {COMBOS}
+          {REVIEW}
+          {CONTACT}
+          </nav>'''
 
-          replacements = {
-              'home page.html': 'index.html',
-              'menu page.html': 'menu_page.html',
-              'combos page.html': 'combos_page.html',
-              'about page.html': 'about_page.html',
-              'reviews page.html': 'reviews_page.html',
-              'contact us.html': 'contact_page.html',
-              'contact page.html': 'contact_page.html',
-          }
+          def link(label, path, active):
+              if active:
+                  return f'<a aria-current="page" class="transition-colors text-primary-container font-bold" data-path="{path}" href="{path}_page.html">{label}</a>' if path != 'home' else '<a aria-current="page" class="transition-colors text-primary-container font-bold" data-path="home" href="index.html">Home</a>'
+              href = 'index.html' if path == 'home' else f'{path}_page.html'
+              return f'<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="{path}" href="{href}">{label}</a>'
 
-          for path in files:
-              text = path.read_text(encoding='utf-8')
+          for file in Path('.').glob('*.html'):
+              if file.name == '404.html':
+                  continue
+
+              text = file.read_text(encoding='utf-8')
               original = text
+              name = file.name.lower()
 
-              # Remove only navigation links for the two unwanted navigation items.
-              text = re.sub(r'<a\b[^>]*>\s*Categories\s*</a>', '', text, flags=re.I)
-              text = re.sub(r'<a\b[^>]*>\s*Board\s*Games\s*</a>', '', text, flags=re.I)
+              if name in ('index.html', 'home page.html'):
+                  current = 'home'
+              elif 'about' in name:
+                  current = 'about'
+              elif 'combo' in name:
+                  current = 'combos'
+              elif 'review' in name:
+                  current = 'reviews'
+              elif 'contact' in name:
+                  current = 'contact'
+              elif 'menu' in name or name in ('pizza.html','burger.html','momos.html','tenders.html','snacks.html','dessert.html','bevarages.html','french fries.html','hotdog.html'):
+                  current = 'menu'
+              else:
+                  current = ''
 
-              # Normalize the six navigation labels and their destinations wherever they occur.
+              nav = NAV.format(
+                  HOME=link('Home', 'home', current == 'home'),
+                  ABOUT=link('About Us', 'about', current == 'about'),
+                  MENU=link('Menu', 'menu', current == 'menu'),
+                  COMBOS=link('Combos', 'combos', current == 'combos'),
+                  REVIEW=link('Review', 'reviews', current == 'reviews'),
+                  CONTACT=link('Contact', 'contact', current == 'contact'),
+              )
+
+              # Replace only the first navigation inside the fixed header.
+              header_match = re.search(r'(<header\\b.*?</header>)', text, flags=re.I|re.S)
+              if header_match:
+                  header = header_match.group(1)
+                  header_new, count = re.subn(r'<nav\\b[^>]*>.*?</nav>', nav, header, count=1, flags=re.I|re.S)
+                  if count:
+                      text = text[:header_match.start(1)] + header_new + text[header_match.end(1):]
+
+              # Fix requested menu labels wherever they occur.
+              replacements = {
+                  'Artisanal Pizza': 'Pizza', 'artisanal pizza': 'pizza',
+                  'Pan Fried Momos': 'Momos', 'pan fried momos': 'momos',
+                  'Gourmet Hot Dogs': 'Hotdog', 'Gourmet Hot Dog': 'Hotdog',
+                  'French Fries & Bowls': 'French Fries', 'french fries & bowls': 'french fries'
+              }
               for old, new in replacements.items():
                   text = text.replace(old, new)
 
-              text = re.sub(r'(<a\b[^>]*href=["\'])menu_page\.html(["\'][^>]*>)\s*Menu\s*</a>', r'\1menu_page.html\2Menu</a>', text, flags=re.I)
-              text = re.sub(r'(<a\b[^>]*href=["\'])combos_page\.html(["\'][^>]*>)\s*Combos\s*</a>', r'\1combos_page.html\2Combos</a>', text, flags=re.I)
-              text = re.sub(r'(<a\b[^>]*href=["\'])about_page\.html(["\'][^>]*>)\s*About(?:\s+Us)?\s*</a>', r'\1about_page.html\2About Us</a>', text, flags=re.I)
-              text = re.sub(r'(<a\b[^>]*href=["\'])reviews_page\.html(["\'][^>]*>)\s*Reviews\s*</a>', r'\1reviews_page.html\2Reviews</a>', text, flags=re.I)
-              text = re.sub(r'(<a\b[^>]*href=["\'])contact_page\.html(["\'][^>]*>)\s*Contact(?:\s+Us)?\s*</a>', r'\1contact_page.html\2Contact</a>', text, flags=re.I)
-              text = re.sub(r'(<a\b[^>]*href=["\'])(?:index\.html|home page\.html)(["\'][^>]*>)\s*Home\s*</a>', r'\1index.html\2Home</a>', text, flags=re.I)
-
-              # Menu item page names requested by the user.
-              text = text.replace('Artisanal Pizza', 'Pizza').replace('artisanal pizza', 'pizza')
-              text = text.replace('Pan Fried Momos', 'Momos').replace('pan fried momos', 'momos')
-              text = text.replace('Gourmet Hot Dogs', 'Hotdog').replace('Gourmet Hot Dog', 'Hotdog')
-              text = text.replace('French Fries & Bowls', 'French Fries').replace('french fries & bowls', 'french fries')
+              # Normalize common old navigation destinations outside the header too.
+              for old, new in {
+                  'home page.html':'index.html', 'menu page.html':'menu_page.html',
+                  'combos page.html':'combos_page.html', 'about page.html':'about_page.html',
+                  'reviews page.html':'reviews_page.html', 'contact us.html':'contact_page.html',
+                  'contact page.html':'contact_page.html'
+              }.items():
+                  text = text.replace(old, new)
 
               if text != original:
-                  path.write_text(text, encoding='utf-8')
+                  file.write_text(text, encoding='utf-8')
           PY
 
       - name: Commit fixes
@@ -67,8 +104,8 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add '*.html'
           if git diff --cached --quiet; then
-            echo 'No navigation changes needed.'
+            echo 'No changes needed.'
           else
-            git commit -m 'Fix navigation across cafe pages [skip ci]'
+            git commit -m 'Fix navigation across all cafe pages [skip ci]'
             git push
           fi
