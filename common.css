@@ -1,0 +1,16 @@
+/* Buddies Cafe - Common Design System */
+:root{--bc-bg:#1b110a;--bc-surface:#241912;--bc-card:#281d15;--bc-card2:#33281f;--bc-border:#564334;--bc-text:#f3dfd1;--bc-muted:#ddc1ae;--bc-orange:#ff8c00;--bc-orange-light:#ffb77d}
+html,body{background:var(--bc-bg)!important;color:var(--bc-text)!important}
+body{font-family:'Plus Jakarta Sans',Arial,sans-serif!important}
+header{background:rgba(27,17,10,.94)!important;border-bottom:1px solid rgba(86,67,52,.55)!important;backdrop-filter:blur(16px)!important}
+header nav{display:flex!important;align-items:center!important;gap:8px!important}
+header nav a{color:var(--bc-muted)!important;text-decoration:none!important;border-radius:10px!important;padding:10px 14px!important;font-weight:600!important;transition:.2s ease!important}
+header nav a:hover,header nav a:focus{background:var(--bc-card2)!important;color:var(--bc-orange-light)!important}
+header nav a[aria-current='page'],header nav a.active{background:var(--bc-orange)!important;color:#241000!important}
+main,section{border-color:var(--bc-border)}
+button,.btn{border-radius:10px!important}
+a[href*='swiggy']{background:var(--bc-orange)!important;color:#241000!important;border-radius:10px!important}
+footer{background:var(--bc-surface)!important;color:var(--bc-muted)!important;border-top:1px solid var(--bc-border)!important}
+.card,.menu-card,.category-card,.review-card,.combo-card,.item-card{background:var(--bc-card)!important;border:1px solid rgba(86,67,52,.65)!important;border-radius:16px!important}
+h1,h2,h3,h4{color:var(--bc-text)}
+@media(max-width:1023px){header nav{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;overflow-x:auto!important}header nav a{white-space:nowrap!important;padding:8px 10px!important;font-size:14px!important}}
