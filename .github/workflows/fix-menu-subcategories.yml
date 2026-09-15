@@ -47,10 +47,47 @@ jobs:
           PY
           cp -f "french fries.html" french_fries.html
 
+      - name: Add on-page SEO to all 15 main pages
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          seo = {
+            'index.html': ('Buddies Cafe | Gaming Cafe & Fast Food in Virudhunagar', 'Buddies Cafe in Virudhunagar for pizza, burgers, momos, chicken tenders, desserts, shakes and gaming vibes. Eat. Play. Repeat.', 'Buddies Cafe Virudhunagar, gaming cafe Virudhunagar, cafe in Virudhunagar, fast food Virudhunagar, pizza burger momos Virudhunagar'),
+            'about_page.html': ('About Buddies Cafe | Cafe & Gaming Vibes in Virudhunagar', 'Learn about Buddies Cafe, a fun food and gaming destination in Virudhunagar serving pizzas, burgers, momos, tenders, desserts and cold beverages.', 'Buddies Cafe about, gaming cafe Virudhunagar, cafe in Virudhunagar, food cafe Virudhunagar'),
+            'menu_page.html': ('Buddies Cafe Menu | Pizza, Burger, Momos & More', 'Explore the Buddies Cafe menu in Virudhunagar: pizza, burgers, Mo-Burger, chicken tenders, momos, fries, snacks, desserts, shakes and mocktails.', 'Buddies Cafe menu, Virudhunagar menu, pizza burger momos, fast food menu Virudhunagar'),
+            'combos_page.html': ('Buddies Cafe Combos | Food Combos in Virudhunagar', 'Discover tasty Buddies Cafe food combos in Virudhunagar for gaming sessions, friends and casual hangouts.', 'Buddies Cafe combos, food combos Virudhunagar, cafe combos, gaming cafe food'),
+            'reviews_page.html': ('Buddies Cafe Reviews | Customer Reviews in Virudhunagar', 'Read Buddies Cafe customer reviews and experiences about food, service, atmosphere and gaming vibes in Virudhunagar.', 'Buddies Cafe reviews, cafe reviews Virudhunagar, Virudhunagar cafe reviews, gaming cafe reviews'),
+            'contact_page.html': ('Contact Buddies Cafe | Virudhunagar Cafe', 'Contact Buddies Cafe in Virudhunagar for food orders, directions and enquiries. Find our location and contact options.', 'Buddies Cafe contact, Buddies Cafe Virudhunagar contact, cafe near Virudhunagar'),
+            'Bevarages.html': ('Beverages | Cold Coffee, Milkshakes & Mocktails | Buddies Cafe', 'Enjoy cold coffee, milkshakes and refreshing mocktails at Buddies Cafe in Virudhunagar.', 'Buddies Cafe beverages, cold coffee Virudhunagar, milkshake Virudhunagar, mocktails Virudhunagar'),
+            'Burger.html': ('Burgers & Mo-Burgers | Buddies Cafe Virudhunagar', 'Explore burgers and special Mo-Burgers at Buddies Cafe in Virudhunagar, made for a satisfying fast food break.', 'Buddies Cafe burgers, burger in Virudhunagar, chicken burger Virudhunagar, Mo-Burger'),
+            'dessert.html': ('Waffles & Sundaes | Buddies Cafe Virudhunagar', 'Treat yourself to waffles, brownies and sundaes at Buddies Cafe in Virudhunagar.', 'Buddies Cafe desserts, waffles Virudhunagar, sundae Virudhunagar, brownie Virudhunagar'),
+            'french fries.html': ('French Fries | Buddies Cafe Virudhunagar', 'Crispy French fries and loaded fries from Buddies Cafe in Virudhunagar for your next food and gaming session.', 'French fries Virudhunagar, loaded fries Virudhunagar, Buddies Cafe fries'),
+            'hotdog.html': ('Hot Dog | Buddies Cafe Virudhunagar', 'Enjoy loaded hot dogs with signature sauces at Buddies Cafe in Virudhunagar.', 'hot dog Virudhunagar, hotdog Virudhunagar, Buddies Cafe hot dog'),
+            'momos.html': ('Momos | Buddies Cafe Virudhunagar', 'Explore tasty momo varieties at Buddies Cafe in Virudhunagar, perfect for a quick snack or gaming session.', 'momos Virudhunagar, chicken momos Virudhunagar, Buddies Cafe momos'),
+            'snacks.html': ('Snacks & Starters | Buddies Cafe Virudhunagar', 'Find cutlets, spring rolls, cheese balls, cheese buns, nuggets and more snacks at Buddies Cafe in Virudhunagar.', 'snacks Virudhunagar, starters Virudhunagar, cheese balls Virudhunagar, spring rolls Virudhunagar'),
+            'tenders.html': ('Chicken Tenders | Buddies Cafe Virudhunagar', 'Enjoy chicken tenders, nuggets and coastal specials at Buddies Cafe in Virudhunagar.', 'chicken tenders Virudhunagar, chicken nuggets Virudhunagar, fried chicken Virudhunagar'),
+            'pizza.html': ('Pizza | Buddies Cafe Virudhunagar', 'Explore fresh veg and chicken pizzas at Buddies Cafe in Virudhunagar, perfect for friends, families and gaming sessions.', 'pizza Virudhunagar, chicken pizza Virudhunagar, veg pizza Virudhunagar, Buddies Cafe pizza'),
+          }
+          for name, (title, desc, keywords) in seo.items():
+            p = Path(name)
+            if not p.exists():
+              continue
+            s = p.read_text(encoding='utf-8')
+            # Keep the existing page design, chatbot embed, scripts and content untouched.
+            s = re.sub(r'<title>.*?</title>', f'<title>{title}</title>', s, count=1, flags=re.I|re.S)
+            tags = f'''\n<meta name="description" content="{desc}">\n<meta name="keywords" content="{keywords}">\n<meta name="robots" content="index, follow">\n<meta name="author" content="Buddies Cafe">\n<meta property="og:title" content="{title}">\n<meta property="og:description" content="{desc}">\n<meta property="og:type" content="website">'''
+            # Idempotent: remove the generated SEO block before adding the current one.
+            s = re.sub(r'\n<meta name="description"[^>]*>\n<meta name="keywords"[^>]*>\n<meta name="robots"[^>]*>\n<meta name="author"[^>]*>\n<meta property="og:title"[^>]*>\n<meta property="og:description"[^>]*>\n<meta property="og:type"[^>]*>', '', s, flags=re.I)
+            s = re.sub(r'(<head[^>]*>)', r'\1' + tags, s, count=1, flags=re.I)
+            p.write_text(s, encoding='utf-8')
+          PY
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add menu_page.html french_fries.html
-          git diff --cached --quiet || git commit -m "Fix menu subcategory navigation"
+          git add menu_page.html french_fries.html index.html about_page.html menu_page.html combos_page.html reviews_page.html contact_page.html Bevarages.html Burger.html dessert.html "french fries.html" hotdog.html momos.html snacks.html tenders.html pizza.html
+          git diff --cached --quiet || git commit -m "Add on-page SEO to all main pages"
           git push
