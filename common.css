@@ -8,9 +8,16 @@ header nav a{color:var(--bc-muted)!important;text-decoration:none!important;bord
 header nav a:hover,header nav a:focus{background:var(--bc-card2)!important;color:var(--bc-orange-light)!important}
 header nav a[aria-current='page'],header nav a.active{background:var(--bc-orange)!important;color:#241000!important}
 main,section{border-color:var(--bc-border)}
-button,.btn{border-radius:10px!important}
-a[href*='swiggy']{background:var(--bc-orange)!important;color:#241000!important;border-radius:10px!important}
+
+/* One common style for every clickable button/link */
+button,.btn,a[class*='btn'],a[class*='button'],a[href*='swiggy'],a[href^='tel:']{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;min-height:44px!important;padding:11px 20px!important;border:1px solid var(--bc-orange)!important;border-radius:10px!important;background:var(--bc-orange)!important;color:#241000!important;font-family:'Plus Jakarta Sans',Arial,sans-serif!important;font-weight:700!important;text-decoration:none!important;cursor:pointer!important;transition:transform .2s ease,background .2s ease,box-shadow .2s ease!important;box-shadow:0 4px 14px rgba(255,140,0,.18)!important}
+button:hover,.btn:hover,a[class*='btn']:hover,a[class*='button']:hover,a[href*='swiggy']:hover,a[href^='tel:']:hover{background:var(--bc-orange-light)!important;color:#241000!important;transform:translateY(-1px)!important;box-shadow:0 6px 18px rgba(255,140,0,.28)!important}
+button:focus-visible,.btn:focus-visible,a[class*='btn']:focus-visible,a[class*='button']:focus-visible{outline:2px solid var(--bc-orange-light)!important;outline-offset:2px!important}
+
+/* Keep secondary clickable controls consistent */
+a:not(nav a):not([class*='btn']):not([class*='button']):not([href*='swiggy']):not([href^='tel:']){transition:.2s ease}
+
 footer{background:var(--bc-surface)!important;color:var(--bc-muted)!important;border-top:1px solid var(--bc-border)!important}
 .card,.menu-card,.category-card,.review-card,.combo-card,.item-card{background:var(--bc-card)!important;border:1px solid rgba(86,67,52,.65)!important;border-radius:16px!important}
 h1,h2,h3,h4{color:var(--bc-text)}
-@media(max-width:1023px){header nav{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;overflow-x:auto!important}header nav a{white-space:nowrap!important;padding:8px 10px!important;font-size:14px!important}}
+@media(max-width:1023px){header nav{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;overflow-x:auto!important}header nav a{white-space:nowrap!important;padding:8px 10px!important;font-size:14px!important}button,.btn,a[class*='btn'],a[class*='button']{min-height:42px!important;padding:10px 16px!important}}
