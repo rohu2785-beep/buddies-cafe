@@ -3,84 +3,52 @@
 
   const routes = {
     home: 'index.html',
-    'about us': 'about_page.html',
-    about: 'about_page.html',
-    menu: 'menu_page.html',
-    combos: 'combos_page.html',
-    review: 'reviews_page.html',
-    reviews: 'reviews_page.html',
+    'about us': 'about_page.html', about: 'about_page.html',
+    menu: 'menu_page.html', combos: 'combos_page.html',
+    review: 'reviews_page.html', reviews: 'reviews_page.html',
     contact: 'contact_page.html',
-    pizza: 'pizza.html',
-    pizzas: 'pizza.html',
-    burger: 'Burger.html',
-    burgers: 'Burger.html',
-    'mo-burger': 'Burger.html',
+    pizza: 'pizza.html', pizzas: 'pizza.html',
+    burger: 'Burger.html', burgers: 'Burger.html', 'mo-burger': 'Burger.html',
     momos: 'momos.html',
-    'chicken tenders': 'tenders.html',
-    tenders: 'tenders.html',
-    nuggets: 'tenders.html',
-    'coastal tenders': 'tenders.html',
-    hotdog: 'hotdog.html',
-    'hot dog': 'hotdog.html',
-    'french fries': 'french fries.html',
-    fries: 'french fries.html',
+    'chicken tenders': 'tenders.html', tenders: 'tenders.html', nuggets: 'tenders.html', 'coastal tenders': 'tenders.html',
+    hotdog: 'hotdog.html', 'hot dog': 'hotdog.html',
+    'french fries': 'french fries.html', fries: 'french fries.html',
     snacks: 'snacks.html',
-    dessert: 'dessert.html',
-    desserts: 'dessert.html',
-    waffle: 'dessert.html',
-    waffles: 'dessert.html',
-    sundae: 'dessert.html',
-    beverages: 'Bevarages.html',
-    beverage: 'Bevarages.html',
-    'cold coffee': 'Bevarages.html',
-    'milk shake': 'Bevarages.html',
-    mocktail: 'Bevarages.html'
+    dessert: 'dessert.html', desserts: 'dessert.html', waffle: 'dessert.html', waffles: 'dessert.html', sundae: 'dessert.html',
+    beverages: 'Bevarages.html', beverage: 'Bevarages.html', 'cold coffee': 'Bevarages.html', 'milk shake': 'Bevarages.html', mocktail: 'Bevarages.html'
   };
 
-  function clean(text) {
-    return (text || '').replace(/\s+/g, ' ').trim().toLowerCase();
-  }
-
+  function clean(text) { return (text || '').replace(/\s+/g, ' ').trim().toLowerCase(); }
   function routeForText(text) {
     const t = clean(text);
     if (routes[t]) return routes[t];
-    for (const key of Object.keys(routes)) {
-      if (t === key || t.includes(key)) return routes[key];
-    }
+    for (const key of Object.keys(routes)) if (t.includes(key)) return routes[key];
     return null;
   }
 
+  // Navigation: always trust the visible navigation label.
   document.addEventListener('click', function (event) {
     const el = event.target.closest('a,button,[role="button"],.cursor-pointer,[onclick]');
     if (!el) return;
-
-    const href = el.getAttribute('href');
-    const dataPath = clean(el.getAttribute('data-path'));
     const label = clean(el.textContent);
+    const href = el.getAttribute('href') || '';
 
-    // For navigation, the visible link text is the source of truth.
-    // This prevents stale/incorrect data-path attributes from sending Contact to Combos, etc.
-    const navRoute = routeForText(label);
-    if (navRoute && el.closest('nav')) {
-      event.preventDefault();
-      window.location.href = navRoute;
-      return;
+    if (el.closest('nav')) {
+      const route = routeForText(label);
+      if (route) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        window.location.assign(route);
+        return;
+      }
     }
 
-    // If a nav link has no visible label, use its data-path as a fallback.
-    const dataRoute = routeForText(dataPath);
-    if (dataRoute && dataPath && el.closest('nav')) {
+    const route = routeForText(label);
+    const category = /pizza|burger|momo|tender|nugget|coastal|hot ?dog|french fries|fries|snack|dessert|waffle|sundae|beverage|cold coffee|milk shake|mocktail/i.test(label);
+    if (route && category && (!href || href === '#' || href.startsWith('#'))) {
       event.preventDefault();
-      window.location.href = dataRoute;
-      return;
-    }
-
-    // Repair menu/category cards and buttons by their visible label.
-    const menuRoute = routeForText(label);
-    const looksLikeCategory = /pizza|burger|momo|tender|nugget|coastal|hot ?dog|french fries|fries|snack|dessert|waffle|sundae|beverage|cold coffee|milk shake|mocktail/i.test(label);
-    if (menuRoute && looksLikeCategory && (!href || href === '#' || href.startsWith('#'))) {
-      event.preventDefault();
-      window.location.href = menuRoute;
+      event.stopImmediatePropagation();
+      window.location.assign(route);
     }
   }, true);
 })();
