@@ -58,11 +58,20 @@
     const dataPath = clean(el.getAttribute('data-path'));
     const label = clean(el.textContent);
 
-    // Repair navigation links even when a generated page contains an old/incorrect href.
-    const navRoute = routeForText(dataPath);
-    if (navRoute && (el.closest('nav') || dataPath)) {
+    // For navigation, the visible link text is the source of truth.
+    // This prevents stale/incorrect data-path attributes from sending Contact to Combos, etc.
+    const navRoute = routeForText(label);
+    if (navRoute && el.closest('nav')) {
       event.preventDefault();
       window.location.href = navRoute;
+      return;
+    }
+
+    // If a nav link has no visible label, use its data-path as a fallback.
+    const dataRoute = routeForText(dataPath);
+    if (dataRoute && dataPath && el.closest('nav')) {
+      event.preventDefault();
+      window.location.href = dataRoute;
       return;
     }
 
