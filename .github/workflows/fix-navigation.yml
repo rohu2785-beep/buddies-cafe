@@ -1,0 +1,74 @@
+name: Fix cafe navigation
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix-navigation:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fix navigation in all HTML pages
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+
+          files = [p for p in Path('.').glob('*.html') if p.name != '404.html']
+
+          replacements = {
+              'home page.html': 'index.html',
+              'menu page.html': 'menu_page.html',
+              'combos page.html': 'combos_page.html',
+              'about page.html': 'about_page.html',
+              'reviews page.html': 'reviews_page.html',
+              'contact us.html': 'contact_page.html',
+              'contact page.html': 'contact_page.html',
+          }
+
+          for path in files:
+              text = path.read_text(encoding='utf-8')
+              original = text
+
+              # Remove only navigation links for the two unwanted navigation items.
+              text = re.sub(r'<a\b[^>]*>\s*Categories\s*</a>', '', text, flags=re.I)
+              text = re.sub(r'<a\b[^>]*>\s*Board\s*Games\s*</a>', '', text, flags=re.I)
+
+              # Normalize the six navigation labels and their destinations wherever they occur.
+              for old, new in replacements.items():
+                  text = text.replace(old, new)
+
+              text = re.sub(r'(<a\b[^>]*href=["\'])menu_page\.html(["\'][^>]*>)\s*Menu\s*</a>', r'\1menu_page.html\2Menu</a>', text, flags=re.I)
+              text = re.sub(r'(<a\b[^>]*href=["\'])combos_page\.html(["\'][^>]*>)\s*Combos\s*</a>', r'\1combos_page.html\2Combos</a>', text, flags=re.I)
+              text = re.sub(r'(<a\b[^>]*href=["\'])about_page\.html(["\'][^>]*>)\s*About(?:\s+Us)?\s*</a>', r'\1about_page.html\2About Us</a>', text, flags=re.I)
+              text = re.sub(r'(<a\b[^>]*href=["\'])reviews_page\.html(["\'][^>]*>)\s*Reviews\s*</a>', r'\1reviews_page.html\2Reviews</a>', text, flags=re.I)
+              text = re.sub(r'(<a\b[^>]*href=["\'])contact_page\.html(["\'][^>]*>)\s*Contact(?:\s+Us)?\s*</a>', r'\1contact_page.html\2Contact</a>', text, flags=re.I)
+              text = re.sub(r'(<a\b[^>]*href=["\'])(?:index\.html|home page\.html)(["\'][^>]*>)\s*Home\s*</a>', r'\1index.html\2Home</a>', text, flags=re.I)
+
+              # Menu item page names requested by the user.
+              text = text.replace('Artisanal Pizza', 'Pizza').replace('artisanal pizza', 'pizza')
+              text = text.replace('Pan Fried Momos', 'Momos').replace('pan fried momos', 'momos')
+              text = text.replace('Gourmet Hot Dogs', 'Hotdog').replace('Gourmet Hot Dog', 'Hotdog')
+              text = text.replace('French Fries & Bowls', 'French Fries').replace('french fries & bowls', 'french fries')
+
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit fixes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add '*.html'
+          if git diff --cached --quiet; then
+            echo 'No navigation changes needed.'
+          else
+            git commit -m 'Fix navigation across cafe pages [skip ci]'
+            git push
+          fi
