@@ -1,17 +1,21 @@
 name: Repair All Pages
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   repair:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Repair links without changing page designs
+
+      - name: Repair navigation and buttons
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -44,8 +48,8 @@ jobs:
           }
 
           def set_anchor_href(s, label, target):
-              pat = re.compile(r'(<a\\b[^>]*?)\\bhref=(?:"[^"]*"|\\'[^\\']*\\')([^>]*>\\s*' + re.escape(label) + r'\\s*</a>)', re.I | re.S)
-              return pat.sub(lambda m: m.group(1) + 'href="' + target + '"' + m.group(2), s)
+              pattern = re.compile(r'(<a\b[^>]*?)\bhref=("[^"]*"|\'[^\']*\')([^>]*>\s*' + re.escape(label) + r'\s*</a>)', re.I | re.S)
+              return pattern.sub(lambda m: m.group(1) + 'href="' + target + '"' + m.group(3), s)
 
           for p in Path('.').glob('*.html'):
               if p.name == '404.html':
@@ -53,44 +57,32 @@ jobs:
               s = p.read_text(encoding='utf-8')
               original = s
 
-              # Repair all main navigation links by visible link text.
+              # Make sure every page loads the global click repair script.
+              if 'src="site-fix.js"' not in s:
+                  tag = '<script src="site-fix.js" defer></script>'
+                  if '</head>' in s:
+                      s = s.replace('</head>', tag + '\n</head>', 1)
+                  else:
+                      s = tag + '\n' + s
+
               for label, target in nav:
                   s = set_anchor_href(s, label, target)
 
-              # If Review is missing from a page navigation, add it before Contact.
-              if not re.search(r'<a\\b[^>]*href=["\\']reviews_page\\.html["\\'][^>]*>\\s*Review(?:s)?\\s*</a>', s, re.I):
-                  contact = re.search(r'<a\\b[^>]*href=["\\']contact_page\\.html["\\'][^>]*>\\s*Contact\\s*</a>', s, re.I)
-                  if contact:
-                      review = '<a class="px-md py-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="reviews_page.html">Review</a>'
-                      s = s[:contact.start()] + review + '\\n' + s[contact.start():]
-
-              # Repair category cards/pills by their visible text.
               for label, target in category_map.items():
                   s = set_anchor_href(s, label, target)
 
-              # Repair common order buttons that were left as placeholder # links.
               swiggy = 'https://www.swiggy.com/city/virudhunagar/buddies-fathimanagar-rest1086766'
               for label in ['Order Online', 'Order Now']:
                   s = set_anchor_href(s, label, swiggy)
 
-              # The homepage CTA should actually open the menu, not Swiggy.
-              s = re.sub(r'(<a\\b[^>]*?)href="[^"]*"([^>]*>\\s*<span[^>]*>\\s*restaurant_menu\\s*</span>\\s*Explore Full Menu\\s*</a>)', r'\\1href="menu_page.html"\\2', s, flags=re.I|re.S)
-
               if s != original:
                   p.write_text(s, encoding='utf-8')
-
-          # Ensure the reviews page always has the correct six-item navigation.
-          rp = Path('reviews_page.html')
-          if rp.exists():
-              s = rp.read_text(encoding='utf-8')
-              # Normalize any old Reviews label to Review in navigation only.
-              s = re.sub(r'(<a\\b[^>]*href="reviews_page\\.html"[^>]*>)\\s*Reviews?\\s*</a>', r'\\1Review</a>', s, flags=re.I)
-              rp.write_text(s, encoding='utf-8')
           PY
+
       - name: Commit repaired pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add '*.html'
-          git diff --cached --quiet || git commit -m "Fix navigation and menu category buttons across pages"
+          git add '*.html' site-fix.js
+          git diff --cached --quiet || git commit -m "Fix navigation and buttons across all pages"
           git push
