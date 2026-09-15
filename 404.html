@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buddies Cafe</title>
+<script>
+(function () {
+  const map = {
+    'home page.html': 'index.html',
+    'menu page.html': 'menu_page.html',
+    'combos page.html': 'combos_page.html',
+    'about page.html': 'about_page.html',
+    'reviews page.html': 'reviews_page.html',
+    'contact us.html': 'contact_page.html',
+    'contact page.html': 'contact_page.html',
+    'beverages.html': 'Bevarages.html',
+    'bevarages.html': 'Bevarages.html',
+    'french%20fries.html': 'french%20fries.html'
+  };
+  const file = decodeURIComponent(location.pathname.split('/').pop() || '').toLowerCase();
+  const target = map[file];
+  if (target) {
+    location.replace(target);
+  }
+})();
+</script>
+<style>
+body{font-family:Arial,sans-serif;background:#1b110a;color:#f3dfd1;text-align:center;padding:80px 20px}
+a{color:#ffb77d}
+</style>
+</head>
+<body>
+<h1>Buddies Cafe</h1>
+<p>Page not found. <a href="index.html">Go to Home</a></p>
+</body>
+</html>
