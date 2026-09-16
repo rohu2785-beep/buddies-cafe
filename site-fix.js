@@ -35,6 +35,11 @@
   const clean = t => (t || '').replace(/\s+/g, ' ').trim().toLowerCase(); 
   const fileName = () => (location.pathname.split('/').pop() || 'index.html').toLowerCase() === '' ? 'index.html' : (location.pathname.split('/').pop() || 'index.html');
 
+  function removeZapierChatbot() {
+    document.querySelectorAll('zapier-interfaces-chatbot-embed').forEach(el => el.remove());
+    document.querySelectorAll('script[src*="interfaces.zapier.com"]').forEach(el => el.remove());
+  }
+
   function addMeta(name, content) {
     let el = document.querySelector('meta[name="' + name + '"]');
     if (!el) { el = document.createElement('meta'); el.name = name; document.head.appendChild(el); }
@@ -124,6 +129,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    removeZapierChatbot();
     loadCommonCSS(); fixSEO(); fixNavigation(); fixLinks(); fixButtons();
   });
 })();
